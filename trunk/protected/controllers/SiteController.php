@@ -54,9 +54,27 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-            //if(!Yii::app()->user->isGuest)	
+            if(Yii::app()->user->isGuest)	
                 $this->render('index');
-	}
+            if(Yii::app()->user->checkAccess('moderator'))
+            {
+                $dataProvider = new CActiveDataProvider('User', array(
+                                    'criteria' => array(
+                                    'condition' => 'online = :param_online',
+                                    'params' => array(':param_online' => 1),
+                                    ),
+                ));
+                $this->render('indexmoderator',array(
+                        'dataProvider'=>$dataProvider,
+                        ),false,true);
+            }
+            else
+                if(Yii::app()->user->checkAccess('user'))	
+                {
+                    $this->render('indexuser');
+                }
+                
+        }
 
 	/**
 	 * This is the action to handle external exceptions.

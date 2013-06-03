@@ -52,7 +52,7 @@ return array(
 		),
                 'session' => array(
                     'class' => 'CDbHttpSession',
-                    'timeout' => 60,
+                    'timeout' => 6000,
                 ),
 
              //   'clientScript' => array(

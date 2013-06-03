@@ -1,9 +1,9 @@
 <div id="content">
-<h1>Пользователь: <?php echo Yii::app()->user->name; ?></h1>
-<h2>Статус: <?php if (Yii::app()->user->checkAccess('moderator'))
+<h3>Пользователь: <?php echo Yii::app()->user->name; ?></h3>
+<h4>Статус: <?php if (Yii::app()->user->checkAccess('moderator'))
                       echo 'Преподаватель';
                   else 
-                      echo 'Обучаемый';?></h2>
+                      echo 'Обучаемый';?></h4>
 <?php
 $ss = $model->learningtime;
 $s = $ss%60;
