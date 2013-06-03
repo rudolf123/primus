@@ -23,7 +23,7 @@ class UserController extends CController
                 'backColor'=> 0x003300,
                 'maxLength'=> 3,
                 'minLength'=> 3,
-                 'foreColor'=> 0x66FF66,
+                'foreColor'=> 0x66FF66,
             ),
         );
     }
@@ -98,7 +98,6 @@ class UserController extends CController
       */
     public function actionRegistration()
     {
-                // тут думаю все понятно
         $form = new User();
 
         // Проверяем являеться ли пользователь гостем
