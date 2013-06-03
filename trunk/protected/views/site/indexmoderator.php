@@ -1,7 +1,7 @@
 <?php $this->pageTitle=Yii::app()->name; ?>
 
 <?php
-   /* $this->widget('zii.widgets.grid.CGridView', array(
+  /*  $this->widget('zii.widgets.grid.CGridView', array(
     'id'=>'aswer-grid',
     'dataProvider'=>$dataProvider,
     //'filter'=>$dataProvider,
@@ -19,8 +19,8 @@
     ));*/
     
     
-    $this->widget('bootstrap.widgets.TbExtendedGridView', array(
-        'type'=>'striped bordered',
+    $this->widget('bootstrap.widgets.TbGridView', array(
+        'type'=>'bordered',
         'dataProvider'=>$dataProvider,
         'template'=>"{items}",
         'columns'=>array(

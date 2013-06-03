@@ -26,43 +26,26 @@ if (Yii::app()->user->checkAccess('moderator'))
     $this->widget('bootstrap.widgets.TbTabs', array(
         'type'=>'tabs', // 'tabs' or 'pills'
         'tabs'=>array(
-                array('label'=>'Home', 'content'=>'Home Content', 'active'=>true),
+                array('label'=>'Home', 'content'=>$this->renderPartial('usersView',array('dataProvider' => $dataProvider),true), 'active'=>true),
                 array('label'=>'Profile', 'content'=>'Profile Content'),
                 array('label'=>'Messages', 'content'=>'Messages Content'),
             ),
         ));
-    $this->widget('zii.widgets.grid.CGridView', array(
-    'id'=>'aswer-grid',
-    'dataProvider'=>$dataProvider,
-    //'filter'=>$dataProvider,
-    'columns'=>array(
-            'surname',
-            'name',
-            'secondname',
-            'block',
-            'rank',
-            array(
-                'class'=>'CButtonColumn',
-                'template'=>'{view}{delete}',
-                //'viewButtonUrl' => 'Yii::app()->createUrl("question/viewAnswer", array("id"=>$data->id))',
-                //'deleteButtonUrl'=> 'Yii::app()->createUrl("question/deleteAnswer", array("id"=>$data->id))',
-                /*'buttons'=>array
-                (
-                    'view' => array
-                    (
-                        'label'=>'Просмотреть ответ',
-                        'url'=>'Yii::app()->createUrl("question/viewAnswer", array("id"=>$data->id))',
-                    ),
-                    'update' => array
-                    (
-                        'label'=>'Изменить ответ',
-                        'url'=>'Yii::app()->createUrl("question/viewAnswer", array("id"=>$data->id))',
-                    ),
-                ),*/
-
-            ),
+    //$this->renderPartial('usersView',null,true);
+    $this->widget('zii.widgets.jui.CJuiAccordion', array(
+        'panels'=>array(
+        'panel 1'=>'content for panel 1',
+        'panel 2'=>$this->renderPartial('usersView',array('dataProvider' => $dataProvider),true),
+        // panel 3 contains the content rendered by a partial view
+        // 'panel 3'=>$this->renderPartial('_partial',null,true),
+        ),
+        // additional javascript options for the accordion plugin
+        'options'=>array(
+        'animated'=>'bounceslide',
         ),
     ));
+        
+
 }
 ?>
 </div>
