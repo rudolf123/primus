@@ -46,16 +46,45 @@
                 <?php echo $form->labelEx($model,'img'); ?>
                 <?php echo $form->fileField($model,'imgfile'); ?>
                 <?php echo $form->error($model,'imgfile'); ?>
+                <?php if ($model->img != '')
+                {
+                            echo CHtml::image('/storage/'.$model->img,'Picture is missing', array('style'=>"width: 40px; height: 40px"));
+                            echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array()), Yii::app()->createUrl('helptree/update', array('id'=>$model->id)));
+                            $this->widget('bootstrap.widgets.TbButton', array(
+                                'label'=>'Удалить',
+                                'type'=>'danger',
+                                'htmlOptions'=>array(
+                                            'onclick'=>'js:bootbox.confirm("Вы уверены?",
+                                            function()
+                                            {
+                                            }
+                                            )'
+                                ),
+                            ));
+                }
+                ?>
         </div>
         <div class="row">
                 <?php echo $form->labelEx($model,'doc'); ?>
                 <?php echo $form->fileField($model,'docfile'); ?>
                 <?php echo $form->error($model,'docfile'); ?>
+                <?php if ($model->doc != '')
+                      {
+                            echo Chtml::link(CHtml::image('/assets/doc.gif','doc icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->doc)));
+                            echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array()), Yii::app()->createUrl('helptree/update', array('id'=>$model->id)));
+                      }
+                ?>
         </div>
         <div class="row">
                 <?php echo $form->labelEx($model,'pdf'); ?>
                 <?php echo $form->fileField($model,'pdffile'); ?>
                 <?php echo $form->error($model,'pdffile'); ?>
+                <?php if ($model->pdf != '')
+                {
+                            echo Chtml::link(CHtml::image('/assets/pdf.gif','doc icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->pdf)));
+                            echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array()), Yii::app()->createUrl('helptree/update', array('id'=>$model->id)));
+                }
+                ?>
         </div>
         <div class="row">
                 <?php echo $form->labelEx($model,'video'); ?>
