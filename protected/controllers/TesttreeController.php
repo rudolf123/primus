@@ -53,26 +53,53 @@ class TesttreeController extends Controller
         
         public function actionViewTest($id)
 	{
-            $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
-            $count_questions = count($testquestions);
-            if($count_questions > 0){
-                $arr_questions = array();
-                foreach($testquestions as $testquestion)
-                    array_push($arr_questions,$testquestion->question_id);
+            if (Yii::app()->user->checkAccess('moderator'))
+            {
+                $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
+                $count_questions = count($testquestions);
+                if($count_questions > 0){
+                    $arr_questions = array();
+                    foreach($testquestions as $testquestion)
+                        array_push($arr_questions,$testquestion->question_id);
+                }
+                $criteria = new CDbCriteria();
+                $criteria->addNotInCondition('id', $arr_questions);
+
+                $dataProvider = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria));
+
+                $model = $this->loadModel($id);
+
+
+                $this->renderPartial('viewtest',array(
+                        'model'=>$model,
+                        'dataProvider'=>$dataProvider,
+                        ),false,true);
             }
-            $criteria = new CDbCriteria();
-            $criteria->addNotInCondition('id', $arr_questions);
+            else 
+            {
+                $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
+                $count_questions = count($testquestions);
+                if($count_questions > 0){
+                    $arr_questions = array();
+                    foreach($testquestions as $testquestion)
+                        array_push($arr_questions,$testquestion->question_id);
+                }
+                $criteria = new CDbCriteria();
+                $criteria->addInCondition('id', $arr_questions);
 
-            $dataProvider = new CActiveDataProvider('Question', array(
-               'criteria' => $criteria));
-            
-            $model = $this->loadModel($id);
-            
+               // $dataProvider = new CActiveDataProvider('Question', array(
+               //    'criteria' => $criteria));
 
-            $this->renderPartial('viewtest',array(
-                    'model'=>$model,
-                    'dataProvider'=>$dataProvider,
-                    ),false,true);
+                $dataProvider = Question::model()->findAll($criteria);
+
+                $model = $this->loadModel($id);
+                $this->renderPartial('runtest',array(
+                        'questions_ids'=>$arr_questions,
+                        'model'=>$model,
+                        'dataProvider'=>$dataProvider,
+                        ),false,true);
+            }
         }
         
         public function actionView($id)

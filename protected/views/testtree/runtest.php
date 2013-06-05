@@ -13,7 +13,10 @@ foreach ($dataProvider as $question)
     {
 ?>
         <br/>
-    <?php echo $answer->text;
+    <?php 
+    echo CHtml::checkBox('dfgdfg');
+    echo '<br/>';
+    echo $answer->text;
     }
 }
 
