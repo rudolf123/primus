@@ -174,6 +174,14 @@ class HelptreeController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Helptree');
+                
+                if(Yii::app()->user->checkAccess('user'))
+                {
+                    $model = User::model()->findByAttributes(array('id'=>Yii::app()->user->id));
+                    $model->section = 'Изучает информационную справку';
+                    $model->save();
+                }
+        
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

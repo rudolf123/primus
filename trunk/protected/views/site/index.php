@@ -1,5 +1,6 @@
 <?php $this->pageTitle=Yii::app()->name; ?>
 
+<div>
 <?php
     $this->widget('bootstrap.widgets.TbCarousel', array(
     'items'=>array(
@@ -33,3 +34,5 @@
     ));
     
 ?>
+
+</div>

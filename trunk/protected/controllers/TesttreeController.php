@@ -182,6 +182,13 @@ class TesttreeController extends Controller
 	{
                 $data = "Content loaded";
 
+                if(Yii::app()->user->checkAccess('user'))
+                {
+                    $model = User::model()->findByAttributes(array('id'=>Yii::app()->user->id));
+                    $model->section = 'Проверяет знания';
+                    $model->save();
+                }
+                
 		$dataProvider=new CActiveDataProvider('Testtree');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,

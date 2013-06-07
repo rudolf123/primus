@@ -34,7 +34,7 @@
                                 array('label'=>'Регистрация', 'url'=>array('user/registration'), 'visible'=>Yii::app()->user->isGuest),
                             	array('label'=>'Вход', 'url'=>array('user/login'), 'visible'=>Yii::app()->user->isGuest),
                                 array('label'=>'Банк вопросов', 'url'=>array('question/admin'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->checkAccess('moderator')),
-                                array('label'=>'Администрирование', 'url'=>array('user/admin'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->checkAccess('moderator')),
+                                array('label'=>'Администрирование', 'url'=>array('site/admin'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->checkAccess('moderator')),
                                 array('label'=>'Выход', 'url'=>array('user/logout'), 'visible'=>!Yii::app()->user->isGuest, 'itemOptions'=>array('class'=>'menuleft')),    
                                 array('label'=>'Личный кабинет', 'url'=>array('user/profile'), 'visible'=>!Yii::app()->user->isGuest,'itemOptions'=>array('class'=>'menuleft')),
 
