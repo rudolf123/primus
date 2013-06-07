@@ -90,7 +90,18 @@ class UserController extends CController
         $this->render('profile', array('model' => $model));
     }
     
-    /**
+    public function actionUpdate()
+    {
+        $model = User::model()->findByAttributes(array('id'=>Yii::app()->user->id));
+        
+        $this->performAjaxValidation($model);
+        if (!empty($_POST['User'])) {
+            $model->name = $_POST['User']['name'];
+            $model->save();            
+        }
+    }
+    
+     /**
      * Метод регистрации
      *
      * Выводим форму для регистрации пользователя и проверяем
@@ -134,6 +145,7 @@ class UserController extends CController
                                 // Выводим страницу что "все окей"
                                 $form->passwd = crypt($form->passwd,'Fghqwe$trteysdf');//self::blowfishSalt());
 
+                                $form->regdate = date('Y-m-d', time());;
                                 if ($form->passwdModerator==='tank')
                                     $form->role = 'moderator';
                                 else 

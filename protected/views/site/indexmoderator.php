@@ -1,5 +1,7 @@
 <?php $this->pageTitle=Yii::app()->name; ?>
 
+<div id="block">
+    <h4>Список личного состава на занятии</h4>
 <?php
   /*  $this->widget('zii.widgets.grid.CGridView', array(
     'id'=>'aswer-grid',
@@ -23,13 +25,15 @@
         'type'=>'bordered',
         'dataProvider'=>$dataProvider,
         'template'=>"{items}",
+        //'htmlOptions'=>array('class'=>'well',),
         'columns'=>array(
             'surname',
             'name',
             'secondname',
-            'block',
-            'rank',
+            'section'
             )
     ));
     
 ?>
+
+</div>

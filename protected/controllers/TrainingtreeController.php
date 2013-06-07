@@ -107,6 +107,13 @@ class TrainingtreeController extends Controller
         
 	public function actionIndex()
 	{
+                if(Yii::app()->user->checkAccess('user'))
+                {
+                    $model = User::model()->findByAttributes(array('id'=>Yii::app()->user->id));
+                    $model->section = 'Проходит обучение';
+                    $model->save();
+                }
+                        
 		$dataProvider=new CActiveDataProvider('Trainingtree');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,

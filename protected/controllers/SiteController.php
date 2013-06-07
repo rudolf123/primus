@@ -64,6 +64,9 @@ class SiteController extends Controller
                                     'params' => array(':param_online' => 1),
                                     ),
                 ));
+                $model = User::model()->findByAttributes(array('id'=>Yii::app()->user->id));
+                $model->section = 'Преподаватель';
+                $model->save();
                 $this->render('indexmoderator',array(
                         'dataProvider'=>$dataProvider,
                         ),false,true);
@@ -71,6 +74,9 @@ class SiteController extends Controller
             else
                 if(Yii::app()->user->checkAccess('user'))	
                 {
+                    $model = User::model()->findByAttributes(array('id'=>Yii::app()->user->id));
+                    $model->section = 'Начальная страница';
+                    $model->save();
                     $this->render('indexuser');
                 }
                 
@@ -110,42 +116,10 @@ class SiteController extends Controller
 		$this->render('contact',array('model'=>$model));
 	}
 
-	/**
-	 * Displays the login page
-	 */
-	public function actionLogin()
-	{
-		/*$model=new LoginForm;
-
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));*/
-            
-                $this->redirect('../user/login');
-	}
-
-	/**
-	 * Logs out the current user and redirect to homepage.
-	 */
-	public function actionLogout()
-	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
-	}
+        public function actionAdmin()
+        {
+            $this->render('adminview');
+        }
         
         public function actionHelp()
         {

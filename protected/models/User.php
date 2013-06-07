@@ -58,6 +58,8 @@ class User extends CActiveRecord
             'rank' => 'Звание',
             'passwd2' => 'Подтверждение пароля',
             'passwdModerator' => 'Пароль преподавателя',
+            'section'=>'Что делает?',
+            'online'=>'В сети',
         );
     } 
     
