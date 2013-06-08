@@ -121,6 +121,11 @@ class SiteController extends Controller
             $this->render('adminview');
         }
         
+        public function actionLogin()
+	{
+            $this->redirect('../user/login');
+	}
+        
         public function actionHelp()
         {
             $model=new Helptree;

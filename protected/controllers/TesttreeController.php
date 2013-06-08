@@ -50,7 +50,30 @@ class TesttreeController extends Controller
             //    $this->redirect('../site/error');
             
         }
-        
+        public function actionAjax()
+        {
+                if(isset($_POST['QuestionForm']))
+                {
+                    
+                    /*if($qmodel->validate())
+                    {
+                       print_r($_REQUEST);
+                       return;
+                    }*/
+                    
+                    $file = fopen('logTestAjax.txt', 'a');
+                    
+                    foreach ($_POST['QuestionForm'] as $attr)
+                    {
+                        fwrite($file, $attr.';   ');
+                    }
+                    
+                    
+                    fclose($file);
+                } 
+        }
+
+
         public function actionViewTest($id)
 	{
             if (Yii::app()->user->checkAccess('moderator'))
@@ -78,6 +101,7 @@ class TesttreeController extends Controller
             }
             else 
             {
+
                 $file = fopen('logTest.txt', 'a');
                 fwrite($file, 'logBegin');
                 $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
@@ -109,10 +133,12 @@ class TesttreeController extends Controller
                 fwrite($file, 'logEnd');
                 fclose($file);
                 $model = $this->loadModel($id);
+                $qmodel = new QuestionForm;
                 $this->renderPartial('runtest',array(
                         'arr_answers'=>$arr_answers,
                         'arr_questions'=>$arr_questions,
-                         ),false,true);
+                        'model'=>$qmodel,
+                        ),false,true);
 
             }
         }
