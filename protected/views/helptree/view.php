@@ -98,4 +98,9 @@ $(this).fadeOut();
 
 });
 
+$('#documentspanel').click(function()
+{
+    (this).fadeOut('slow');
+});
+
 </script>

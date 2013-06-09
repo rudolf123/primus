@@ -277,8 +277,14 @@
                         }
                       });
             }
-            setInterval(timer,5000);
+            //setInterval(timer,5000);
+            
         });
+        $('#mtreeview').fadeout('slow', function() {
+
+        });
+        
+
 </script>
 
 
