@@ -60,19 +60,26 @@ body
                 border-radius: 4px;
 }
 
+.menuleft1
+{
+    position: relative;
+    float: right;
+}
+
 #mainmenu
 {
 	background:white url(bg.gif) repeat-x left top;
-        border: 1px solid #e3e3e3;
-        -webkit-border-radius: 4px;
-           -moz-border-radius: 4px;
-                border-radius: 4px;
+
+        -webkit-box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.15);
+           -moz-box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.15);
+                box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.15);
 }
 
 #mainmenu ul
 {
 	padding:6px 20px 5px 20px;
 	margin:0px;
+        
         
 
 }
@@ -89,7 +96,7 @@ body
 	font-size:12px;
 	font-weight:bold;
 	text-decoration:none;
-	padding:5px 8px;
+	padding:9px 8px;
         
 
 }
@@ -99,11 +106,10 @@ body
 	color: #6399cd;
 	background-color:#EFF4FA;
 	text-decoration:none;
-        border: 1px solid #e3e3e3;
-        -webkit-border-radius: 4px;
-           -moz-border-radius: 4px;
-                border-radius: 4px;
 
+        -webkit-box-shadow: inset 0px 7px 7px rgba(0, 0, 0, 0.1);
+           -moz-box-shadow: inset 0px 7px 7px rgba(0, 0, 0, 0.1);
+                box-shadow: inset 0px 7px 7px rgba(0, 0, 0, 0.1);
 }
 
 .error
@@ -302,6 +308,9 @@ div.search-form
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
        -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
             box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow:  0px 7px 7px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow:  0px 7px 7px rgba(0, 0, 0, 0.1);
+            box-shadow:  0px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 #documentspanel
@@ -388,12 +397,6 @@ div.search-form
 {
     text-align:left;
     margin-top: 20px;
-}
-
-.menuleft
-{
-    position: relative;
-    float: right;
 }
 
 .Mynavbar {

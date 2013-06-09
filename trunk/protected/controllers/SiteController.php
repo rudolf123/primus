@@ -60,7 +60,7 @@ class SiteController extends Controller
             {
                 $dataProvider = new CActiveDataProvider('User', array(
                                     'criteria' => array(
-                                    'condition' => 'online = :param_online',
+                                    'condition' => 'online = :param_online AND TIME_TO_SEC(TIMEDIFF(NOW(),sessionend))<100',
                                     'params' => array(':param_online' => 1),
                                     ),
                 ));
