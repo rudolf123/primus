@@ -40,8 +40,8 @@ class SiteController extends Controller
 				'users'=>array('*'),
 			),
 			array('deny',  // deny all users
-                                'actions'=>array('index','view'),
-				//'users'=>array('?'),
+                                'actions'=>array('index','view','admin'),
+				'users'=>array('?'),
 			),
 		);
 	}

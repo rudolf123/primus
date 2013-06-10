@@ -38,7 +38,7 @@
 
 	<div class="row">
                 <?php //echo $form->labelEx($model,'htmlfield'); ?>
-                <?php echo $form->ckEditorRow($model, 'htmlfield', array('options'=>array('fullpage'=>'js:true', 'width'=>'640', 'resize_maxWidth'=>'640','resize_minWidth'=>'320')));?>
+                <?php echo $form->ckEditorRow($model, 'htmlfield', array('options'=>array('fullpage'=>'js:true', 'width'=>'840','height'=>'640', 'resize_maxWidth'=>'1040','resize_minWidth'=>'320')));?>
                 <?php //echo $form->textArea($model,'htmlfield'); ?>
                 <?php echo $form->error($model,'htmlfield'); ?>
 	</div>

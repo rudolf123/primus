@@ -1,6 +1,6 @@
 <?php $this->pageTitle=Yii::app()->name; ?>
 
-<div>
+<div style="margin-top: 10px">
 <?php
     $this->widget('bootstrap.widgets.TbCarousel', array(
     'items'=>array(
