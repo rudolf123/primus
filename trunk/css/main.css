@@ -299,6 +299,8 @@ div.search-form
 
 #usernamebar
 {
+    padding-left: 3px;
+    padding-right: 3px;
     float: right;
     background-color: #f5f5f5;
     border: 1px solid #e3e3e3;
