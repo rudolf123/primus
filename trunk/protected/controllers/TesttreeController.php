@@ -65,7 +65,14 @@ class TesttreeController extends Controller
                     
                     foreach ($_POST['QuestionForm'] as $attr)
                     {
+                    
                         fwrite($file, $attr.';   ');
+                        
+                        if (is_array($attr))
+                        {
+                            foreach ($attr as $a)
+                                fwrite($file, $a.';   ');
+                        }
                     }
                     
                     

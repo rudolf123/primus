@@ -1,64 +1,37 @@
-<?php $form=$this->beginWidget('CActiveForm', array(
-    'id'=>'question',
-    'enableAjaxValidation'=>false,
-        'htmlOptions'=>array(
+<?php 
+    $form=$this->beginWidget('CActiveForm', array(
+                'id'=>'question',
+                'enableAjaxValidation'=>false,
+                'htmlOptions'=>array(
                                'onsubmit'=>"return false;",/* Disable normal form submit */
                                'onkeypress'=>" if(event.keyCode == 13){ send(); } " /* Do ajax call when user presses enter key */
-                             ),
-)); ?>
- 
- 
-    <?php echo $form->errorSummary($model); ?>
- 
-    <div class="row">
-        <?php echo $form->labelEx($model,'name'); ?>
-        <?php echo $form->textField($model,'name'); ?>
-        <?php echo $form->error($model,'name'); ?>
-    </div>
-        <div class="row">
-        <?php echo $form->labelEx($model,'age'); ?>
-        <?php echo $form->textField($model,'age'); ?>
-        <?php echo $form->error($model,'age'); ?>
-    </div>
- 
- 
-    <div class="row buttons">
-        <?php echo CHtml::Button('SUBMIT',array('onclick'=>'send();')); ?> 
-    </div>
- 
-<?php $this->endWidget(); ?>
-
-
-<?php
-
-
-echo 'asdfasdgeiorjgerjge';
-$i = 0;
-foreach ($arr_questions as $question)
-{
-?>
-    <br/>
-    <?php    
-        echo $question;
-    ?>
-   
-    <?php
-    //$answers = Answer::model()->findAllByAttributes(array('question_id'=>$question->id));
-    foreach($arr_answers[$i++] as $answer)
+                            ),
+                ));
+    echo $form->errorSummary($model);
+    $i = 0;
+    $j = 0;
+    foreach ($arr_questions as $question)
     {
-        echo '<br/>';
-        echo $answer;
+        $data = array('11'=>11,'12'=>12,'13'=>13);
+        echo $question;
+        echo '<br />';
+        foreach($arr_answers[$i++] as $answer)
+        {
+           // echo $answer;
+          //  echo '<br />';
+          //  array_push($data, $answer);
+           // echo $form->textField($model,'answers['.$j.']'); 
+            //echo '<br />';
+            //echo $form->error($model,'name');
+            $j++;
+        };
+        
+        echo $form->radioButtonList($model, 'answers['.$j.']',$data);
     }
+    echo CHtml::Button('SUBMIT',array('onclick'=>'send();')); 
+    $this->endWidget(); 
     ?>
-    <form id="questionBox" method="post" action="test.php">
-    <ul>
-    </ul>
-    <p><input type="hidden" name="num" value="" />
-    <input type="hidden" name="submitter" value="TRUE" />
-    <input type="submit" id="submit" name="submit" value="Submit Answer" /></p>
-    </form>
-<?php } ?>
-    
+
 <script type="text/javascript">
     function send()
     {
