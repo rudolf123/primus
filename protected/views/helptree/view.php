@@ -72,8 +72,18 @@
 
 
 </div>
+<script>
+$(document).ready(function () {
+    if ($("#mtreeview-target").is('hidden')) {
+        $("#mtreeview").fadeOut();
+      } 
+    //$('#mtreeview-target').
+    $('#mtreeview-target').fadeIn('1000');
+});
+</script>
 
 <script type="text/javascript" >
+
 $(document).ready(function() {
 
 // При клике на миниатюру

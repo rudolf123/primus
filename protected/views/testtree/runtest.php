@@ -12,14 +12,18 @@
     $j = 0;
     foreach ($arr_questions as $question)
     {
-        $data = array('11'=>11,'12'=>12,'13'=>13);
+        $data = array();
+       // $data['11'] = 11;
+        //$data['12'] = 12;
+        //$data['13'] = 13;
+        //$data = array('11'=>11,'12'=>12,'13'=>13);
         echo $question;
         echo '<br />';
         foreach($arr_answers[$i++] as $answer)
         {
+            $data[$answer] = $answer;
            // echo $answer;
           //  echo '<br />';
-          //  array_push($data, $answer);
            // echo $form->textField($model,'answers['.$j.']'); 
             //echo '<br />';
             //echo $form->error($model,'name');
