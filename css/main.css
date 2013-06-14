@@ -448,3 +448,174 @@ div.search-form
 div.ui-tooltip {
     max-width: 100px;
 }
+
+
+#main-quiz-holder {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(252, 252, 252);
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: rgb(222, 222, 222);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: rgb(222, 222, 222);
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: rgb(222, 222, 222);
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    border-top-color: rgb(222, 222, 222);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: 0 1px 5px rgb(217, 217, 217), 0 10px 20px rgb(241, 241, 241) inset;
+    font-family: "Myriad","Myriad Pro","Helvetica","Segoe UI","Lucida Sans Unicode","Lucida Grande",sans-serif;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    position: relative;
+    width: 600px;
+}
+
+.hide 
+{
+    display: none;
+}
+
+.questionContainer 
+{
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    min-height: 400px;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    width: 560px;
+}
+
+.questionContainer ul.answers {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+}
+
+.questionContainer ul.answers li {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(246, 246, 246);
+    background-image: -moz-linear-gradient(center top , rgb(246, 246, 246), rgb(212, 212, 212));
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: rgb(161, 161, 161);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: rgb(161, 161, 161);
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: rgb(161, 161, 161);
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    border-top-color: rgb(161, 161, 161);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset, 0 0 6px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.4);
+    color: rgb(76, 76, 76);
+    margin-bottom: 12px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 12px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.questionContainer ul.answers li.selected 
+{
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(111, 178, 229);
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    box-shadow: 0 1px 5px rgb(0, 97, 170), 0 10px 20px rgb(182, 249, 255) inset;
+}
+
+.questionContainer .question, h2.qTitle {
+    font-size: 26px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+}
+
+.question 
+{
+    line-height: 1.3em;
+    padding-left: 20px;
+}

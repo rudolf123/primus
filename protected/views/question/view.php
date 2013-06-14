@@ -29,6 +29,7 @@ $dataProvider = new CActiveDataProvider('Answer', array(
                     'class'=>'CButtonColumn',
                     'template'=>'{view}{update}{delete}',
                     'viewButtonUrl' => 'Yii::app()->createUrl("question/viewAnswer", array("id"=>$data->id))',
+                    'updateButtonUrl' => 'Yii::app()->createUrl("question/updateAnswer", array("id"=>$data->id))',
                     'deleteButtonUrl'=> 'Yii::app()->createUrl("question/deleteAnswer", array("id"=>$data->id))',
                     /*'buttons'=>array
                     (
@@ -80,7 +81,6 @@ $dataProvider = new CActiveDataProvider('Answer', array(
             ));
         ?>
 
-        <?php //добавляем каталог?>
         <?php echo $forms->errorSummary($answermodel); ?>
         <br />
         <?php echo $forms->labelEx($answermodel,'text'); ?>

@@ -86,6 +86,25 @@ class QuestionController extends Controller
 		//	'model'=>$model,
 		//));
 	}
+        
+        public function actionUpdateAnswer($id)
+	{
+		$model = Answer::model()->findByPk($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Answer']))
+		{
+			$model->attributes=$_POST['Answer'];
+			if($model->save())
+				$this->redirect(array('question/view', 'id'=>$model->question_id));
+		}
+
+		$this->render('updateAnswer',array(
+			'model'=>$model,
+		));
+	}
 
 	/**
 	 * Creates a new model.
