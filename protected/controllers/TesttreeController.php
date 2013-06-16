@@ -109,8 +109,8 @@ class TesttreeController extends Controller
             else 
             {
 
-                $file = fopen('logTest.txt', 'a');
-                fwrite($file, 'logBegin');
+                //$file = fopen('logTest.txt', 'a');
+                //fwrite($file, 'logBegin');
                 $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
                 $count_questions = count($testquestions);
                 if($count_questions > 0){
@@ -128,23 +128,24 @@ class TesttreeController extends Controller
                 {
                     $arr_answers_ = array();
                     array_push($arr_questions,$question->text);
-                    fwrite($file, $question->text);
+                    //fwrite($file, $question->text);
                     $answers = Answer::model()->findAllByAttributes(array('question_id'=>$question->id));
                     foreach($answers as $answer)
                     {
                         array_push($arr_answers_,$answer->text);
-                        fwrite($file, $answer->text);
+                        //fwrite($file, $answer->text);
                     }
                     array_push($arr_answers, $arr_answers_);
                 }
-                fwrite($file, 'logEnd');
-                fclose($file);
+                //fwrite($file, 'logEnd');
+                //fclose($file);
                 $model = $this->loadModel($id);
                 $qmodel = new QuestionForm;
-                $this->renderPartial('runtest',array(
+                $this->renderPartial('viewtest',array(
                         'arr_answers'=>$arr_answers,
                         'arr_questions'=>$arr_questions,
-                        'model'=>$qmodel,
+                        'qmodel'=>$qmodel,
+                        'model'=>$model,
                         ),false,true);
 
             }
@@ -263,25 +264,40 @@ class TesttreeController extends Controller
             $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
             $count_questions = count($testquestions);
             if($count_questions > 0){
-                $arr_questions = array();
+                $arr_questions_ids = array();
                 foreach($testquestions as $testquestion)
-                    array_push($arr_questions,$testquestion->question_id);
+                    array_push($arr_questions_ids,$testquestion->question_id);
             }
             $criteria = new CDbCriteria();
-            $criteria->addInCondition('id', $arr_questions);
+            $criteria->addInCondition('id', $arr_questions_ids);
 
-           // $dataProvider = new CActiveDataProvider('Question', array(
-           //    'criteria' => $criteria));
-            
-            $dataProvider = Question::model()->findAll($criteria);
-
-            
+            $questions = Question::model()->findAll($criteria);
+            $arr_questions = array();
+            $arr_answers = array();
+            foreach($questions as $question)
+            {
+                $arr_answers_ = array();
+                array_push($arr_questions,$question->text);
+                //fwrite($file, $question->text);
+                $answers = Answer::model()->findAllByAttributes(array('question_id'=>$question->id));
+                foreach($answers as $answer)
+                {
+                    array_push($arr_answers_,$answer->text);
+                    //fwrite($file, $answer->text);
+                }
+                array_push($arr_answers, $arr_answers_);
+            }
+            //fwrite($file, 'logEnd');
+            //fclose($file);
             $model = $this->loadModel($id);
-            $this->render('runtest',array(
-                    'questions_ids'=>$arr_questions,
-                    'model'=>$model,
-                    'dataProvider'=>$dataProvider,
-                    ),false,true);
+            $qmodel = new QuestionForm;
+
+
+            $this->render('runtest', array(
+                        'arr_answers'=>$arr_answers,
+                        'arr_questions'=>$arr_questions,
+                        'model'=>$qmodel,
+                        ), false, true);
         }
 
         public function loadModel($id)

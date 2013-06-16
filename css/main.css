@@ -619,3 +619,92 @@ div.ui-tooltip {
     line-height: 1.3em;
     padding-left: 20px;
 }
+
+.questiontext
+{
+    background-image: -moz-linear-gradient(center top , rgb(246, 246, 246), rgb(212, 212, 212));
+    
+    background-origin: padding-box;
+    background-color:  #E6F2FF;
+    border: 1px solid #e3e3e3;
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+       -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.questiontext h5
+{
+    margin: 10px;
+}
+.questionblock
+{
+
+}
+
+.answer
+{
+    margin: 5px;
+    font-size: 15px;
+}
+
+.answerblock
+{
+        -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(246, 246, 246);
+    background-image: -moz-linear-gradient(center top , rgb(246, 246, 246), rgb(212, 212, 212));
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: rgb(161, 161, 161);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: rgb(161, 161, 161);
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: rgb(161, 161, 161);
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    border-top-color: rgb(161, 161, 161);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset, 0 0 6px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.4);
+    color: rgb(76, 76, 76);
+    margin-bottom: 12px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 12px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}

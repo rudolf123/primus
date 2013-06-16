@@ -42,6 +42,8 @@ class Testtree extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('title', 'required'),
+                        array('time', 'required'),
+			array('time', 'numerical', 'integerOnly'=>true),
 			array('parent_id, test_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>40),
 			array('tooltip', 'length', 'max'=>100),
@@ -73,7 +75,8 @@ class Testtree extends CActiveRecord
 			'id' => 'ID',
 			'parent_id' => 'Parent',
 			'test_id' => 'Test',
-			'title' => 'Название',
+			'title' => 'Название теста',
+                        'time'=>'Время на выполнение',
 			'tooltip' => 'Tooltip',
 			'url' => 'Url',
 			'icon' => 'Icon',
