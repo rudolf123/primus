@@ -28,8 +28,13 @@
    <?php //$this->renderPartial('_ajaxContent', array('myValue'=>'$myValue')); ?>
 </div>
 <div id="mtreeview-target">
-
+    
 </div>
+<?php 
+    //echo CHtml::ajaxLink('clickMe1', Yii::app()->createUrl('testtree/viewTest',array('id'=>25)), array('update'=>'#mtreeview-target'));
+    //echo CHtml::ajaxLink('clickMe2', Yii::app()->createUrl('testtree/viewTest',array('id'=>20)), array('update'=>'#data'));
+?>
+
 <div id="mtreeview-buttons">
     <?php
     if (Yii::app()->user->checkAccess('moderator'))
