@@ -4,17 +4,38 @@
                 'id'=>'question',
                 'enableAjaxValidation'=>false,
                 'htmlOptions'=>array(
-                               'onsubmit'=>"return false;",// Disable normal form submit 
-                               'onkeypress'=>" if(event.keyCode == 13){ send(); } " //do ajax call when user presses enter key 
+                               //'onsubmit'=>"return false;",// Disable normal form submit 
+                               //'onkeypress'=>" if(event.keyCode == 13){ send(); } " //do ajax call when user presses enter key 
                             ),
-                'action' => array('helptree/create'),
+                'action' => array('testtree/ajax'),
                 ));
     echo $form->errorSummary($model);
-    $i = 0;
-    $j = 0;
-    $pattern = ' ';
-    $replace = '_';
+    //$i = 0;
+    //$j = 0;
+    $k = 0;
+    //$pattern = ' ';
+    //$replace = '_';
 
+    foreach($questions as $question)
+    {
+        echo '<div class="questionblock">';
+        echo '<div class="questiontext">';
+        echo '<h5> Вопрос №'.($k+1).'</h5>';
+        echo '<h5>'.$question->text.'</h5>';
+        echo '</div>';
+        echo '<div class="answerblock">';
+        echo '<h5>Варианты ответов:</h5>';
+        $answers = Answer::model()->findAllByAttributes(array('question_id'=>$question->id));
+        foreach($answers as $answer)
+        {
+            echo '<div class="answer">'.$form->radioButton($model, 'answers['.$k.']',array('value'=>$question->id.';'.$answer->id,'uncheckValue'=>null)).$answer->text.'</div>';
+        };
+        echo '</div>';
+        echo '</div>';
+        
+        $k++;
+    }
+    /*
     foreach ($arr_questions as $question)
     {
         echo '<div class="questionblock">';
@@ -45,7 +66,7 @@
             //echo '<input type="radio" data-key="'.$j.'" name="q'.$i.'">';
             //echo $answer2;
             //echo '</label>';
-            //echo '</li>';*/
+            //echo '</li>';
             $j++;
         };
         echo '</div>';
@@ -54,10 +75,20 @@
         //echo $form->radioButtonList($model, 'answers['.$j.']',$data);
         //echo '</ul>';
         echo '</div>';
-    }
+    }*/
 
 
-    echo CHtml::Button('SUBMIT',array('onclick'=>'send();')); 
+    //echo CHtml::Button('SUBMIT',array('onclick'=>'send();')); 
+    
+    $this->widget('zii.widgets.jui.CJuiButton', array(
+        'name'=>'submit',
+        'caption'=>'Завершить',
+        'htmlOptions'=>array(
+            'class'=>'ui-button-primary'
+            ),
+        )
+    );
+    
     $this->endWidget(); 
     ?>
 </div>

@@ -708,3 +708,16 @@ div.ui-tooltip {
     padding-top: 5px;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 }
+
+#scroll{
+    position:fixed;
+    width:10px;
+    height:30px;
+    background-color:#bbb;
+    top: 0px;
+}
+#contentup{
+    margin-left:15px;
+    border:1px solid blue;
+    height:2000px;
+}

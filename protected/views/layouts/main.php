@@ -80,7 +80,9 @@
 			'links'=>$this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
-
+<div id="scroll">
+    asdasdasfsdf
+    </div>
 	<?php echo $content; ?>
 
 	<div class="clear"></div>
@@ -91,6 +93,14 @@
 	</div><!-- footer -->
 
 </div><!-- page -->
+
+<script>
+$(function(){
+    $(window).scroll(function () {
+$("#scroll").css('top',$(window).scrollTop()/($(document).height()-$(window).height())*($(window).height()-30));
+    });
+});
+</script>
 
 </body>
 </html>

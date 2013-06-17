@@ -66,12 +66,15 @@ class TesttreeController extends Controller
                     foreach ($_POST['QuestionForm'] as $attr)
                     {
                     
-                        fwrite($file, $attr.';   ');
+                        //fwrite($file, $attr.';   ');
                         
                         if (is_array($attr))
                         {
                             foreach ($attr as $a)
-                                fwrite($file, $a.';   ');
+                            {
+                                list($question_id, $answer_id) = explode(";", $a);
+                                fwrite($file, 'question_id = '.$question_id.':answer_id = '.$answer_id.'; ');
+                            }
                         }
                     }
                     
@@ -296,6 +299,7 @@ class TesttreeController extends Controller
             $this->render('runtest', array(
                         'arr_answers'=>$arr_answers,
                         'arr_questions'=>$arr_questions,
+                        'questions'=>$questions,
                         'model'=>$qmodel,
                         ), false, true);
         }
