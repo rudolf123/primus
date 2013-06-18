@@ -23,8 +23,11 @@ $dataProvider = new CActiveDataProvider('Answer', array(
 	//'filter'=>$dataProvider,
 	'columns'=>array(
 		'text',
-		'isright',
-		'image',
+                array(
+                'value' => '$data->isright==0 ? "Не верный" : "Верный"',
+                'type' => 'html',
+                ),
+                'image',
 		array(
                     'class'=>'CButtonColumn',
                     'template'=>'{view}{update}{delete}',

@@ -5775,3 +5775,531 @@ Stack trace:
 REQUEST_URI=/index.php/site/Adminsections
 HTTP_REFERER=http://primus_yii2/index.php/site/admin
 ---
+2013/06/18 10:31:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:32:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:33:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:34:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:35:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:36:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:37:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:38:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:39:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:40:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:41:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:42:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:43:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:44:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:45:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:46:49 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:47:49 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:54:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:55:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:56:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:57:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:58:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 10:59:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 11:00:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 11:01:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 11:02:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 11:03:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 11:04:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 11:06:10 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('keepAliveStatus')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/keepAl...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/helptree/keepAliveStatus
+HTTP_REFERER=http://primus_yii2/index.php/user/profile
+---
+2013/06/18 11:17:33 [warning] [application] Не удалось присвоить небезопасный атрибут "passwd2" класса "User".
+in Z:\home\primus_yii2\www\protected\controllers\UserController.php (133)
+in Z:\home\primus_yii2\www\index.php (13)
+2013/06/18 11:17:33 [warning] [application] Не удалось присвоить небезопасный атрибут "passwdModerator" класса "User".
+in Z:\home\primus_yii2\www\protected\controllers\UserController.php (133)
+in Z:\home\primus_yii2\www\index.php (13)

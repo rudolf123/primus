@@ -55,8 +55,9 @@
                                 'type'=>'danger',
                                 'htmlOptions'=>array(
                                             'onclick'=>'js:bootbox.confirm("Вы уверены?",
-                                            function()
+                                            function(confirmed)
                                             {
+                                                deletefile(confirmed)
                                             }
                                             )'
                                 ),
@@ -92,9 +93,6 @@
                 <?php echo $form->error($model,'videofile'); ?>
         </div>
         
-        <?php// echo $form->hiddenField($model,'type'); ?>
-        <?php //echo $form->hiddenField($model,'icon'); ?>
-        <?php// echo $form->hiddenField($model,'url'); ?>
         <?php echo $form->hiddenField($model,'etype', array('value'=>1)); ?>
 
 	<div class="form-actions">
@@ -127,3 +125,25 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+
+<script>
+
+            function deletefile(name)
+            { 
+                var name1 = 'sdfsdf';
+                    $.ajax({
+                        type: "POST",
+                        url:  "<?php echo Yii::app()->createUrl('helptree/Ajaxdeletepic',array('name'=>name)); ?>" + name,
+                        data:  {},
+                        success: function(){
+                            // alert("Sucess");
+                            },
+                        error: function(){
+                       // alert("failure");
+
+                        }
+                      });
+            }
+            //setInterval(timer,5000);
+
+</script>

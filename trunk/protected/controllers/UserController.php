@@ -96,9 +96,14 @@ class UserController extends CController
         
         $this->performAjaxValidation($model);
         if (!empty($_POST['User'])) {
-            $model->name = $_POST['User']['name'];
+            $pass = $model->passwd;
+            $model->attributes = $_POST['User'];
+            if ($model->passwd!==$pass)
+                $model->passwd = crypt($model->passwd,'Fghqwe$trteysdf');//self::blowfishSalt());
             $model->save();            
         }
+        
+        $this->redirect(Yii::app()->createUrl('user/profile'));
     }
     
      /**
@@ -168,6 +173,11 @@ class UserController extends CController
         }
     }
     
+    public function actionSaveChanges($id)
+    {
+        
+    }
+            
     function blowfishSalt($cost = 13)
     {
         if (!is_numeric($cost) || $cost < 4 || $cost > 31) {

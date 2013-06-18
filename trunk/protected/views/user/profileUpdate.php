@@ -62,7 +62,7 @@
              <td>
                  <?php $this->widget('zii.widgets.jui.CJuiButton', array(
                             'name'=>'buttonSubmit',
-                            'caption'=>'Зарегистрироваться',
+                            'caption'=>'Сохранить изменения',
                             //'value'=>'abc',
                             'htmlOptions'=>array(
                                 'style'=>'height:40px; width:215px; margin-top: 10px; margin-bottom: 10px ',
