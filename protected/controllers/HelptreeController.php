@@ -167,8 +167,15 @@ class HelptreeController extends Controller
 		//else
 		//	throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
+        
+        public function actionAjaxdeletepic($name)
+        {
+            $file = fopen('logdeleteajax.txt','a');
+            fwrite($file, $name);
+            fclose($file);
+        }
 
-	/**
+        /**
 	 * Lists all models.
 	 */
 	public function actionIndex()

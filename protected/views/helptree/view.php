@@ -26,7 +26,7 @@
                     'debug' => false,            //enable the debugger to see what you will get
                     //'id' => 'documentspanel'         //id of the print link
                 ));
-                $this->widget('zii.widgets.jui.CJuiButton', array(
+               /* $this->widget('zii.widgets.jui.CJuiButton', array(
                     'name'=>'buttonchangesize',
                     'caption'=>'Изменить размер',
                     //'value'=>'abc',
@@ -36,7 +36,7 @@
                         ),
                     'onclick'=>'js:changeSize()',
                     )
-                );
+                );*/
         $this->endWidget(); 
                
         ?>
@@ -46,9 +46,9 @@
 </div>
 
 
-<div id="<?php if (User::model()->findByPk(Yii::app()->user->id)->fixedcontent) 
-                    echo 'HelptreeViewContentFix';
-               else 
+<div id="<?php //if (User::model()->findByPk(Yii::app()->user->id)->fixedcontent) 
+                 //   echo 'HelptreeViewContentFix';
+              // else 
                     echo 'HelptreeViewContent'?>">
     
     <?php if ($model->htmlfield != '')
