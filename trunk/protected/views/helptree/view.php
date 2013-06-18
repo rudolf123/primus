@@ -26,6 +26,17 @@
                     'debug' => false,            //enable the debugger to see what you will get
                     //'id' => 'documentspanel'         //id of the print link
                 ));
+                $this->widget('zii.widgets.jui.CJuiButton', array(
+                    'name'=>'buttonchangesize',
+                    'caption'=>'Изменить размер',
+                    //'value'=>'abc',
+                    'htmlOptions'=>array(
+                        //'style'=>'height:40px; width:250px',
+                        'class'=>'btn btn-primary btn-large'
+                        ),
+                    'onclick'=>'js:changeSize()',
+                    )
+                );
         $this->endWidget(); 
                
         ?>
@@ -72,6 +83,13 @@
 
 
 </div>
+
+<script>
+function changeSize() {
+$("#HelptreeViewContentFix").attr('height');
+};
+</script>
+
 <script>
 $(document).ready(function () {
     if ($("#mtreeview-target").is('hidden')) {

@@ -121,6 +121,28 @@ class SiteController extends Controller
             $this->render('adminview');
         }
         
+        public function actionAdminsections()
+        {
+            $modelHelp = Helptree::model()->findAll();
+            $modelTrain = Trainingtree::model()->findAll();
+            $dataProviderHelp = new CActiveDataProvider('Helptree', array());
+            $dataProviderTrain = new CActiveDataProvider('Trainingtree', array());
+            $this->render('adminsectionsview', array('modelHelp'=>$dataProviderHelp,
+                                                     'modelTrain'=>$dataProviderTrain,   
+                                        ));
+        }
+        
+        public function actionAdminsectionsAjax()
+        {
+            $modelHelp = Helptree::model()->findAll();
+            $modelTrain = Trainingtree::model()->findAll();
+            $dataProviderHelp = new CActiveDataProvider('Helptree', array());
+            $dataProviderTrain = new CActiveDataProvider('Trainingtree', array());
+            $this->render('_adminsectionsview', array('modelHelp'=>$dataProviderHelp,
+                                                     'modelTrain'=>$dataProviderTrain,   
+                                        ));
+        }
+
         public function actionLogin()
 	{
             $this->redirect('../user/login');

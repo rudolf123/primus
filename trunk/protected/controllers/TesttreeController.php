@@ -41,7 +41,25 @@ class TesttreeController extends Controller
             $testquestion->test_id = $test_id;
             $testquestion->question_id = $question_id;
             $testquestion->save();
-            $this->redirect('../testtree/index/viewtest', array('id'=>$testquestion->test_id));
+            $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$test_id));
+            $count_questions = count($testquestions);
+            if($count_questions > 0){
+                $arr_questions = array();
+                foreach($testquestions as $testquestion)
+                    array_push($arr_questions,$testquestion->question_id);
+            }
+            $criteria = new CDbCriteria();
+            $criteria->addNotInCondition('id', $arr_questions);
+
+            $dataProvider = new CActiveDataProvider('Question', array(
+               'criteria' => $criteria));
+
+            $model = $this->loadModel($test_id);
+
+            $this->renderPartial('_viewquestions',array(
+                    'dataProvider'=>$dataProvider,
+                    ));
+            //$this->redirect('../testtree/index/viewtest', array('id'=>$testquestion->test_id));
             //if($testquestion->save())
            // {
            //     $this->redirect('../testtree/index');

@@ -60,6 +60,7 @@ class User extends CActiveRecord
             'passwdModerator' => 'Пароль преподавателя',
             'section'=>'Что делает?',
             'online'=>'В сети',
+            'regdate'=>'Дата регистрации',
         );
     } 
     

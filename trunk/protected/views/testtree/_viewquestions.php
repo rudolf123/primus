@@ -1,6 +1,3 @@
-<h2>Доступные вопросы</h2>
-
-<div id="ajaxModerateTable">
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
     'id'=>'question-grid',
@@ -38,4 +35,3 @@ $this->widget('zii.widgets.grid.CGridView', array(
     ),
 ));
 ?>
-</div>
