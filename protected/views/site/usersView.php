@@ -10,6 +10,7 @@
             'online',
             'block',
             'rank',
+            'regdate',
             array(
                 'class'=>'CButtonColumn',
                 'template'=>'{view}{delete}',
