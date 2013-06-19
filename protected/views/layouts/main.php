@@ -80,9 +80,7 @@
 			'links'=>$this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
-<div id="scroll">
-    asdasdasfsdf
-    </div>
+<div style="opacity: 0.8; position: absolute; top: 456px; right: 0px; display:none;" class="scroll-to-top-button"></div>
 	<?php echo $content; ?>
 
 	<div class="clear"></div>
@@ -95,10 +93,46 @@
 </div><!-- page -->
 
 <script>
-$(function(){
-    $(window).scroll(function () {
-$("#scroll").css('top',$(window).scrollTop()/($(document).height()-$(window).height())*($(window).height()-30));
-    });
+(function(jq) {
+	jq.autoScroll = function(ops) {
+		ops = ops || {};
+		ops.styleClass = ops.styleClass || 'scroll-to-top-button';
+		var t = jq('<div class="'+ops.styleClass+'"></div>'),
+    	d = jq(ops.target || document);
+		jq(ops.container || 'body').append(t);
+
+		t.css({
+			opacity: 0,
+			position: 'absolute',
+			top: 0,
+			right: 0
+		}).click(function() {
+		jq('html,body').animate({
+			scrollTop: 0
+		}, ops.scrollDuration || 1000);
+	});
+
+	d.scroll(function() {
+		var sv = d.scrollTop();
+		if (sv < 1000) {
+			t.clearQueue().fadeOut(ops.hideDuration || 200);
+			return;
+		}
+
+		t.css('display', '').clearQueue().animate({
+			top: sv,
+			opacity: 0.8
+		}, ops.showDuration || 500);
+		});
+	};
+})(jQuery);
+
+$(document).ready(function(){
+	$.autoScroll({
+		scrollDuration: 1000, 
+		showDuration: 600, 
+		hideDuration: 300
+	});
 });
 </script>
 
