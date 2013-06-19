@@ -7,7 +7,11 @@
             'surname',
             'name',
             'secondname',
-            'online',
+            array(
+                'name' => 'online',
+                'value' => '$data->online==0 ? "Нет" : "Да"',
+                'type' => 'raw',
+            ),
             'block',
             'rank',
             'regdate',

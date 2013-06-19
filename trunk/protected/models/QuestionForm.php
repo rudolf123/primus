@@ -6,6 +6,9 @@ class QuestionForm extends CFormModel
     public $name;
     public $age;
     public $answers = array();
+    public $answersmulti = array();
+    public $answerscomp = array();
+    public $test_id;
  
     public function rules()
     {

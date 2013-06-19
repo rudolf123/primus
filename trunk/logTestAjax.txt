@@ -1,1 +1,1 @@
-Array;   много;   rt;   Array;   Немного;   Array;   Немного;   rt;   Array;   1;1;   2;4;   4;12;   Array;   1;2;   2;5;   4;10;   1;1;   2;3;   4;10;   question_id = 1:answer_id = 1; question_id = 2:answer_id = 3; question_id = 4:answer_id = 10; question_id = 2:answer_id = 2; question_id = 3:answer_id = 10; 
+Вопросы с одним вариантом ответа:  question_id = 1:answer_id = 1;question_id = 2:answer_id = 5;question_id = 4:answer_id = 10;Вопросы с несколькими вариантами ответа:  Количество правильных ответов: 2
