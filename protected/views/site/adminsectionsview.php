@@ -11,9 +11,9 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'id',
             'title',
             array(
-                'name' => 'Т и п',
+                'name' => 'Тип',
                 'value' => '$data->type==0 ? "Раздел" : "Материал"',
-                'type' => 'html',
+                'type' => 'raw',
             ),
             array(
                 'class'=>'CButtonColumn',
@@ -29,7 +29,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
                     'delete' => array
                     (
                         'label'=>'Удалить',
-                        'url'=>'Yii::app()->createUrl("testtree/addquestiontotest", array("question_id"=>$data->id, "test_id"=>'.$model->id.'))',
+                        //'url'=>'Yii::app()->createUrl("testtree/addquestiontotest", array("question_id"=>$data->id, "test_id"=>'.$model->id.'))',
                     ),
 
                 ),
@@ -50,7 +50,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'id',
             'title',
             array(
-                'name' => 'Т и п',
+                'name' => 'Тип',
                 'value' => '$data->type==0 ? "Раздел" : "Материал"',
                 'type' => 'html',
             ),

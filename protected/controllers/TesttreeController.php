@@ -72,31 +72,34 @@ class TesttreeController extends Controller
         {
                 if(isset($_POST['QuestionForm']))
                 {
-                    
-                    /*if($qmodel->validate())
-                    {
-                       print_r($_REQUEST);
-                       return;
-                    }*/
-                    
                     $file = fopen('logTestAjax.txt', 'a');
-                    
-                    foreach ($_POST['QuestionForm'] as $attr)
-                    {
-                    
-                        //fwrite($file, $attr.';   ');
-                        
-                        if (is_array($attr))
+                    $rightanswwer_counter = 0;
+                    fwrite($file,'Вопросы с одним вариантом ответа:  ');
+                    if(isset($_POST['QuestionForm']['answers']))
+                        foreach ($_POST['QuestionForm']['answers'] as $attr)
                         {
-                            foreach ($attr as $a)
-                            {
-                                list($question_id, $answer_id) = explode(";", $a);
-                                fwrite($file, 'question_id = '.$question_id.':answer_id = '.$answer_id.'; ');
-                            }
+                            list($question_id, $answer_id) = explode(";", $attr);
+                            fwrite($file, 'question_id = '.$question_id.':answer_id = '.$answer_id.';');
+                            $checkanswer = Answer::model()->findByAttributes(array('question_id'=>$question_id,'id'=>$answer_id));
+                            if ($checkanswer->isright)
+                                $rightanswwer_counter++;
                         }
+                    fwrite($file,'Вопросы с несколькими вариантами ответа:  ');
+                    if(isset($_POST['QuestionForm']['answersmulti']))
+                    {
+                        /*$countofright = array();
+                        foreach ($_POST['QuestionForm']['answersmulti'] as $attr)
+                        {
+                            
+                            list($question_id, $answer_id) = explode(";", $attr);
+                            fwrite($file, 'question_id = '.$question_id.':answer_id = '.$answer_id.';');
+                            $rightanswers = Answer::model()->findAllByAttributes(array('question_id'=>$question_id,'isright'=>1));
+                            foreach ($rightanswers as $a)
+                                if ($answer_id==$a->id)
+                                    $countofright[]=
+                        }*/
                     }
-                    
-                    
+                    fwrite($file, 'Количество правильных ответов: '.$rightanswwer_counter);
                     fclose($file);
                 } 
         }
@@ -291,34 +294,14 @@ class TesttreeController extends Controller
             }
             $criteria = new CDbCriteria();
             $criteria->addInCondition('id', $arr_questions_ids);
-
             $questions = Question::model()->findAll($criteria);
-            $arr_questions = array();
-            $arr_answers = array();
-            foreach($questions as $question)
-            {
-                $arr_answers_ = array();
-                array_push($arr_questions,$question->text);
-                //fwrite($file, $question->text);
-                $answers = Answer::model()->findAllByAttributes(array('question_id'=>$question->id));
-                foreach($answers as $answer)
-                {
-                    array_push($arr_answers_,$answer->text);
-                    //fwrite($file, $answer->text);
-                }
-                array_push($arr_answers, $arr_answers_);
-            }
-            //fwrite($file, 'logEnd');
-            //fclose($file);
-            $model = $this->loadModel($id);
             $qmodel = new QuestionForm;
 
 
             $this->render('runtest', array(
-                        'arr_answers'=>$arr_answers,
-                        'arr_questions'=>$arr_questions,
                         'questions'=>$questions,
                         'model'=>$qmodel,
+                        'test_id'=>$id,
                         ), false, true);
         }
 
