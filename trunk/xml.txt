@@ -1,0 +1,19 @@
+<tests>
+	<test>
+		<title></title>
+		<time></time>
+		<questions>
+			<question>
+				<text></text>
+				<theme></theme>
+				<rate></rate>
+				<image></image>
+				<answers>
+					<text></text>
+					<image></image>
+					<isright></isright>
+				</answers>
+			</question>
+		</questions>
+	</test>
+</tests>

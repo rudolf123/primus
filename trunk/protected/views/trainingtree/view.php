@@ -4,13 +4,13 @@
              )); 
                 //echo Chtml::link('sdfsdf',Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>'2260358673_keyboard_1.jpg')), array('img'=>'src=; alt="альтернативный текст">'));
                 if ($model->doc != '')
-                    echo Chtml::link(CHtml::image('/assets/doc.gif','doc icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('trainingtree/DownloadFile',array('filename'=>$model->doc)));
+                    echo Chtml::link(CHtml::image('/assets/doc.gif','doc icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать в формате Word')),Yii::app()->createUrl('trainingtree/DownloadFile',array('filename'=>$model->doc)));
                 if ($model->pdf != '')
-                    echo Chtml::link(CHtml::image('/assets/pdf.gif','pdf icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('trainingtree/DownloadFile',array('filename'=>$model->pdf)));
+                    echo Chtml::link(CHtml::image('/assets/pdf.gif','pdf icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать в формате PDF')),Yii::app()->createUrl('trainingtree/DownloadFile',array('filename'=>$model->pdf)));
                 if ($model->program != '')
-                    echo Chtml::link(CHtml::image('/assets/gear.gif','program icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('trainingtree/DownloadFile',array('filename'=>$model->program))); 
+                    echo Chtml::link(CHtml::image('/assets/gear.gif','program icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать программу')),Yii::app()->createUrl('trainingtree/DownloadFile',array('filename'=>$model->program))); 
                 if (Yii::app()->user->checkAccess('moderator'))
-                    echo Chtml::link(CHtml::image('/assets/edit.png','edit icon is missing',array()), Yii::app()->createUrl('trainingtree/update', array('id'=>$model->id)));
+                    echo Chtml::link(CHtml::image('/assets/edit.png','edit icon is missing',array('title'=>'Изменить материал')), Yii::app()->createUrl('trainingtree/update', array('id'=>$model->id)));
                                 
 //echo CHtml::image('/assets/print.png','print icon is missing',array('width'=>'40px','height'=>'32px'));
         
@@ -34,13 +34,10 @@
 </div>
 
 <div id="HelptreeTitle">
-<h3><?php echo $model->title; ?></h3>
+<h3><?php echo $model->title; echo '<div class="toolbox"><a id="wideView" class="fix" href="#" title="Свернуть/развернуть"></a></div>';?></h3>
 </div>
 
-<div id="<?php if (User::model()->findByPk(Yii::app()->user->id)->fixedcontent) 
-                    echo 'HelptreeViewContentFix';
-               else 
-                    echo 'HelptreeViewContent'?>">
+<div id="HelptreeViewContent" class="fix">
     
             <?php if ($model->htmlfield != '')
             echo $model->htmlfield ?>
@@ -82,6 +79,15 @@
 ?>
 
 </div>
+<script>
+        $(document).ready(function() {
+            $("#wideView").click(function() {
+                $("#HelptreeViewContent").toggleClass("fix");
+                $(this).toggleClass("fix");
+            });
+        });
+</script>
+
 <script type="text/javascript" >
 $(document).ready(function() {
 

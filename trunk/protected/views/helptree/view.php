@@ -4,11 +4,11 @@
              )); 
                 //echo Chtml::link('sdfsdf',Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>'2260358673_keyboard_1.jpg')), array('img'=>'src=; alt="альтернативный текст">'));
                 if ($model->doc != '')
-                    echo Chtml::link(CHtml::image('/assets/doc.gif','doc icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->doc)));
+                    echo Chtml::link(CHtml::image('/assets/doc.gif','doc icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать в формате Word')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->doc)));
                 if ($model->pdf != '')
-                    echo Chtml::link(CHtml::image('/assets/pdf.gif','pdf icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->pdf)));  
+                    echo Chtml::link(CHtml::image('/assets/pdf.gif','pdf icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать в формате PDF')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->pdf)));  
                 if (Yii::app()->user->checkAccess('moderator'))
-                    echo Chtml::link(CHtml::image('/assets/edit.png','edit icon is missing',array()), Yii::app()->createUrl('helptree/update', array('id'=>$model->id)));
+                    echo Chtml::link(CHtml::image('/assets/edit.png','edit icon is missing',array('title'=>'Изменить материал')), Yii::app()->createUrl('helptree/update', array('id'=>$model->id)));
                 //echo Chtml::link(CHtml::image('/assets/doc.gif','doc icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('helptree/delete',array('id'=>$model->id)));
                 
                 $this->widget('ext.mPrint.mPrint', array(
@@ -26,6 +26,7 @@
                     'debug' => false,            //enable the debugger to see what you will get
                     //'id' => 'documentspanel'         //id of the print link
                 ));
+                
                /* $this->widget('zii.widgets.jui.CJuiButton', array(
                     'name'=>'buttonchangesize',
                     'caption'=>'Изменить размер',
@@ -42,14 +43,10 @@
         ?>
 </div>
 <div id="HelptreeTitle">
-<h3><?php echo $model->title; ?></h3>
+<h3><?php echo $model->title; echo '<div class="toolbox"><a id="wideView" class="fix" href="#" title="Свернуть/развернуть"></a></div>';?></h3>
 </div>
 
-
-<div id="<?php //if (User::model()->findByPk(Yii::app()->user->id)->fixedcontent) 
-                 //   echo 'HelptreeViewContentFix';
-              // else 
-                    echo 'HelptreeViewContent'?>">
+<div id="HelptreeViewContent" class='fix'>
     
     <?php if ($model->htmlfield != '')
         echo $model->htmlfield
@@ -85,9 +82,12 @@
 </div>
 
 <script>
-function changeSize() {
-$("#HelptreeViewContentFix").attr('height');
-};
+        $(document).ready(function() {
+            $("#wideView").click(function() {
+                $("#HelptreeViewContent").toggleClass("fix");
+                $(this).toggleClass("fix");
+            });
+        });
 </script>
 
 <script>
