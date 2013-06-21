@@ -1,4 +1,4 @@
-<div id="sectionname">Информационная справка</div>
+<h4>Информационная справка</h4>
 
 <div id="mtreeview">
 <?php

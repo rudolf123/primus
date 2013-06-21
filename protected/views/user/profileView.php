@@ -1,3 +1,4 @@
+<div id="block" class="well">
 <h5>
 <?php
 /*$arr_data = array('Фамилия: '=>$model->surname,
@@ -30,3 +31,4 @@ $d = floor(($ss%2592000)/86400);
 echo  "Время работы:  $d дн., $h ч., $m мин., $s сек.";
 ?>
 </h5>
+</div>

@@ -608,8 +608,6 @@ div.ui-tooltip {
 
 .questiontext
 {
-    background-image: -moz-linear-gradient(center top , rgb(246, 246, 246), rgb(212, 212, 212));
-    
     background-origin: padding-box;
     background-color:  #E6F2FF;
     border: 1px solid #e3e3e3;
@@ -644,7 +642,6 @@ div.ui-tooltip {
     background-attachment: scroll;
     background-clip: border-box;
     background-color: rgb(246, 246, 246);
-    background-image: -moz-linear-gradient(center top , rgb(246, 246, 246), rgb(212, 212, 212));
     background-origin: padding-box;
     background-position: 0 0;
     background-repeat: repeat;

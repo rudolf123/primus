@@ -121,6 +121,32 @@ class SiteController extends Controller
             $this->render('adminview');
         }
         
+        public function actionMakemoderator($id)
+        {
+            $user = User::model()->findByPk($id);
+            if ($user->role == 'user')
+                $user->role = 'moderator';
+            else
+                $user->role = 'user';
+            $user->save();
+            $this->render('userview', array('model'=>$user));
+        }
+        
+        public function actionDeleteuser($id)
+        {
+            $user = User::model()->findByPk($id);
+            $user->delete();
+            
+            $this->render('adminview');
+        }
+        
+        public function actionViewuser($id)
+        {
+            $user = User::model()->findByPk($id);
+            
+            $this->render('userview', array('model'=>$user));
+        }
+        
         public function actionAdminsections()
         {
             $modelHelp = Helptree::model()->findAll();

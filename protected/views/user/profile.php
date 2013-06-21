@@ -5,7 +5,6 @@
         'tabs'=>array(
                 array('label'=>'Информация', 'content'=>$this->renderPartial('profileView',array('model' => $model),true), 'active'=>true),
                 array('label'=>'Изменить данные', 'content'=>$this->renderPartial('profileUpdate',array('model' => $model),true)),
-                array('label'=>'Настройки', 'content'=>'Messages Content'),
             ),
         ));
 ?>
