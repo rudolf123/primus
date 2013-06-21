@@ -7,7 +7,7 @@
                                //'onsubmit'=>"return false;",// Disable normal form submit 
                                //'onkeypress'=>" if(event.keyCode == 13){ send(); } " //do ajax call when user presses enter key 
                             ),
-                'action' => array('testtree/ajax'),
+                'action' => array('testtree/finishtest'),
                 ));
     echo $form->errorSummary($model);
     $i = 0;
@@ -120,6 +120,7 @@
     $this->endWidget(); 
     ?>
 </div>
+
 <script type="text/javascript">
     function send()
     {

@@ -34,7 +34,7 @@
 </div>
 
 <div id="HelptreeTitle">
-<h3><?php echo $model->title; echo '<div class="toolbox"><a id="wideView" class="fix" href="#" title="Свернуть/развернуть"></a></div>';?></h3>
+<h5><?php echo $model->title; echo '<div class="toolbox"><a id="wideView" class="fix" href="#" title="Свернуть/развернуть"></a></div>';?></h5>
 </div>
 
 <div id="HelptreeViewContent" class="fix">

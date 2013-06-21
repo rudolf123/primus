@@ -56,9 +56,10 @@ class TesttreeController extends Controller
 
             $model = $this->loadModel($test_id);
 
-            $this->renderPartial('_viewquestions',array(
-                    'dataProvider'=>$dataProvider,
-                    ));
+            $this->render('updatetest',array(
+                        'model'=>$model,
+                        'dataProvider'=>$dataProvider,
+                        ),false,true);
             //$this->redirect('../testtree/index/viewtest', array('id'=>$testquestion->test_id));
             //if($testquestion->save())
            // {
@@ -68,6 +69,33 @@ class TesttreeController extends Controller
             //    $this->redirect('../site/error');
             
         }
+        
+        public function actionRemoveQuestionFromTest($question_id,$test_id)
+        {
+            $testquestion = new Testquestion;
+            $testquestion->test_id = $test_id;
+            $testquestion->question_id = $question_id;
+            $testquestion->save();
+            $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$test_id));
+            $count_questions = count($testquestions);
+            if($count_questions > 0){
+                $arr_questions = array();
+                foreach($testquestions as $testquestion)
+                    array_push($arr_questions,$testquestion->question_id);
+            }
+            $criteria = new CDbCriteria();
+            $criteria->addNotInCondition('id', $arr_questions);
+
+            $dataProvider = new CActiveDataProvider('Question', array(
+               'criteria' => $criteria));
+
+            $model = $this->loadModel($test_id);
+
+            $this->renderPartial('_viewquestions',array(
+                    'dataProvider'=>$dataProvider,
+                    ));
+        }
+        
         public function actionAjax()
         {
                 if(isset($_POST['QuestionForm']))
@@ -105,10 +133,8 @@ class TesttreeController extends Controller
         }
 
 
-        public function actionViewTest($id)
-	{
-            if (Yii::app()->user->checkAccess('moderator'))
-            {
+        public function actionUpdateTest($id)
+        {
                 $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
                 $count_questions = count($testquestions);
                 if($count_questions > 0){
@@ -117,6 +143,8 @@ class TesttreeController extends Controller
                         array_push($arr_questions,$testquestion->question_id);
                 }
                 $criteria = new CDbCriteria();
+                $questionsintest = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria));
                 $criteria->addNotInCondition('id', $arr_questions);
 
                 $dataProvider = new CActiveDataProvider('Question', array(
@@ -125,54 +153,48 @@ class TesttreeController extends Controller
                 $model = $this->loadModel($id);
 
 
-                $this->renderPartial('viewtest',array(
+                $this->render('updatetest',array(
                         'model'=>$model,
                         'dataProvider'=>$dataProvider,
+                        'testquestions'=>$questionsintest,
                         ),false,true);
+        }
+        
+        public function actionViewTest($id)
+	{
+            $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
+            $count_questions = count($testquestions);
+            if($count_questions > 0){
+                $arr_questions_ids = array();
+                foreach($testquestions as $testquestion)
+                    array_push($arr_questions_ids,$testquestion->question_id);
             }
-            else 
+            $criteria = new CDbCriteria();
+            $criteria->addInCondition('id', $arr_questions_ids);
+
+            $questions = Question::model()->findAll($criteria);
+            $arr_questions = array();
+            $arr_answers = array();
+            foreach($questions as $question)
             {
-
-                //$file = fopen('logTest.txt', 'a');
-                //fwrite($file, 'logBegin');
-                $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
-                $count_questions = count($testquestions);
-                if($count_questions > 0){
-                    $arr_questions_ids = array();
-                    foreach($testquestions as $testquestion)
-                        array_push($arr_questions_ids,$testquestion->question_id);
-                }
-                $criteria = new CDbCriteria();
-                $criteria->addInCondition('id', $arr_questions_ids);
-
-                $questions = Question::model()->findAll($criteria);
-                $arr_questions = array();
-                $arr_answers = array();
-                foreach($questions as $question)
+                $arr_answers_ = array();
+                array_push($arr_questions,$question->text);
+                $answers = Answer::model()->findAllByAttributes(array('question_id'=>$question->id));
+                foreach($answers as $answer)
                 {
-                    $arr_answers_ = array();
-                    array_push($arr_questions,$question->text);
-                    //fwrite($file, $question->text);
-                    $answers = Answer::model()->findAllByAttributes(array('question_id'=>$question->id));
-                    foreach($answers as $answer)
-                    {
-                        array_push($arr_answers_,$answer->text);
-                        //fwrite($file, $answer->text);
-                    }
-                    array_push($arr_answers, $arr_answers_);
+                    array_push($arr_answers_,$answer->text);
                 }
-                //fwrite($file, 'logEnd');
-                //fclose($file);
-                $model = $this->loadModel($id);
-                $qmodel = new QuestionForm;
-                $this->renderPartial('viewtest',array(
-                        'arr_answers'=>$arr_answers,
-                        'arr_questions'=>$arr_questions,
-                        'qmodel'=>$qmodel,
-                        'model'=>$model,
-                        ),false,true);
-
+                array_push($arr_answers, $arr_answers_);
             }
+            $model = $this->loadModel($id);
+            $qmodel = new QuestionForm;
+            $this->renderPartial('viewtest',array(
+                    'arr_answers'=>$arr_answers,
+                    'arr_questions'=>$arr_questions,
+                    'qmodel'=>$qmodel,
+                    'model'=>$model,
+                    ),false,true);
+
         }
         
         public function actionView($id)
@@ -303,6 +325,25 @@ class TesttreeController extends Controller
                         'model'=>$qmodel,
                         'test_id'=>$id,
                         ), false, true);
+        }
+        
+        public function actionFinishtest()
+        {
+                if(isset($_POST['QuestionForm']))
+                {
+                    $rightanswwer_counter = 0;
+                    if(isset($_POST['QuestionForm']['answers']))
+                        foreach ($_POST['QuestionForm']['answers'] as $attr)
+                        {
+                            list($question_id, $answer_id) = explode(";", $attr);
+                            $checkanswer = Answer::model()->findByAttributes(array('question_id'=>$question_id,'id'=>$answer_id));
+                            if ($checkanswer->isright)
+                                $rightanswwer_counter++;
+                        }
+                    $question_count = count(Testquestion::model()->findAllByAttributes(array('test_id'=>$_POST['QuestionForm']['test_id'])));
+                    $this->render('finishTest', array('rightcount'=>$rightanswwer_counter,'questioncount'=>$question_count));
+        
+                } 
         }
 
         public function loadModel($id)

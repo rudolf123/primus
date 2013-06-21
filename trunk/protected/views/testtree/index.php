@@ -1,4 +1,4 @@
-<h2>Проверка знаний</h2>
+<h4>Проверка знаний</h4>
 
 <div id="mtreeview">
 <?php
@@ -87,12 +87,12 @@
         //$model->parent_id = $this->model->id;
         $forms = $this->beginWidget('CActiveForm', array(
                 'id' => 'addtesttree-form',
-                //'enableClientValidation' => true,
+                'enableClientValidation' => true,
                 //'enableAjaxValidation'=>true, // <<<<------ валидация по AJAX
-                //'clientOptions' => array(
-               //         'validateOnSubmit' => true,
-                //        'validateOnChange' => true,
-                //    ),
+                'clientOptions' => array(
+                        'validateOnSubmit' => true,
+                        'validateOnChange' => true,
+                    ),
                 'htmlOptions'=>array(
                     'class'=>'well',
                     'accept-charset'=>'UTF-8',
@@ -114,7 +114,7 @@
         <br />
         <?php echo $forms->labelEx($models,'title'); ?>
         <br />
-        <?php echo $forms->textField($models,'title',array('maxlength'=>40)); ?>
+        <?php echo $forms->textField($models,'title',array('maxlength'=>250)); ?>
         <br />
         <?php echo $forms->error($models,'title'); ?>
         <br />
