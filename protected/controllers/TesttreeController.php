@@ -308,6 +308,7 @@ class TesttreeController extends Controller
         public function actionRunTest($id)
         {
             $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
+            $testtreemodel = Testtree::model()->findByPk($id);
             $count_questions = count($testquestions);
             if($count_questions > 0){
                 $arr_questions_ids = array();
@@ -323,7 +324,7 @@ class TesttreeController extends Controller
             $this->render('runtest', array(
                         'questions'=>$questions,
                         'model'=>$qmodel,
-                        'test_id'=>$id,
+                        'testtreemodel'=>$testtreemodel,
                         ), false, true);
         }
         

@@ -106,7 +106,7 @@
 
 
     //echo CHtml::Button('SUBMIT',array('onclick'=>'send();')); 
-    echo $form->hiddenField($model,'test_id', array('value'=>$test_id));
+    echo $form->hiddenField($model,'test_id', array('value'=>$testtreemodel->id));
     
     $this->widget('zii.widgets.jui.CJuiButton', array(
         'name'=>'submit',
@@ -121,6 +121,29 @@
     ?>
 </div>
 
+<!-- Начало панели счетчика -->
+<div id="countdown_dashboard">
+	<div class="dash hours_dash">
+		<span class="dash_title">часов</span>
+		<div class="digit">0</div>
+		<div class="digit">0</div>
+	</div>
+
+	<div class="dash minutes_dash">
+		<span class="dash_title">минут</span>
+		<div class="digit">0</div>
+		<div class="digit">0</div>
+	</div>
+
+	<div class="dash seconds_dash">
+		<span class="dash_title">секунд</span>
+		<div class="digit">0</div>
+		<div class="digit">0</div>
+	</div>
+
+</div>
+<!-- Завершение панели счетчика -->
+<script language="Javascript" type="text/javascript" src="/js/jquery.lwtCountdown-0.9.5.js"></script>
 <script type="text/javascript">
     function send()
     {
@@ -144,3 +167,22 @@
         });
     }
 </script>
+
+<script>
+jQuery(document).ready(function() {
+	$("#countdown_dashboard").countDown({
+		targetOffset: {
+			"day": 		0,
+			"month": 	0,
+			"year": 	0,
+			"hour": 	0,
+			"min": 		<?php echo $testtreemodel->time?>,
+			"sec": 		6
+		}, 
+		// По завершении счета будет выскальзывать панель #complete_info_message
+		onComplete: function(){send()}
+	});
+});
+</script>
+
+

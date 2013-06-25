@@ -81,6 +81,8 @@ class TrainingtreeController extends Controller
                         else
                             $this->redirect('../site/error');
 		}
+                
+                $this->render('create', array('model'=>$model));
 	}
         
         public function actionUpdate($id)
