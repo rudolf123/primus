@@ -82,7 +82,7 @@
 			'links'=>$this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
-<div style="opacity: 0.8; position: absolute; top: 456px; right: 0px; display:none;" class="scroll-to-top-button"></div>
+        <div id="scrollupbutton" class="scroll-to-top-button"></div>
 	<?php echo $content; ?>
 
 	<div class="clear"></div>
