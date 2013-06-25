@@ -52,15 +52,11 @@
         echo $model->htmlfield
 ?>
     
-<!--Контейнер в котором мы будем отображать большую картинку-->
-<div id="img_container"><img src="" width="1000px"></div>
-        <!--Контейнер с миниатюрами-->
-<div class="imagepreview">
-<?php
-        if ($model->img != '')
-            echo CHtml::image('/storage/'.$model->img,'Picture is missing');  
-?> 
-</div>
+
+        <?php 
+
+        echo Chtml::link(CHtml::image('/storage/'.$model->img,'Изображение недоступно!',array('style'=>'class: imagepreview')),'/storage/'.$model->img,array('rel'=>'lightbox'));
+        ?>
 
     <?php
     if ($model->video != '')
@@ -90,16 +86,7 @@
         });
 </script>
 
-<script>
-$(document).ready(function () {
-    if ($("#mtreeview-target").is('hidden')) {
-        $("#mtreeview").fadeOut();
-      } 
-    //$('#mtreeview-target').
-    $('#mtreeview-target').fadeIn('1000');
-});
-</script>
-
+<!--
 <script type="text/javascript" >
 
 $(document).ready(function() {
@@ -132,3 +119,4 @@ $('#documentspanel').click(function()
 });
 
 </script>
+-->

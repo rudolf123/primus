@@ -112,13 +112,10 @@
         <br />
         <?php echo $forms->hiddenField($models,'etype', array('value'=>0)); ?>
         <br />
-        <?php// echo CHtml::submitButton($models->isNewRecord ? 'Создать' : 'Сохранить'); ?>
         <?php $this->widget('zii.widgets.jui.CJuiButton', array(
             'name'=>'submit1',
             'caption'=>'Сохранить',
-            //'value'=>'abc',
             'htmlOptions'=>array(
-               // 'style'=>'height:20px; width:100px',
                 'class'=>'btn btn-primary btn-large'
                 ),
             )
@@ -126,9 +123,7 @@
         $this->widget('zii.widgets.jui.CJuiButton', array(
             'name'=>'buttonCancel1',
             'caption'=>'Отмена',
-            //'value'=>'abc',
             'htmlOptions'=>array(
-                //'style'=>'height:40px; width:250px',
                 'class'=>'btn btn-primary btn-large'
                 ),
             'onclick'=>'js:function(){$("#dialogFolders").dialog("close"); return false;}',
@@ -225,13 +220,10 @@
         <?php echo $form->error($model,'videofile'); ?>
         <br />
 <div class="form-actions">
-        <?php// echo CHtml::submitButton($model->isNewRecord ? 'Создать' : 'Сохранить'); ?>
         <?php $this->widget('zii.widgets.jui.CJuiButton', array(
             'name'=>'submit',
             'caption'=>'Сохранить',
-            //'value'=>'abc',
             'htmlOptions'=>array(
-               // 'style'=>'height:20px; width:100px',
                 'class'=>'btn btn-primary btn-large'
                 ),
             )
@@ -239,9 +231,7 @@
         $this->widget('zii.widgets.jui.CJuiButton', array(
             'name'=>'buttonCancel',
             'caption'=>'Отмена',
-            //'value'=>'abc',
             'htmlOptions'=>array(
-                //'style'=>'height:40px; width:250px',
                 'class'=>'ui-button-primary'
                 ),
             'onclick'=>'js:function(){$("#dialogMaterial").dialog("close"); return false;}',
@@ -259,6 +249,7 @@
     
     }// if checkaccess;
     ?>
+<script src="/js/lightbox.js"></script>
 
 <script>
         $(document).ready(function(){
@@ -286,7 +277,19 @@
         
 
 </script>
-
+<!--
+<script type="text/javascript">
+    $(function() {
+        var offset = $("#mtreeview").offset();
+        var topPadding = 20;
+        $(window).scroll(function() {
+        if ($(window).scrollTop() > offset.top) {
+            $("#mtreeview").stop().animate({marginTop: $(window).scrollTop() - offset.top + topPadding});
+        }
+        else {$("#mtreeview").stop().animate({marginTop: 0});};});
+    });
+</script> 
+-->
 
 
 

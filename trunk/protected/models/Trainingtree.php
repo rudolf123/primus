@@ -61,7 +61,7 @@ class Trainingtree extends CActiveRecord
 			array('tooltip', 'length', 'max'=>100),
 			array('url', 'length', 'max'=>255),
 			array('icon', 'length', 'max'=>50),
-                        array('imgfile', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>true),
+                        array('imgfile', 'file', 'types'=>'jpg, jpeg, gif, png', 'allowEmpty'=>true),
                         array('docfile', 'file', 'types'=>'doc, docx', 'allowEmpty'=>true),
                         array('pdffile', 'file', 'types'=>'pdf', 'allowEmpty'=>true),
                         array('videofile', 'file', 'types'=>'mp4, mpeg, mov', 'allowEmpty'=>true),

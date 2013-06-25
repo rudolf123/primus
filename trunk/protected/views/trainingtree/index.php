@@ -36,7 +36,6 @@
         $this->widget('zii.widgets.jui.CJuiButton', array(
             'name'=>'buttonAddFolder',
             'caption'=>'Добавить раздел',
-            //'value'=>'abc',
             'htmlOptions'=>array(
                 'style'=>'height:40px; width:250px; margin-top: 10px; margin-bottom: 10px ',
                 'class'=>'button'
@@ -51,7 +50,8 @@
                 'style'=>'height:40px; width:250px',
                 'class'=>'ui-button-primary'
                 ),
-            'onclick'=>'js:function(){$("#dialogMaterial").dialog("open"); return false;}',
+            //'onclick'=>'js:function(){$("#dialogMaterial").dialog("open"); return false;}',
+            'onclick'=>'js:function(){window.location = "create"; return false;}',
             )
         );
     }
@@ -244,11 +244,6 @@
 
     }
 ?>
-
-    <script type="text/javascript" >
-    function addItem(){
-        $(this).dialog("close");
-        alert( $("#item-name-input").val() + " has been added");
-    }
-</script>
 </div><!-- demo box -->
+
+<script src="/js/lightbox.js"></script>
