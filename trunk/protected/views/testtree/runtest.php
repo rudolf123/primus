@@ -123,6 +123,7 @@
 
 <!-- Начало панели счетчика -->
 <div id="countdown_dashboard">
+    Осталось времени
 	<div class="dash hours_dash">
 		<span class="dash_title">часов</span>
 		<div class="digit">0</div>
@@ -140,9 +141,20 @@
 		<div class="digit">0</div>
 		<div class="digit">0</div>
 	</div>
-
 </div>
 <!-- Завершение панели счетчика -->
+<script type="text/javascript">
+    $(function() {
+        var offset = $("#countdown_dashboard").offset();
+        var topPadding = 20;
+        $(window).scroll(function() {
+        if ($(window).scrollTop() > offset.top) {
+            $("#countdown_dashboard").stop().animate({marginTop: $(window).scrollTop() - offset.top + topPadding});
+        }
+        else {$("#countdown_dashboard").stop().animate({marginTop: 0});};});
+    });
+</script> 
+
 <script language="Javascript" type="text/javascript" src="/js/jquery.lwtCountdown-0.9.5.js"></script>
 <script type="text/javascript">
     function send()
