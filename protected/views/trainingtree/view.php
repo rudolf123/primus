@@ -12,8 +12,6 @@
                 if (Yii::app()->user->checkAccess('moderator'))
                     echo Chtml::link(CHtml::image('/assets/edit.png','edit icon is missing',array('title'=>'Изменить материал')), Yii::app()->createUrl('trainingtree/update', array('id'=>$model->id)));
                                 
-//echo CHtml::image('/assets/print.png','print icon is missing',array('width'=>'40px','height'=>'32px'));
-        
                 $this->widget('ext.mPrint.mPrint', array(
                     'title' => $model->title,          //the title of the document. Defaults to the HTML title
                     'tooltip' => 'Печать',        //tooltip message of the print icon. Defaults to 'print'
@@ -34,33 +32,40 @@
 </div>
 
 <div id="HelptreeTitle">
-<h5><?php echo $model->title; echo '<div class="toolbox"><a id="wideView" class="fix" href="#" title="Свернуть/развернуть"></a></div>';?></h5>
+<h5>
+    <?php 
+        echo $model->title; 
+        echo '<div class="toolbox"><a id="wideView" class="fix" href="#" title="Свернуть/развернуть"></a></div>';
+    ?>
+</h5>
 </div>
 
 <div id="HelptreeViewContent" class="fix">
-    
-            <?php if ($model->htmlfield != '')
-            echo $model->htmlfield ?>
-    
-<!--Контейнер в котором мы будем отображать большую картинку-->
-<div id="img_container"><img src="" width="1000px"></div>
-        <!--Контейнер с миниатюрами-->
-<div class="imagepreview">
-<?php
-        if ($model->img != '')
-            echo CHtml::image('/storage/training/'.$model->img,'Picture is missing');  
-?> 
-</div>
-
-    <?php
-        //$file1 = fopen('log11234.txt','a');
+<?php 
+    //если есть, вывоим текстовое содержимое
+    if ($model->htmlfield != '')
+        echo $model->htmlfield;
+    //если есть, вывоим изображение
+    if ($model->img != '')
+    {
+        echo Chtml::link(
+                CHtml::image('/storage/training/'.$model->img,'Изображение недоступно!',array(
+                    'style'=>'class: imagepreview',
+                    )),
+                '/storage/training/'.$model->img,array(
+                    'rel'=>'lightbox',
+                    'title'=>$model->img,
+                    )
+                );
+    }
+    //если есть, вывоим видео
     if ($model->video != '')
     {
         $this->widget('ext.jwplayer.Jwplayer',array(
                 'width'=>600,
                 'height'=>360,
                 'id'=>'HelptreeViewVideo',
-                'file'=>'/storage/training/'.$model->video, // the file of the player, if null we use demo file of jwplayer
+                'file'=>'/storage/video/'.$model->video,
                 //'image'=>'/assets/doc.jpg', // the thumbnail image of the player, if null we use demo image of jwplayer
                 'options'=>array(
                     'controlbar'=>'bottom'
@@ -68,16 +73,7 @@
                 
             ));
     }
-       // fwrite($file1,Yii::getPathOfAlias('webroot').'/storage/video.mp4');
-        //fclose($file1);
 ?>
-
-
-        
-<?php //if ($model->program != '')
-       //     echo Chtml::link(CHtml::image('/assets/gear.gif','program icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('trainingtree/DownloadFile',array('filename'=>$model->program))); 
-?>
-
 </div>
 <script>
         $(document).ready(function() {

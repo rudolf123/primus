@@ -320,29 +320,54 @@ class TesttreeController extends Controller
             $questions = Question::model()->findAll($criteria);
             $qmodel = new QuestionForm;
 
+            $userlogcount = count(Userlog::model()->findByAttributes(array('test_id'=>$id, 'user_id'=>Yii::app()->user->id)));
+           // if (count($userlogcount)==0)
+            
+            $userlog = new Userlog;            
+            $userlog->test_id = $id;
+            $userlog->user_id = Yii::app()->user->id;
+            $userlog->grade = -1;
+            $userlog->starttime = date('Y-m-d H:i:s', time());
+            $userlog->save();
 
             $this->render('runtest', array(
                         'questions'=>$questions,
                         'model'=>$qmodel,
                         'testtreemodel'=>$testtreemodel,
+                        'userlogcount'=>$userlogcount,
+                        'userlog_id'=>$userlog->id,
                         ), false, true);
         }
         
-        public function actionFinishtest()
+        public function actionFinishtest($userlog_id)
         {
                 if(isset($_POST['QuestionForm']))
                 {
+                    $userlog = Userlog::model()->findByPk($userlog_id);
+                    $userlog->endtime = date('Y-m-d H:i:s', time());
+                    
                     $rightanswwer_counter = 0;
                     if(isset($_POST['QuestionForm']['answers']))
                         foreach ($_POST['QuestionForm']['answers'] as $attr)
                         {
                             list($question_id, $answer_id) = explode(";", $attr);
+
                             $checkanswer = Answer::model()->findByAttributes(array('question_id'=>$question_id,'id'=>$answer_id));
                             if ($checkanswer->isright)
                                 $rightanswwer_counter++;
+                            $userloganswers = new Userloganswers;
+                            $userloganswers->answer_id = $answer_id;
+                            $userloganswers->answer_text = $checkanswer->text;
+                            $userloganswers->question_text = Question::model()->findByPk($question_id)->text;;
+                            $userloganswers->question_id = $question_id;
+                            $userloganswers->userlog_id = $userlog_id;
+                            $userloganswers->isright = $checkanswer->isright;
+                            $userloganswers->save();
                         }
+                    $answerslog = Userloganswers::model()->findAllByAttributes(array('userlog_id'=>$userlog_id));
                     $question_count = count(Testquestion::model()->findAllByAttributes(array('test_id'=>$_POST['QuestionForm']['test_id'])));
-                    $this->render('finishTest', array('rightcount'=>$rightanswwer_counter,'questioncount'=>$question_count));
+
+                    $this->render('finishTest', array('rightcount'=>$rightanswwer_counter,'questioncount'=>$question_count, 'answerslog'=>$answerslog));
         
                 } 
         }

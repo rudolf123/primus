@@ -1,11 +1,10 @@
 <h4>Информация о тесте</h4>
- 
 
- 
 <?php// echo CHtml::link('clickMe', Yii::app()->createUrl('testtree/runtest', array('id'=>$model->id)));
 ?>
 <div id="HelptreeViewContent">
-<?php $this->widget('zii.widgets.CDetailView', array(
+<?php 
+$this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'title',
@@ -14,6 +13,11 @@
                     'label'=>'Количество вопросов',
                     'type'=>'raw',
                     'value'=>count($arr_questions),
+                    ),
+                array( 
+                    'label'=>'Количество ваших попыток',
+                    'type'=>'raw',
+                    'value'=>$userlogcount,
                     )
 	),
 )); 

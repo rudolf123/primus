@@ -89,8 +89,16 @@
         </div>
         <div class="row">
                 <?php echo $form->labelEx($model,'video'); ?>
-                <?php echo $form->fileField($model,'videofile'); ?>
-                <?php echo $form->error($model,'videofile'); ?>
+                <?php echo $form->textField($model,'video',array('maxlength'=>255)); ?>
+                <?php echo $form->error($model,'video'); ?>
+                <?php 
+                    /*$this->widget('ext.elFinder.ServerFileInput', array(
+                            'model' => $model,
+                            'attribute' => 'video',
+                            'connectorRoute' => 'elfinder/connector',
+                            )
+                    );*/
+                ?>
         </div>
         
         <?php echo $form->hiddenField($model,'etype', array('value'=>1)); ?>
@@ -147,3 +155,14 @@
             //setInterval(timer,5000);
 
 </script>
+
+<!--<script type="text/javascript">
+        AjexFileManager.init({
+        returnTo: 'function',
+        skin: 'light'
+        });
+        function insertValue(filePath) {
+        document.getElementById('srcFile_function').value = filePath;
+        return;
+        }
+</script>-->
