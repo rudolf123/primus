@@ -7,7 +7,7 @@
                                //'onsubmit'=>"return false;",// Disable normal form submit 
                                //'onkeypress'=>" if(event.keyCode == 13){ send(); } " //do ajax call when user presses enter key 
                             ),
-                'action' => array('testtree/finishtest'),
+                'action' => array('testtree/finishtest/'.$userlog_id),
                 ));
     echo $form->errorSummary($model);
     $i = 0;

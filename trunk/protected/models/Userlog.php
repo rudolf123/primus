@@ -8,6 +8,8 @@
  * @property integer $user_id
  * @property integer $test_id
  * @property integer $grade
+ * @property string $starttime
+ * @property string $endtime
  */
 class Userlog extends CActiveRecord
 {
@@ -38,9 +40,10 @@ class Userlog extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('user_id, test_id, grade', 'numerical', 'integerOnly'=>true),
+			array('starttime, endtime', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, user_id, test_id, grade', 'safe', 'on'=>'search'),
+			array('id, user_id, test_id, grade, starttime, endtime', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,6 +68,8 @@ class Userlog extends CActiveRecord
 			'user_id' => 'User',
 			'test_id' => 'Test',
 			'grade' => 'Grade',
+			'starttime' => 'Starttime',
+			'endtime' => 'Endtime',
 		);
 	}
 
@@ -83,6 +88,8 @@ class Userlog extends CActiveRecord
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('test_id',$this->test_id);
 		$criteria->compare('grade',$this->grade);
+		$criteria->compare('starttime',$this->starttime,true);
+		$criteria->compare('endtime',$this->endtime,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -48,24 +48,28 @@
 
 <div id="HelptreeViewContent" class='fix'>
     
-    <?php if ($model->htmlfield != '')
-        echo $model->htmlfield
-?>
+<?php 
+    if ($model->htmlfield != '')
+        echo $model->htmlfield;
     
-
-        <?php 
-
-        echo Chtml::link(CHtml::image('/storage/'.$model->img,'Изображение недоступно!',array('style'=>'class: imagepreview')),'/storage/'.$model->img,array('rel'=>'lightbox'));
-        ?>
-
-    <?php
+    if ($model->img != '')
+        echo Chtml::link(
+                CHtml::image('/storage/'.$model->img,'Изображение недоступно!',array(
+                    'style'=>'class: imagepreview',
+                    )
+                ),'/storage/'.$model->img,array(
+                        'rel'=>'lightbox',
+                        'title'=>$model->img,
+                        )
+                );
+    
     if ($model->video != '')
     {
         $this->widget('ext.jwplayer.Jwplayer',array(
                 'width'=>600,
                 'height'=>360,
                 'id'=>'HelptreeViewVideo',
-                'file'=>'/storage/'.$model->video, // the file of the player, if null we use demo file of jwplayer
+                'file'=>'/storage/video/'.$model->video, // the file of the player, if null we use demo file of jwplayer
                 //'image'=>'/assets/doc.jpg', // the thumbnail image of the player, if null we use demo image of jwplayer
                 'options'=>array(
                     'controlbar'=>'bottom'
