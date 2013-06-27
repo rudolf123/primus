@@ -4,10 +4,10 @@
                 'id'=>'question',
                 'enableAjaxValidation'=>false,
                 'htmlOptions'=>array(
-                               'onsubmit'=>"return false;",// Disable normal form submit 
+                               //'onsubmit'=>"return false;",// Disable normal form submit 
                                //'onkeypress'=>" if(event.keyCode == 13){ send(); } " //do ajax call when user presses enter key 
                             ),
-                'action' => array('testtree/finishtest/'.$userlog_id),
+                'action' => Yii::app()->createUrl('testtree/Ajax', array('userlog_id'=>$userlog_id)),
                 ));
     echo $form->errorSummary($model);
     $i = 0;
@@ -114,6 +114,7 @@
         'htmlOptions'=>array(
             'class'=>'ui-button-primary'
             ),
+        'onclick'=>'js:function(){send()}',
         )
     );
     
@@ -160,22 +161,22 @@
     function send()
     {
 
-       var data=$("#question").serialize();
+       //var data=$("#question").serialize();
 
 
         $.ajax({
             type: 'POST',
             url: "<? echo Yii::app()->createUrl('testtree/Ajax', array('userlog_id'=>$userlog_id)); ?>",
-            data:data,
-            success:function(data){
-                alert(data); 
-                    },
-            error: function(data) { // if error occured
-                alert("Error occured.please try again");
-                alert(data);
-          },
+            //data:data,
+            //success:function(){
+                //alert(data); 
+              //      },
+            //error: function() { // if error occured
+                //alert("Error occured.please try again");
+                //alert(data);
+          //},
 
-        dataType:'html'
+        //dataType:'html'
         });
     }
 </script>

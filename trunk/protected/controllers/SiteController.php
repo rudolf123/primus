@@ -143,8 +143,13 @@ class SiteController extends Controller
         public function actionViewuser($id)
         {
             $user = User::model()->findByPk($id);
-            
-            $this->render('userview', array('model'=>$user));
+            $testdataprovider = new CActiveDataProvider('Userlog', array(
+                    'criteria' => array(
+                    'condition' => 'user_id = :param_user_id',// AND TIME_TO_SEC(TIMEDIFF(NOW(),sessionend))<100',
+                    'params' => array(':param_user_id' => $id),
+                    ),
+            ));
+            $this->render('userview', array('model'=>$user,'testdataprovider'=>$testdataprovider));
         }
         
         public function actionAdminsections()
