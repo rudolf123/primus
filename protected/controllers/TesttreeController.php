@@ -148,12 +148,18 @@ class TesttreeController extends Controller
                         }
                     }*/
                     fwrite($file, 'Количество правильных ответов: '.$rightanswwer_counter);
-                    $answerslog = Userloganswers::model()->findByAttributes(array('userlog_id'=>$userlog_id));
                     $question_count = count(Testquestion::model()->findAllByAttributes(array('test_id'=>$_POST['QuestionForm']['test_id'])));
                     $userlog->save();
+                    $answerslog = new CActiveDataProvider('Userloganswers', array(
+                                        'criteria' => array(
+                                        'condition' => 'userlog_id = :param_userlog_id',// AND TIME_TO_SEC(TIMEDIFF(NOW(),sessionend))<100',
+                                        'params' => array(':param_userlog_id' => $userlog_id),
+                                        ),
+                    ));
                     fwrite($file, 'Количество вопросов: '.$question_count);
                     fclose($file);
                     
+                    //$this->redirect('../testtree/finishTest',array('rightcount'=>$rightanswwer_counter,'questioncount'=>$question_count, 'answerslog'=>$answerslog));
                     $this->render('finishTest', array('rightcount'=>$rightanswwer_counter,'questioncount'=>$question_count, 'answerslog'=>$answerslog));
         
                 } 
@@ -215,11 +221,13 @@ class TesttreeController extends Controller
             }
             $model = $this->loadModel($id);
             $qmodel = new QuestionForm;
+            $userlogcount = count(Userlog::model()->findAllByAttributes(array('test_id'=>$id, 'user_id'=>Yii::app()->user->id)));
             $this->renderPartial('viewtest',array(
                     'arr_answers'=>$arr_answers,
                     'arr_questions'=>$arr_questions,
                     'qmodel'=>$qmodel,
                     'model'=>$model,
+                    'userlogcount'=>$userlogcount,
                     ),false,true);
 
         }
