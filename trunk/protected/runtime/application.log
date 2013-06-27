@@ -9156,3 +9156,1489 @@ Stack trace:
 REQUEST_URI=/index.php/testtree/finishtest/7
 HTTP_REFERER=http://primus_yii2/index.php/testtree/runtest/23
 ---
+2013/06/27 15:19:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 15:19:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 15:46:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 15:46:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 15:53:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 15:54:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:01:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:03:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:03:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:03:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:14:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:14:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:14:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:19:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:19:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:19:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:20:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:25:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:25:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:25:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:25:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:25:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:27:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:27:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:27:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:34:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:34:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:34:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:42:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:42:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:42:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:43:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:43:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:43:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:46:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:49:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:49:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:49:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 16:51:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:02:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:02:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:02:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:03:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:03:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:03:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:04:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:04:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:04:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:08:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:08:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:08:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:08:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:08:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:09:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:09:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:09:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:09:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:09:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:09:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:09:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:09:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:09:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:09:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:09:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:09:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:09:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:18:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:18:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:18:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:18:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:18:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:22:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:22:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:22:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:22:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:22:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:22:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:23:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:23:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:24:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:24:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:24:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:24:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:26:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:26:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:27:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:27:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "flowplayer-3.2.1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('flowplayer-3.2....')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('flowplayer-3.2....')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/flowpl...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/flowplayer-3.2.1.swf
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:28:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:28:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/06/27 17:28:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:28:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:28:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:28:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:29:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:29:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:29:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:29:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:29:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:29:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:29:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:29:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:37:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:37:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:37:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:37:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:38:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:38:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:38:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin2.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin2.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:38:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ConfigurationEchoPlugin1.swf".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('ConfigurationEc...')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('ConfigurationEc...')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Config...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/ConfigurationEchoPlugin1.swf
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:38:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "storage/video/Those Relaxing Sounds of Waves, Tropical Beaches with Ocean Sounds, 1080p HD Video.mp4".' in Z:\home\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('storage/video/T...')
+#1 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/storage/video/Those%20Relaxing%20Sounds%20of%20Waves,%20Tropical%20Beaches%20with%20Ocean%20Sounds,%201080p%20HD%20Video.mp4
+HTTP_REFERER=http://primus_yii2/assets/243805ba/StrobeMediaPlayback.swf
+---
+2013/06/27 17:43:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('finishtest')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('testtree/finish...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/testtree/finishtest/8
+HTTP_REFERER=http://primus_yii2/index.php/testtree/runtest/27
+---
+2013/06/27 17:45:09 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\Yii\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('finishtest')
+#9 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('testtree/finish...')
+#10 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/testtree/finishtest/9
+HTTP_REFERER=http://primus_yii2/index.php/testtree/runtest/27
+---
+2013/06/27 18:25:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/06/27 18:25:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/06/27 18:30:45 [error] [exception.CException] exception 'CException' with message 'В классе Userloganswers и его поведениях не найден метод или замыкание с именем "getData".' in Z:\home\Yii\framework\base\CComponent.php:265
+Stack trace:
+#0 Z:\home\Yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('getData', Array)
+#1 [internal function]: CActiveRecord->__call('getData', Array)
+#2 Z:\home\Yii\framework\zii\widgets\CBaseListView.php(107): Userloganswers->getData()
+#3 Z:\home\Yii\framework\zii\widgets\grid\CGridView.php(314): CBaseListView->init()
+#4 Z:\home\Yii\framework\web\CBaseController.php(147): CGridView->init()
+#5 Z:\home\Yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#6 Z:\home\primus_yii2\www\protected\views\testtree\finishtest.php(17): CBaseController->widget('zii.widgets.gri...', Array)
+#7 Z:\home\Yii\framework\web\CBaseController.php(126): require('Z:\home\primus_...')
+#8 Z:\home\Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\primus_...', Array, true)
+#9 Z:\home\Yii\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\primus_...', Array, true)
+#10 Z:\home\Yii\framework\web\CController.php(782): CController->renderPartial('finishTest', Array, true)
+#11 Z:\home\primus_yii2\www\protected\controllers\TesttreeController.php(157): CController->render('finishTest', Array)
+#12 [internal function]: TesttreeController->actionAjax('17')
+#13 Z:\home\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(TesttreeController), Array)
+#14 Z:\home\Yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TesttreeController), Object(ReflectionMethod), Array)
+#15 Z:\home\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#22 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('Ajax')
+#24 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('testtree/Ajax')
+#25 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/index.php/testtree/Ajax?userlog_id=17
+HTTP_REFERER=http://primus_yii2/index.php/testtree/runtest/27
+---

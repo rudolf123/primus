@@ -96,26 +96,46 @@ class TesttreeController extends Controller
                     ));
         }
         
-        public function actionAjax()
+        public function actionAjax($userlog_id)
         {
                 if(isset($_POST['QuestionForm']))
                 {
                     $file = fopen('logTestAjax.txt', 'a');
+                    fwrite($file,'ID лога:  '.$userlog_id);
+                    fwrite($file,'ID теста: '.$_POST['QuestionForm']['test_id']);
                     $rightanswwer_counter = 0;
+                    
+
+                    $userlog = Userlog::model()->findByPk($userlog_id);
+                    $userlog->endtime = date('Y-m-d H:i:s', time());
+                    
+                    $rightanswwer_counter = 0;
+
+                    //$this->render('finishTest', array('rightcount'=>$rightanswwer_counter,'questioncount'=>$question_count, 'answerslog'=>$answerslog));
                     fwrite($file,'Вопросы с одним вариантом ответа:  ');
                     if(isset($_POST['QuestionForm']['answers']))
                         foreach ($_POST['QuestionForm']['answers'] as $attr)
                         {
                             list($question_id, $answer_id) = explode(";", $attr);
-                            fwrite($file, 'question_id = '.$question_id.':answer_id = '.$answer_id.';');
+                            
                             $checkanswer = Answer::model()->findByAttributes(array('question_id'=>$question_id,'id'=>$answer_id));
                             if ($checkanswer->isright)
                                 $rightanswwer_counter++;
+                            $userloganswers = new Userloganswers;
+                            $userloganswers->answer_id = $answer_id;
+                            $userloganswers->answer_text = $checkanswer->text;
+                            $userloganswers->question_text = Question::model()->findByPk($question_id)->text;;
+                            $userloganswers->question_id = $question_id;
+                            $userloganswers->userlog_id = $userlog_id;
+                            $userloganswers->isright = $checkanswer->isright;
+                            $userloganswers->save();
+                            
+                            fwrite($file, 'question_ = '.$userloganswers->question_text.':answer_ = '.$checkanswer->text.';');
                         }
-                    fwrite($file,'Вопросы с несколькими вариантами ответа:  ');
+                    /*fwrite($file,'Вопросы с несколькими вариантами ответа:  ');
                     if(isset($_POST['QuestionForm']['answersmulti']))
                     {
-                        /*$countofright = array();
+                        $countofright = array();
                         foreach ($_POST['QuestionForm']['answersmulti'] as $attr)
                         {
                             
@@ -125,10 +145,17 @@ class TesttreeController extends Controller
                             foreach ($rightanswers as $a)
                                 if ($answer_id==$a->id)
                                     $countofright[]=
-                        }*/
-                    }
+                        }
+                    }*/
                     fwrite($file, 'Количество правильных ответов: '.$rightanswwer_counter);
+                    $answerslog = Userloganswers::model()->findByAttributes(array('userlog_id'=>$userlog_id));
+                    $question_count = count(Testquestion::model()->findAllByAttributes(array('test_id'=>$_POST['QuestionForm']['test_id'])));
+                    $userlog->save();
+                    fwrite($file, 'Количество вопросов: '.$question_count);
                     fclose($file);
+                    
+                    $this->render('finishTest', array('rightcount'=>$rightanswwer_counter,'questioncount'=>$question_count, 'answerslog'=>$answerslog));
+        
                 } 
         }
 

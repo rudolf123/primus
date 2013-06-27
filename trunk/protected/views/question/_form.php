@@ -32,6 +32,11 @@
 		<?php echo $form->textField($model,'image',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'image'); ?>
 	</div>
+        <div class="row">
+		<?php echo $form->labelEx($model,'rate'); ?>
+		<?php echo $form->textField($model,'rate'); ?>
+		<?php echo $form->error($model,'rate'); ?>
+	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Создать' : 'Сохранить'); ?>

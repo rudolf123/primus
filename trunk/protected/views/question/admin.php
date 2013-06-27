@@ -32,6 +32,7 @@ $('.search-form form').submit(function(){
 		'theme',
 		'text',
 		'image',
+                'rate',
 		array(
 			'class'=>'CButtonColumn',
 		),

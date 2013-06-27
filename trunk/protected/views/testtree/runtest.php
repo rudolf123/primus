@@ -4,7 +4,7 @@
                 'id'=>'question',
                 'enableAjaxValidation'=>false,
                 'htmlOptions'=>array(
-                               //'onsubmit'=>"return false;",// Disable normal form submit 
+                               'onsubmit'=>"return false;",// Disable normal form submit 
                                //'onkeypress'=>" if(event.keyCode == 13){ send(); } " //do ajax call when user presses enter key 
                             ),
                 'action' => array('testtree/finishtest/'.$userlog_id),
@@ -165,7 +165,7 @@
 
         $.ajax({
             type: 'POST',
-            url: "<? echo Yii::app()->createUrl('testtree/Ajax'); ?>",
+            url: "<? echo Yii::app()->createUrl('testtree/Ajax', array('userlog_id'=>$userlog_id)); ?>",
             data:data,
             success:function(data){
                 alert(data); 
