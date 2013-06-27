@@ -48,6 +48,9 @@ class HelptreeController extends Controller
 	 */
 	public function actionView($id)
 	{
+            $file = fopen('dffghfg.txt','a');
+            fwrite($file, $this->createAbsoluteUrl('test/test',array('id'=>$id)));
+            fclose($file);
 		if(Yii::app()->request->isAjaxRequest)
                     if (Yii::app()->user->isGuest)
                         $this->renderPartial('../user/login');

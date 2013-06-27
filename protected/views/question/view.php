@@ -6,6 +6,7 @@
 		'theme',
 		'text',
 		'image',
+                'rate',
 	),
 )); ?>
 

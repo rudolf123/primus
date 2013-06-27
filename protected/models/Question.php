@@ -11,6 +11,7 @@
  */
 class Question extends CActiveRecord
 {
+        public $imgfile;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -40,9 +41,10 @@ class Question extends CActiveRecord
 			array('theme, text', 'required'),
 			array('theme', 'length', 'max'=>255),
 			array('image', 'length', 'max'=>50),
+                        array('rate', 'numerical'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, theme, text, image', 'safe', 'on'=>'search'),
+			array('id, theme, text, image, rate', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,6 +71,7 @@ class Question extends CActiveRecord
 			'theme' => 'Тема',
 			'text' => 'Текст вопроса',
 			'image' => 'Изображение',
+                        'rate' => 'Коэффициент сложности',
 		);
 	}
 
@@ -87,6 +90,7 @@ class Question extends CActiveRecord
 		$criteria->compare('theme',$this->theme,true);
 		$criteria->compare('text',$this->text,true);
 		$criteria->compare('image',$this->image,true);
+                $criteria->compare('rate',$this->rate);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
