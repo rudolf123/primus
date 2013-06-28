@@ -3,6 +3,7 @@
 //echo CHtml::ajaxLink('clickMe', Yii::app()->createUrl('testtree/updateajax'), array('update'=>'#data'));
 //if (Yii::app()->user->checkAccess('moderator'))
     $this->renderPartial('viewquestions', array('dataProvider'=>$dataProvider, 'model'=>$model));
+    $this->renderPartial('viewtestquestions', array('dataProvider'=>$testquestions, 'model'=>$model));
 //else
     //echo CHtml::ajaxButton ("Update data",
                               //Yii::app()->createUrl('testtree/runtest'),array('update' => '#data'));

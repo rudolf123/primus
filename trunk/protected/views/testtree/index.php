@@ -210,6 +210,12 @@
         <br />
         <?php echo $form->error($model,'title'); ?>
         <br />
+        <?php echo $form->labelEx($model,'time'); ?>
+        <br />
+        <?php echo $form->textField($model,'time'); ?>
+        <br />
+        <?php echo $form->error($model,'time'); ?>
+        <br />
         <?php echo $form->hiddenField($model,'etype', array('value'=>1)); ?>
         <br />
         <?php //echo CHtml::submitButton($model->isNewRecord ? 'Создать' : 'Сохранить'); ?>
