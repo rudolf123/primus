@@ -114,7 +114,7 @@
         'htmlOptions'=>array(
             'class'=>'ui-button-primary'
             ),
-        'onclick'=>'js:function(){send()}',
+        //'onclick'=>'js:function(){send()}',
         )
     );
     
@@ -143,6 +143,8 @@
 		<div class="digit">0</div>
 	</div>
 </div>
+
+
 <!-- Завершение панели счетчика -->
 <script type="text/javascript">
     $(function() {
@@ -160,13 +162,18 @@
 <script type="text/javascript">
     function send()
     {
-
+            if(document.question.onsubmit &&
+            !document.question.onsubmit())
+            {
+                return;
+            }
+            document.question.submit();
        //var data=$("#question").serialize();
 
 
-        $.ajax({
-            type: 'POST',
-            url: "<? echo Yii::app()->createUrl('testtree/Ajax', array('userlog_id'=>$userlog_id)); ?>",
+        //$.ajax({
+            //type: 'POST',
+            //url: "<? //echo Yii::app()->createUrl('testtree/Ajax', array('userlog_id'=>$userlog_id)); ?>",
             //data:data,
             //success:function(){
                 //alert(data); 
@@ -177,7 +184,7 @@
           //},
 
         //dataType:'html'
-        });
+       // });
     }
 </script>
 
@@ -193,9 +200,9 @@ jQuery(document).ready(function() {
 			"sec": 		6
 		}, 
 		// По завершении счета будет выскальзывать панель #complete_info_message
-		onComplete: function(){send()}
+		onComplete: function(){send();}
 	});
 });
 </script>
-
+<a href="#" onclick="$('#question').submit();return false;">Do it!</a>
 

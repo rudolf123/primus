@@ -49,17 +49,21 @@ class TesttreeController extends Controller
                     array_push($arr_questions,$testquestion->question_id);
             }
             $criteria = new CDbCriteria();
+            $criteria1 = new CDbCriteria();
+            $criteria1->addInCondition('id', $arr_questions);
+            $questionsintest = new CActiveDataProvider('Question', array(
+               'criteria' => $criteria1));
             $criteria->addNotInCondition('id', $arr_questions);
-
             $dataProvider = new CActiveDataProvider('Question', array(
                'criteria' => $criteria));
 
             $model = $this->loadModel($test_id);
 
             $this->render('updatetest',array(
-                        'model'=>$model,
-                        'dataProvider'=>$dataProvider,
-                        ),false,true);
+                    'model'=>$model,
+                    'dataProvider'=>$dataProvider,
+                    'testquestions'=>$questionsintest,
+                    ),false,true);
             //$this->redirect('../testtree/index/viewtest', array('id'=>$testquestion->test_id));
             //if($testquestion->save())
            // {
@@ -72,10 +76,13 @@ class TesttreeController extends Controller
         
         public function actionRemoveQuestionFromTest($question_id,$test_id)
         {
-            $testquestion = new Testquestion;
-            $testquestion->test_id = $test_id;
-            $testquestion->question_id = $question_id;
-            $testquestion->save();
+            Testquestion::model()->deleteAll(
+                                    'test_id = :param_test_id AND question_id=:param_question_id',
+                                    array(
+                                        ':param_test_id' => $test_id,
+                                        ':param_question_id' => $question_id,
+                                        ));
+            
             $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$test_id));
             $count_questions = count($testquestions);
             if($count_questions > 0){
@@ -84,16 +91,21 @@ class TesttreeController extends Controller
                     array_push($arr_questions,$testquestion->question_id);
             }
             $criteria = new CDbCriteria();
+            $criteria1 = new CDbCriteria();
+            $criteria1->addInCondition('id', $arr_questions);
+            $questionsintest = new CActiveDataProvider('Question', array(
+               'criteria' => $criteria1));
             $criteria->addNotInCondition('id', $arr_questions);
-
             $dataProvider = new CActiveDataProvider('Question', array(
                'criteria' => $criteria));
 
             $model = $this->loadModel($test_id);
 
-            $this->renderPartial('_viewquestions',array(
+            $this->render('updatetest',array(
+                    'model'=>$model,
                     'dataProvider'=>$dataProvider,
-                    ));
+                    'testquestions'=>$questionsintest,
+                    ),false,true);
         }
         
         public function actionAjax($userlog_id)
@@ -176,8 +188,11 @@ class TesttreeController extends Controller
                         array_push($arr_questions,$testquestion->question_id);
                 }
                 $criteria = new CDbCriteria();
+                $criteria1 = new CDbCriteria();
+                $criteria1->addInCondition('id', $arr_questions);
                 $questionsintest = new CActiveDataProvider('Question', array(
-                   'criteria' => $criteria));
+                   'criteria' => $criteria1));
+                
                 $criteria->addNotInCondition('id', $arr_questions);
 
                 $dataProvider = new CActiveDataProvider('Question', array(
@@ -405,6 +420,22 @@ class TesttreeController extends Controller
                     $this->render('finishTest', array('rightcount'=>$rightanswwer_counter,'questioncount'=>$question_count, 'answerslog'=>$answerslog));
         
                 } 
+        }
+        
+        public function actionParseXML()
+        {
+            if (!($xml_file = fopen($_SERVER['DOCUMENT_ROOT'].'/xml.xml','r')))
+            {
+                die("could not open XML input");
+            };
+            while ($data = fgets($xml_file)) {
+            if (!xml_parse($xml_parser, $data, feof($fp))) {
+              echo "<br>XML Error: ".xml_error_string(xml_get_error_code($xml_parser));
+              echo " at line ".xml_get_current_line_number($xml_parser);
+              break;
+            }
+            }
+            
         }
 
         public function loadModel($id)

@@ -51,7 +51,7 @@ class Testtree extends CActiveRecord
 			array('icon', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, parent_id, test_id, title, type, tooltip, url, icon', 'safe', 'on'=>'search'),
+			array('id, parent_id, test_id, title, type, tooltip, url, icon, time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -76,7 +76,7 @@ class Testtree extends CActiveRecord
 			'parent_id' => 'Parent',
 			'test_id' => 'Test',
 			'title' => 'Название',
-                        'time'=>'Время на выполнение',
+                        'time'=>'Время на выполнение (мин.)',
 			'tooltip' => 'Tooltip',
 			'url' => 'Url',
 			'icon' => 'Icon',
