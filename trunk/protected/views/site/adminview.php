@@ -9,7 +9,6 @@
         'tabs'=>array('tabsOptions'=>array('class'=>'well'),
                 array('label'=>'Личный состав', 'content'=>$this->renderPartial('usersView',array('dataProvider' => $dataProvider),true), 'active'=>true),
                 array('label'=>'Системные параметры', 'content'=>$this->renderPartial('systemView',false,true)),
-                array('label'=>'База данных', 'content'=>'Messages Content'),
             ),
         ));
 ?>

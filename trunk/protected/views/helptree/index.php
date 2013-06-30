@@ -13,7 +13,7 @@
 			'text'=>'title',//no `text` column, use `title` instead
 			'alt'=>'title',//skip using `alt` column
 			'id_parent'=>'parent_id',//no `id_parent` column,use `parent_id` instead
-			'position'=>'id',
+			'position'=>'type',
 			'task'=>false,
 			'options'=>'title',
 			'url'=>'url',
