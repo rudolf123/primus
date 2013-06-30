@@ -387,6 +387,17 @@ div.search-form
     margin-top: 20px;
 }
 
+.list_box
+{
+    width: 600px;
+}
+
+.button_box
+{
+    margin-top: 10px; 
+    margin-bottom: 10px
+}
+
 .Mynavbar {
   *position: relative;
   *z-index: 2;

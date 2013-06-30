@@ -61,7 +61,8 @@ class User extends CActiveRecord
             'section'=>'Что делает?',
             'online'=>'В сети',
             'regdate'=>'Дата регистрации',
-            'role'=>'Статус'
+            'role'=>'Статус',
+            'learningtime'=>'Время работы',
         );
     } 
     

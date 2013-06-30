@@ -1,8 +1,7 @@
 <?php
 
-    $this->widget('bootstrap.widgets.TbGridView', array(
+    $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider'=>$dataProvider,
-    //'filter'=>$dataProvider,
     'columns'=>array(
             'surname',
             'name',
@@ -17,8 +16,16 @@
                 'value' => '$data->role=="moderator" ? "Преподаватель" : "Обучаемый"',
                 'type' => 'raw',
             ),
-            'block',
-            'rank',
+            array(
+                'name' => 'block',
+                'value' => 'Block::model()->findByPk($data->block)->name',
+                'type' => 'raw',
+            ),
+            array(
+                'name' => 'rank',
+                'value' => 'Rank::model()->findByPk($data->rank)->name',
+                'type' => 'raw',
+            ),
             'regdate',
             array(
                 'class'=>'CButtonColumn',

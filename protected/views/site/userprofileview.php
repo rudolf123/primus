@@ -1,21 +1,17 @@
-<h4>Просмотр профиля пользователя: <?php echo $model->login?></h4>  
 <div id="block" class="well">
   
-<h5>
 <?php
-echo 'Фамилия: '.$model->surname.'<br />';
-echo 'Имя: '.$model->name.'<br />';
-echo 'Отчество: '.$model->secondname.'<br />';
-echo 'Звание: '.$model->rank.'<br />';
-echo 'Подразделение: '.$model->block.'<br />';
-echo 'Зарегистрирован: '.$model->regdate.'<br />';
-echo 'Статус: ';
+$rank = Rank::model()->findByPk($model->rank)->name;
+if (!$rank)
+    $rank = 'Нет звания';
+$block = Block::model()->findByPk($model->block)->name;
+if (!$block)
+    $block = 'Нет подразделения';
+$role = '';
 if ($model->role == 'moderator')
-                      echo 'Преподаватель'.'<br />';
-                  else 
-                      echo 'Обучаемый'.'<br />';
-echo 'Имя пользователя: '.$model->login.'<br />';
-
+    $role = 'Преподаватель';
+else 
+    $role = 'Обучаемый';
 
 $ss = $model->learningtime;
 $s = $ss%60;
@@ -23,10 +19,36 @@ $m = floor(($ss%3600)/60);
 $h = floor(($ss%86400)/3600);
 $d = floor(($ss%2592000)/86400);
 
-echo  "Время работы:  $d дн., $h ч., $m мин., $s сек.";
+$ss = $d." дн., ".$h." ч., ".$m." мин., ".$s." сек.";
+
+$this->widget('zii.widgets.CDetailView', array(
+	'data'=>$model,
+	'attributes'=>array(
+		'surname',
+		'name',
+		'secondname',
+                array(
+                    'name'=>'rank',
+                    'value' => $rank,
+                ),
+                array(
+                    'name'=>'block',
+                    'value' => $block,
+                ),
+                'regdate',
+                'login',
+                array(
+                    'name'=>'role',
+                    'value' => $role,
+                ),
+                array(
+                    'name'=>'learningtime',
+                    'value' => $ss,
+                ),
+	),
+));
 ?>
-</h5>
-<div>
+<div class="button_box">
 <?php
 if ($model->role == 'user')
         $this->widget('zii.widgets.jui.CJuiButton', array(

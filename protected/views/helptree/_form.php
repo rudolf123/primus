@@ -125,7 +125,8 @@
             'htmlOptions'=>array(
                 'class'=>'button',
                 ),
-            'onclick'=>'js:function(){window.location = "'.$path.'"; return false;}',
+            //'onclick'=>'js:function(){window.location = "'.$path.'"; return false;}',
+            'onclick'=>'js:function(){history.back()}',
             )
         );?>	
 	</div>

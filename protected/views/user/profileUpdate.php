@@ -37,7 +37,7 @@
             <!-- Выводим поле для звания !-->
             <td><?php echo $forms->labelEx($model, 'rank'); ?></td>
             <td><?php echo $forms->dropDownList($model,'rank',CHtml::listData(Rank::model()->findAll(),
-                                                    'name','name'),
+                                                    'id','name'),
                                                     array('empty' => 'Без звания','style'=>'width: 215px')); ?>
             </td>
          </tr>
@@ -45,7 +45,7 @@
             <!-- Выводим поле для подразделения !-->
             <td><?php echo $forms->labelEx($model, 'block'); ?></td>
             <td><?php echo $forms->dropDownList($model,'block',CHtml::listData(Block::model()->findAll(),
-                                                    'name','name'),
+                                                    'id','name'),
                                                     array('empty' => 'Без подразделения','style'=>'width: 215px')); ?></td>
          </tr>
          <!-- Выводим поле для пароля !-->
@@ -59,13 +59,12 @@
         <tr>
             <td></td>
             <!-- Кнопка "регистрация" !-->
-             <td>
+             <td class="button_box">
                  <?php $this->widget('zii.widgets.jui.CJuiButton', array(
                             'name'=>'buttonSubmit',
                             'caption'=>'Сохранить изменения',
-                            //'value'=>'abc',
                             'htmlOptions'=>array(
-                                'style'=>'height:40px; width:215px; margin-top: 10px; margin-bottom: 10px ',
+                                'style'=>'height:40px; width:215px;',
                                 'class'=>'ui-button-primary'
                                 ),
                             'onclick'=>'submit',

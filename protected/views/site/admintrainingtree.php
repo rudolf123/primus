@@ -1,17 +1,15 @@
 <?php
 
 $this->widget('zii.widgets.grid.CGridView', array(
-    'id'=>'grid',
-    'dataProvider'=>$modelHelp,
-    //'ajaxUrl' => Yii::app()->createUrl('site/AdminsectionsAjax'),
-    //'filter'=>$dataProvider,
+    'id'=>'grid2',
+    'dataProvider'=>$modelTrain,
     'columns'=>array(
             'id',
             array(
                     'class' => 'bootstrap.widgets.TbEditableColumn',
                     'name' => 'title',
                     'editable' => array(
-                        'url' => $this->createUrl('/site/edithelptreetitle'),
+                        'url' => $this->createUrl('/site/edittrainingtreetitle'),
                         'placement' => 'right',
                         'inputclass' => 'span3',
                         'title'=>'Введите значение',
@@ -26,18 +24,17 @@ $this->widget('zii.widgets.grid.CGridView', array(
                 'template'=>'{delete}',
                 'buttons'=>array
                 (
-                    /*'update' => array
+                    /*'view' => array
                     (
                         'label'=>'Просмотреть',
-                        'url'=>'Yii::app()->createUrl("helptree/update", array("id"=>$data->id))',
+                       // 'url'=>'Yii::app()->createUrl("testtree/addquestiontotest", array("question_id"=>$data->id, "test_id"=>'.$model->id.'))',
                     ),*/
-                    
-                    'delete' => array
+
+                    'delete'=> array
                     (
                         'label'=>'Удалить',
-                        'url'=>'Yii::app()->createUrl("site/deletehelptree/", array("id"=>$data->id))',
-                    ),
-
+                        'url'=>'Yii::app()->createUrl("site/deletetrainingtree/", array("id"=>$data->id))',
+                    )
                 ),
 
             ),

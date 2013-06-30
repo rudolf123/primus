@@ -1,4 +1,7 @@
-<h1>Просмотр вопроса № <?php echo $model->id; ?></h1>
+<p>
+<?php echo CHtml::link('<< назад(банк вопросов)', Yii::app()->createUrl('question/admin'));?>
+</p>
+<h3>Просмотр вопроса № <?php echo $model->id; ?></h3>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
