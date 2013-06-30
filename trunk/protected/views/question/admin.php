@@ -14,7 +14,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Банк вопросов</h1>
+<h3>Банк вопросов</h3>
 
 <?php echo CHtml::link('Расширенный поиск','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
@@ -39,11 +39,10 @@ $('.search-form form').submit(function(){
 	),
 )); ?>
 
-<div class="demo_box">
 <?php
     if (Yii::app()->user->checkAccess('moderator'))
     {
-        /* Диалог добавления раздела */
+        /* Диалог добавления вопроса */
         $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
             'id'=>'dialogQuestion',
             'options'=>array(
@@ -93,17 +92,14 @@ $('.search-form form').submit(function(){
 
         $this->endWidget('zii.widgets.jui.CJuiDialog');
 
-       // if (Yii::app()->user->checkAccess('moderator'))
-       //     echo CHtml::link('Добавить вопрос', '#', array(
-       //         'onclick'=>'$("#dialogQuestion").dialog("open"); return false;',
-        //));
-        
+        ?>
+ <div class="button_box">       
+     <?php
         $this->widget('zii.widgets.jui.CJuiButton', array(
-            'name'=>'buttonAddFolder',
+            'name'=>'buttonAddQuestion',
             'caption'=>'Добавить вопрос',
-            //'value'=>'abc',
             'htmlOptions'=>array(
-                'style'=>'height:40px; width:250px; margin-top: 10px; margin-bottom: 10px ',
+                'style'=>'height:40px; width:250px;',
                 'class'=>'ui-button-primary'
                 ),
             'onclick'=>'js:function(){$("#dialogQuestion").dialog("open"); return false;}',

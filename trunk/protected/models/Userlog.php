@@ -39,7 +39,8 @@ class Userlog extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, test_id, grade', 'numerical', 'integerOnly'=>true),
+			array('user_id, test_id', 'numerical', 'integerOnly'=>true),
+                        array('grade', 'numerical'),
 			array('starttime, endtime', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -65,11 +66,11 @@ class Userlog extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'user_id' => 'User',
-			'test_id' => 'Test',
-			'grade' => 'Grade',
-			'starttime' => 'Starttime',
-			'endtime' => 'Endtime',
+			'user_id' => 'Пользователь',
+			'test_id' => 'Название теста',
+			'grade' => 'Оценка',
+			'starttime' => 'Начат',
+			'endtime' => 'Закончен',
 		);
 	}
 

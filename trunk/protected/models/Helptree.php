@@ -6,12 +6,17 @@
  * The followings are the available columns in table '{{helptree}}':
  * @property integer $id
  * @property integer $parent_id
+ * @property integer $test_id
  * @property string $title
  * @property string $tooltip
  * @property string $url
  * @property string $icon
- * @property string $file
- * @property integer $position
+ * @property integer $type
+ * @property string $doc
+ * @property string $img
+ * @property string $video
+ * @property string $pdf
+ * @property string $htmlfield
  */
 class Helptree extends CActiveRecord
 {
@@ -49,14 +54,12 @@ class Helptree extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			//array('id', 'required','message'=>'Кодовое обозначение раздела - необходимое для заполнения поле'),
-                        array('title', 'required','message'=>'Поле "Название" обязательное для заполнения!'),    
-                        //array('id', 'unique','message'=>'запись с таким наименованием уже существует'),
-			array('id, parent_id', 'numerical', 'integerOnly'=>true),
-			array('title', 'length', 'max'=>255),
+			array('title', 'required'),
+			array('parent_id, test_id, type', 'numerical', 'integerOnly'=>true),
+			array('title, url, doc, img, video, pdf', 'length', 'max'=>255),
 			array('tooltip', 'length', 'max'=>100),
-			array('url', 'length', 'max'=>255),
 			array('icon', 'length', 'max'=>50),
+			array('htmlfield', 'safe'),
                         array('imgfile', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>true),
                         array('docfile', 'file', 'types'=>'doc, docx', 'allowEmpty'=>true),
                         array('pdffile', 'file', 'types'=>'pdf', 'allowEmpty'=>true),
@@ -64,8 +67,7 @@ class Helptree extends CActiveRecord
                         array('video', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, parent_id, title, tooltip, url, icon, htmlfield', 'safe', 'on'=>'search'),
-
+			array('id, parent_id, test_id, title, tooltip, url, icon, type, doc, img, video, pdf, htmlfield', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -96,6 +98,7 @@ class Helptree extends CActiveRecord
 			'img' => 'Графический файл',
 			'video' => 'Видео файл',
 			'pdf' => 'Документ PDF',
+                        'type' => 'Тип',
 			'htmlfield' => 'Содержание страницы(HTML)',
 		);
 	}
@@ -103,9 +106,6 @@ class Helptree extends CActiveRecord
         protected function beforeSave(){
             if(!parent::beforeSave())
                 return false;
-          //  if(($this->scenario=='insert' || $this->scenario=='update') &&
-             //   ($image=CUploadedFile::getInstance($this,'image'))){
-               // $this->deleteDocument(); // старый документ удалим, потому что загружаем новый
             if (!is_dir($_SERVER['DOCUMENT_ROOT'].'/storage/'))
             {
                 mkdir($_SERVER['DOCUMENT_ROOT'].'/storage/', 0777);
@@ -136,30 +136,10 @@ class Helptree extends CActiveRecord
                     $_SERVER['DOCUMENT_ROOT'].'/storage/'.$this->pdffile);
                 $this->pdf = $this->pdffile;
             }
-            /*if ($videofile)
-            {
-                $this->videofile=$videofile;
-                $this->videofile->saveAs(
-                    $_SERVER['DOCUMENT_ROOT'].'/storage/'.$this->videofile);
-                $this->video = $this->videofile;
-            }*/
-           // }
+
             return true;
         }
 
-        protected function beforeDelete(){
-       //     if(!parent::beforeDelete())
-       //         return false;
-       //     $this->deleteDocument(); // удалили модель? удаляем и файл
-       //     return true;
-        }
-        
-        public function deleteDocument(){
-      //      $documentPath=Yii::getPathOfAlias('webroot').DIRECTORY_SEPARATOR.
-      //          $this->imgfile;
-      //      if(is_file($documentPath))
-     //           unlink($documentPath);
-        }
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
@@ -173,12 +153,17 @@ class Helptree extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('parent_id',$this->parent_id);
+		$criteria->compare('test_id',$this->test_id);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('tooltip',$this->tooltip,true);
 		$criteria->compare('url',$this->url,true);
 		$criteria->compare('icon',$this->icon,true);
-                $criteria->compare('type',$this->type,true);
-                $criteria->compare('htmlfield',$this->htmlfield,true);
+		$criteria->compare('type',$this->type);
+		$criteria->compare('doc',$this->doc,true);
+		$criteria->compare('img',$this->img,true);
+		$criteria->compare('video',$this->video,true);
+		$criteria->compare('pdf',$this->pdf,true);
+		$criteria->compare('htmlfield',$this->htmlfield,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

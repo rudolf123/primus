@@ -67,12 +67,12 @@ class Userloganswers extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'question_id' => 'Question',
-			'answer_id' => 'Answer',
-			'userlog_id' => 'Userlog',
-			'isright' => 'Isright',
-			'question_text' => 'Question Text',
-			'answer_text' => 'Answer Text',
+			'question_id' => 'Номер вопроса',
+			'answer_id' => 'Номер ответа',
+			'userlog_id' => 'Номер лога',
+			'isright' => 'Верный?',
+			'question_text' => 'Вопрос',
+			'answer_text' => 'Ответ',
 		);
 	}
 

@@ -112,37 +112,38 @@ class TesttreeController extends Controller
         {
                 if(isset($_POST['QuestionForm']))
                 {
-                    $file = fopen('logTestAjax.txt', 'a');
-                    fwrite($file,'ID лога:  '.$userlog_id);
-                    fwrite($file,'ID теста: '.$_POST['QuestionForm']['test_id']);
-                    $rightanswwer_counter = 0;
-                    
-
+                    //$file = fopen('logTestAjax.txt', 'a');
+                    //fwrite($file,'ID лога:  '.$userlog_id);
+                   // fwrite($file,'ID теста: '.$_POST['QuestionForm']['test_id']);
                     $userlog = Userlog::model()->findByPk($userlog_id);
                     $userlog->endtime = date('Y-m-d H:i:s', time());
                     
-                    $rightanswwer_counter = 0;
+                    $rightanswer_counter = 0;
+                    $grade = 0;
 
                     //$this->render('finishTest', array('rightcount'=>$rightanswwer_counter,'questioncount'=>$question_count, 'answerslog'=>$answerslog));
-                    fwrite($file,'Вопросы с одним вариантом ответа:  ');
+                    //fwrite($file,'Вопросы с одним вариантом ответа:  ');
                     if(isset($_POST['QuestionForm']['answers']))
                         foreach ($_POST['QuestionForm']['answers'] as $attr)
                         {
                             list($question_id, $answer_id) = explode(";", $attr);
-                            
+                            $checkquestion  = Question::model()->findByPk($question_id);
                             $checkanswer = Answer::model()->findByAttributes(array('question_id'=>$question_id,'id'=>$answer_id));
                             if ($checkanswer->isright)
-                                $rightanswwer_counter++;
+                            {
+                                $rightanswer_counter++;
+                                $grade += $checkquestion->rate; 
+                            }
                             $userloganswers = new Userloganswers;
                             $userloganswers->answer_id = $answer_id;
                             $userloganswers->answer_text = $checkanswer->text;
-                            $userloganswers->question_text = Question::model()->findByPk($question_id)->text;;
+                            $userloganswers->question_text = $checkquestion->text;
                             $userloganswers->question_id = $question_id;
                             $userloganswers->userlog_id = $userlog_id;
                             $userloganswers->isright = $checkanswer->isright;
                             $userloganswers->save();
                             
-                            fwrite($file, 'question_ = '.$userloganswers->question_text.':answer_ = '.$checkanswer->text.';');
+                            //fwrite($file, 'question_ = '.$userloganswers->question_text.':answer_ = '.$checkanswer->text.';');
                         }
                     /*fwrite($file,'Вопросы с несколькими вариантами ответа:  ');
                     if(isset($_POST['QuestionForm']['answersmulti']))
@@ -159,8 +160,10 @@ class TesttreeController extends Controller
                                     $countofright[]=
                         }
                     }*/
-                    fwrite($file, 'Количество правильных ответов: '.$rightanswwer_counter);
+                    //fwrite($file, 'Количество правильных ответов: '.$rightanswwer_counter);
                     $question_count = count(Testquestion::model()->findAllByAttributes(array('test_id'=>$_POST['QuestionForm']['test_id'])));
+                    $grade /= $question_count;
+                    $userlog->grade = $grade;
                     $userlog->save();
                     $answerslog = new CActiveDataProvider('Userloganswers', array(
                                         'criteria' => array(
@@ -168,11 +171,15 @@ class TesttreeController extends Controller
                                         'params' => array(':param_userlog_id' => $userlog_id),
                                         ),
                     ));
-                    fwrite($file, 'Количество вопросов: '.$question_count);
-                    fclose($file);
-                    
+                    //fwrite($file, 'Количество вопросов: '.$question_count);
+                    //fclose($file);
                     //$this->redirect('../testtree/finishTest',array('rightcount'=>$rightanswwer_counter,'questioncount'=>$question_count, 'answerslog'=>$answerslog));
-                    $this->render('finishTest', array('rightcount'=>$rightanswwer_counter,'questioncount'=>$question_count, 'answerslog'=>$answerslog));
+                    $this->render('finishTest', array(
+                                                'rightcount'=>$rightanswer_counter,
+                                                'questioncount'=>$question_count,
+                                                'answerslog'=>$answerslog,
+                                                'grade'=>$grade,
+                                    ));
         
                 } 
         }
@@ -180,6 +187,14 @@ class TesttreeController extends Controller
 
         public function actionUpdateTest($id)
         {
+                $model = $this->loadModel($id);
+                if(isset($_POST['Testtree']))
+		{
+			$model->attributes=$_POST['Testtree'];
+			if($model->save())
+				$this->redirect(array('index'));
+		}
+                
                 $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
                 $count_questions = count($testquestions);
                 if($count_questions > 0){
@@ -197,9 +212,6 @@ class TesttreeController extends Controller
 
                 $dataProvider = new CActiveDataProvider('Question', array(
                    'criteria' => $criteria));
-
-                $model = $this->loadModel($id);
-
 
                 $this->render('updatetest',array(
                         'model'=>$model,

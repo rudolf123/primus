@@ -39,7 +39,7 @@
             <!-- Выводим поле для звания !-->
             <td><?php echo $forms->labelEx($form, 'rank'); ?></td>
             <td><?php echo $forms->dropDownList($form,'rank',CHtml::listData(Rank::model()->findAll(),
-                                                    'name','name'),
+                                                    'id','name'),
                                                     array('empty' => 'Без звания','style'=>'width: 215px')); ?>
             </td>
          </tr>
@@ -47,7 +47,7 @@
             <!-- Выводим поле для подразделения !-->
             <td><?php echo $forms->labelEx($form, 'block'); ?></td>
             <td><?php echo $forms->dropDownList($form,'block',CHtml::listData(Block::model()->findAll(),
-                                                    'name','name'),
+                                                    'id','name'),
                                                     array('empty' => 'Без подразделения','style'=>'width: 215px')); ?></td>
          </tr>
                   <tr>
@@ -74,11 +74,6 @@
             <td><?php echo $forms->labelEx($form, 'passwdModerator'); ?></td>
             <td><?php echo $forms->passwordField($form, 'passwdModerator') ?></td>
          </tr>
-       <!-- <tr>
-            <!-- Выводим капчу 
-            <td><?php //$this->widget('CCaptcha', array('buttonLabel' => '<br>[новый код]')); ?></td>
-             <td><?php//CHtml::activeTextField($form,'verifyCode'); ?></td>
-        </tr>!-->
         <tr>
             <td></td>
             <!-- Кнопка "регистрация" !-->

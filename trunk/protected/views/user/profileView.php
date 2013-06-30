@@ -11,8 +11,8 @@
 echo 'Фамилия: '.$model->surname.'<br />';
 echo 'Имя: '.$model->name.'<br />';
 echo 'Отчество: '.$model->secondname.'<br />';
-echo 'Звание: '.$model->rank.'<br />';
-echo 'Подразделение: '.$model->block.'<br />';
+echo 'Звание: '.Rank::model()->findByPk($model->rank)->name.'<br />';
+echo 'Подразделение: '.Block::model()->findByPk($model->block)->name.'<br />';
 echo 'Зарегистрирован: '.$model->regdate.'<br />';
 echo 'Статус: ';
 if (Yii::app()->user->checkAccess('moderator'))

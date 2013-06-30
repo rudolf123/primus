@@ -2,7 +2,8 @@
 <?php
 echo '<h5>Количество вопросов: '.$questioncount.'</h5>';
 echo '<h5>Количество правильных ответов: '.$rightcount.'</h5>';
-$this->widget('zii.widgets.grid.CGridView', array(
+echo '<h5>Оценка: '.$grade.'</h5>';
+/*$this->widget('zii.widgets.grid.CGridView', array(
     'id'=>'grid2',
     'dataProvider'=>$answerslog,
     'columns'=>array(
@@ -14,5 +15,5 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'question_text',
             'answer_text',
     ),
-));
+));*/
 ?>

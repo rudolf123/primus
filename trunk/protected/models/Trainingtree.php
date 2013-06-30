@@ -98,7 +98,7 @@ class Trainingtree extends CActiveRecord
 			'tooltip' => 'Tooltip',
 			'url' => 'Url',
 			'icon' => 'Icon',
-			'type' => 'Type',
+			'type' => 'Тип',
 			'doc' => 'Документ Word',
 			'img' => 'Графический файл',
 			'video' => 'Видео файл',
