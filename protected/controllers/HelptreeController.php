@@ -202,9 +202,144 @@ class HelptreeController extends Controller
                // fclose($file);
 	}
 
+        public function actionManageQuestions($id)
+        {
+                $model = $this->loadModel($id);
+               /* if(isset($_POST['Helptree']))
+		{
+			$model->attributes=$_POST['Helptree'];
+			if($model->save())
+				$this->redirect(array('index'));
+		}*/
+                
+                $testquestions = Helpquestion::model()->findAllByAttributes(array('help_id'=>$id));
+                $count_questions = count($testquestions);
+                if($count_questions > 0){
+                    $arr_questions = array();
+                    foreach($testquestions as $testquestion)
+                        array_push($arr_questions,$testquestion->question_id);
+                }
+                $criteria = new CDbCriteria();
+                $criteria1 = new CDbCriteria();
+                $criteria1->addInCondition('id', $arr_questions);
+                $questionsintest = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria1));
+                
+                $criteria->addNotInCondition('id', $arr_questions);
+
+                $dataProvider = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria));
+
+                $this->render('updatetest',array(
+                        'model'=>$model,
+                        'dataProvider'=>$dataProvider,
+                        'testquestions'=>$questionsintest,
+                        ),false,true);
+        }
+        
+        public function actionAddQuestionToTest($question_id,$test_id)
+        {
+            $testquestion = new Helpquestion;
+            $testquestion->help_id = $test_id;
+            $testquestion->question_id = $question_id;
+            $testquestion->save();
+            $testquestions = Helpquestion::model()->findAllByAttributes(array('help_id'=>$test_id));
+            $count_questions = count($testquestions);
+            if($count_questions > 0){
+                $arr_questions = array();
+                foreach($testquestions as $testquestion)
+                    array_push($arr_questions,$testquestion->question_id);
+            }
+            $criteria = new CDbCriteria();
+            $criteria1 = new CDbCriteria();
+            $criteria1->addInCondition('id', $arr_questions);
+            $questionsintest = new CActiveDataProvider('Question', array(
+               'criteria' => $criteria1));
+            $criteria->addNotInCondition('id', $arr_questions);
+            $dataProvider = new CActiveDataProvider('Question', array(
+               'criteria' => $criteria));
+
+            $model = $this->loadModel($test_id);
+
+            $this->render('updatetest',array(
+                    'model'=>$model,
+                    'dataProvider'=>$dataProvider,
+                    'testquestions'=>$questionsintest,
+                    ),false,true);
+        }
+        
+        public function actionRemoveQuestionFromTest($question_id,$test_id)
+        {
+            Helpquestion::model()->deleteAll(
+                                    'help_id = :param_test_id AND question_id=:param_question_id',
+                                    array(
+                                        ':param_test_id' => $test_id,
+                                        ':param_question_id' => $question_id,
+                                        ));
+            
+            $testquestions = Helpquestion::model()->findAllByAttributes(array('help_id'=>$test_id));
+            $count_questions = count($testquestions);
+            if($count_questions > 0){
+                $arr_questions = array();
+                foreach($testquestions as $testquestion)
+                    array_push($arr_questions,$testquestion->question_id);
+            }
+            $criteria = new CDbCriteria();
+            $criteria1 = new CDbCriteria();
+            $criteria1->addInCondition('id', $arr_questions);
+            $questionsintest = new CActiveDataProvider('Question', array(
+               'criteria' => $criteria1));
+            $criteria->addNotInCondition('id', $arr_questions);
+            $dataProvider = new CActiveDataProvider('Question', array(
+               'criteria' => $criteria));
+
+            $model = $this->loadModel($test_id);
+
+            $this->render('updatetest',array(
+                    'model'=>$model,
+                    'dataProvider'=>$dataProvider,
+                    'testquestions'=>$questionsintest,
+                    ),false,true);
+        }
+        
+        public function actionRunTest($id)
+        {
+            $testquestions = Helpquestion::model()->findAllByAttributes(array('help_id'=>$id));
+            $testtreemodel = Helptree::model()->findByPk($id);
+            $count_questions = count($testquestions);
+            if($count_questions > 0){
+                $arr_questions_ids = array();
+                foreach($testquestions as $testquestion)
+                    array_push($arr_questions_ids,$testquestion->question_id);
+            }
+            $criteria = new CDbCriteria();
+            $criteria->addInCondition('id', $arr_questions_ids);
+            $questions = Question::model()->findAll($criteria);
+            $qmodel = new QuestionForm;
+
+            $userlogcount = count(Userlog::model()->findByAttributes(array('test_id'=>$id, 'user_id'=>Yii::app()->user->id)));
+           // if (count($userlogcount)==0)
+            
+            $userlog = new Userloghelp;            
+            $userlog->test_id = $id;
+            $userlog->user_id = Yii::app()->user->id;
+            $userlog->grade = -1;
+            $userlog->starttime = date('Y-m-d H:i:s', time());
+            $userlog->save();
+
+            $this->render('runtest', array(
+                        'questions'=>$questions,
+                        'model'=>$qmodel,
+                        'testtreemodel'=>$testtreemodel,
+                        'userlogcount'=>$userlogcount,
+                        'userlog_id'=>$userlog->id,
+                        ), false, true);
+        }
+        
 	/**
 	 * Manages all models.
 	 */
+        
 	public function actionAdmin()
 	{
 		$model=new Helptree('search');
