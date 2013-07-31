@@ -10,7 +10,8 @@
                 if (Yii::app()->user->checkAccess('moderator'))
                     echo Chtml::link(CHtml::image('/assets/edit.png','edit icon is missing',array('title'=>'Изменить материал')), Yii::app()->createUrl('helptree/update', array('id'=>$model->id)));
                 //echo Chtml::link(CHtml::image('/assets/doc.gif','doc icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('helptree/delete',array('id'=>$model->id)));
-                
+                if (Yii::app()->user->checkAccess('moderator'))
+                    echo Chtml::link(CHtml::image('/assets/question.png','question icon is missing',array('title'=>'Изменить вопросы самоконтроля')), Yii::app()->createUrl('helptree/manageQuestions', array('id'=>$model->id)));
                 $this->widget('ext.mPrint.mPrint', array(
                     'title' => $model->title,          //the title of the document. Defaults to the HTML title
                     'tooltip' => 'Печать',        //tooltip message of the print icon. Defaults to 'print'
@@ -147,6 +148,11 @@
 
 
 </div>
+
+<?php 
+    if (Helpquestion::model()->findByAttributes(array('help_id'=>$model->id)))
+        echo Chtml::link('Пройти самоконтроль',Yii::app()->createUrl('helptree/runtest', array('id'=>$model->id)));
+?>
 
 <script>
         $(document).ready(function() {

@@ -7,7 +7,7 @@
                                //'onsubmit'=>"return false;",// Disable normal form submit 
                                //'onkeypress'=>" if(event.keyCode == 13){ send(); } " //do ajax call when user presses enter key 
                             ),
-                'action' => Yii::app()->createUrl('testtree/Ajax', array('userlog_id'=>$userlog_id)),
+                'action' => Yii::app()->createUrl('helptree/Ajax', array('userlog_id'=>$userlog_id)),
                 ));
     echo $form->errorSummary($model);
     $i = 0;
@@ -72,86 +72,3 @@
     $this->endWidget(); 
     ?>
 </div>
-
-<!-- Начало панели счетчика -->
-<div id="countdown_dashboard">
-    Осталось времени
-	<div class="dash hours_dash">
-		<span class="dash_title">часов</span>
-		<div class="digit">0</div>
-		<div class="digit">0</div>
-	</div>
-
-	<div class="dash minutes_dash">
-		<span class="dash_title">минут</span>
-		<div class="digit">0</div>
-		<div class="digit">0</div>
-	</div>
-
-	<div class="dash seconds_dash">
-		<span class="dash_title">секунд</span>
-		<div class="digit">0</div>
-		<div class="digit">0</div>
-	</div>
-</div>
-
-
-<!-- Завершение панели счетчика -->
-<script type="text/javascript">
-    $(function() {
-        var offset = $("#countdown_dashboard").offset();
-        var topPadding = 20;
-        $(window).scroll(function() {
-        if ($(window).scrollTop() > offset.top) {
-            $("#countdown_dashboard").stop().animate({marginTop: $(window).scrollTop() - offset.top + topPadding});
-        }
-        else {$("#countdown_dashboard").stop().animate({marginTop: 0});};});
-    });
-</script> 
-
-<script language="Javascript" type="text/javascript" src="/js/jquery.lwtCountdown-0.9.5.js"></script>
-<script type="text/javascript">
-    function send()
-    {
-            if(document.question.onsubmit &&
-            !document.question.onsubmit())
-            {
-                return;
-            }
-            document.question.submit();
-       //var data=$("#question").serialize();
-
-
-        //$.ajax({
-            //type: 'POST',
-            //url: "<? //echo Yii::app()->createUrl('testtree/Ajax', array('userlog_id'=>$userlog_id)); ?>",
-            //data:data,
-            //success:function(){
-                //alert(data); 
-              //      },
-            //error: function() { // if error occured
-                //alert("Error occured.please try again");
-                //alert(data);
-          //},
-
-        //dataType:'html'
-       // });
-    }
-</script>
-
-<script>
-jQuery(document).ready(function() {
-	$("#countdown_dashboard").countDown({
-		targetOffset: {
-			"day": 		0,
-			"month": 	0,
-			"year": 	0,
-			"hour": 	0,
-			"min": 		<?php echo $testtreemodel->time?>,
-			"sec": 		6
-		}, 
-		// По завершении счета будет выскальзывать панель #complete_info_message
-		onComplete: function(){send();}
-	});
-});
-</script>
