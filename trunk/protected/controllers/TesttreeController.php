@@ -163,7 +163,7 @@ class TesttreeController extends Controller
                     //fwrite($file, 'Количество правильных ответов: '.$rightanswwer_counter);
                     $question_count = count(Testquestion::model()->findAllByAttributes(array('test_id'=>$_POST['QuestionForm']['test_id'])));
                     $grade /= $question_count;
-                    $userlog->grade = $grade;
+                    $userlog->grade = round($grade,2);
                     $userlog->save();
                     $answerslog = new CActiveDataProvider('Userloganswers', array(
                                         'criteria' => array(

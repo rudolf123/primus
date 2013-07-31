@@ -3,7 +3,11 @@
 echo '<h5>Количество вопросов: '.$questioncount.'</h5>';
 echo '<h5>Количество правильных ответов: '.$rightcount.'</h5>';
 echo '<h5>Оценка: '.round($grade,2).'</h5>';
-/*$this->widget('zii.widgets.grid.CGridView', array(
+
+echo 123;
+foreach ($answerslog as $answerlog)
+    echo $answerlog->id;
+$this->widget('zii.widgets.grid.CGridView', array(
     'id'=>'grid2',
     'dataProvider'=>$answerslog,
     'columns'=>array(
@@ -16,4 +20,4 @@ echo '<h5>Оценка: '.round($grade,2).'</h5>';
             'answer_text',
     ),
 ));
-?>*/
+?>

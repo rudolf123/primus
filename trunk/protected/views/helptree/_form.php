@@ -90,8 +90,11 @@
         </div>
         <div class="row">
                 <?php echo $form->labelEx($model,'video'); ?>
-                <?php echo $form->textField($model,'video',array('maxlength'=>255)); ?>
-                <?php echo $form->error($model,'video'); ?>
+                <?php echo $form->fileField($model,'videofile'); ?>
+                <?php echo $form->error($model,'videofile'); ?>
+                <?php //echo $form->labelEx($model,'video'); ?>
+                <?php //echo $form->textField($model,'video',array('maxlength'=>255)); ?>
+                <?php //echo $form->error($model,'video'); ?>
                 <?php 
                     /*$this->widget('ext.elFinder.ServerFileInput', array(
                             'model' => $model,

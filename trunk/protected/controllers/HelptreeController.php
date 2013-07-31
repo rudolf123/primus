@@ -317,7 +317,7 @@ class HelptreeController extends Controller
             $questions = Question::model()->findAll($criteria);
             $qmodel = new QuestionForm;
 
-            $userlogcount = count(Userlog::model()->findByAttributes(array('test_id'=>$id, 'user_id'=>Yii::app()->user->id)));
+            $userlogcount = count(Userloghelp::model()->findByAttributes(array('test_id'=>$id, 'user_id'=>Yii::app()->user->id)));
            // if (count($userlogcount)==0)
             
             $userlog = new Userloghelp;            
@@ -334,6 +334,57 @@ class HelptreeController extends Controller
                         'userlogcount'=>$userlogcount,
                         'userlog_id'=>$userlog->id,
                         ), false, true);
+        }
+        
+        public function actionAjax($userlog_id)
+        {
+                if(isset($_POST['QuestionForm']))
+                {
+                    $userlog = Userloghelp::model()->findByPk($userlog_id);
+                    $userlog->endtime = date('Y-m-d H:i:s', time());
+                    
+                    $rightanswer_counter = 0;
+                    $grade = 0;
+
+                    if(isset($_POST['QuestionForm']['answers']))
+                        foreach ($_POST['QuestionForm']['answers'] as $attr)
+                        {
+                            list($question_id, $answer_id) = explode(";", $attr);
+                            $checkquestion  = Question::model()->findByPk($question_id);
+                            $checkanswer = Answer::model()->findByAttributes(array('question_id'=>$question_id,'id'=>$answer_id));
+                            if ($checkanswer->isright)
+                            {
+                                $rightanswer_counter++;
+                                $grade += $checkquestion->rate; 
+                            }
+                            $userloganswers = new Userloganswershelp;
+                            $userloganswers->answer_id = $answer_id;
+                            $userloganswers->answer_text = $checkanswer->text;
+                            $userloganswers->question_text = $checkquestion->text;
+                            $userloganswers->question_id = $question_id;
+                            $userloganswers->userlog_id = $userlog_id;
+                            $userloganswers->isright = $checkanswer->isright;
+                            $userloganswers->save();
+                        }
+
+                    $question_count = count(Helpquestion::model()->findAllByAttributes(array('help_id'=>$_POST['QuestionForm']['test_id'])));
+                    $grade /= $question_count;
+                    $userlog->grade = round($grade,2);
+                    $userlog->save();
+                    $answerslog = new CActiveDataProvider('Userloganswershelp', array(
+                                        'criteria' => array(
+                                        'condition' => 'userlog_id = :param_userlog_id',// AND TIME_TO_SEC(TIMEDIFF(NOW(),sessionend))<100',
+                                        'params' => array(':param_userlog_id' => $userlog_id),
+                                        ),
+                    ));
+                    $this->render('finishTest', array(
+                                                'rightcount'=>$rightanswer_counter,
+                                                'questioncount'=>$question_count,
+                                                'answerslog'=>$answerslog,
+                                                'grade'=>$grade,
+                                    ));
+        
+                } 
         }
         
 	/**
