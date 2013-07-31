@@ -53,9 +53,7 @@ class Trainingtree extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			//array('id', 'required','message'=>'Кодовое обозначение раздела - необходимое для заполнения поле'),
                         array('title', 'required','message'=>'Поле "Название" обязательное для заполнения!'),    
-                        //array('id', 'unique','message'=>'запись с таким наименованием уже существует'),
 			array('id, parent_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>40),
 			array('tooltip', 'length', 'max'=>100),
@@ -64,7 +62,7 @@ class Trainingtree extends CActiveRecord
                         array('imgfile', 'file', 'types'=>'jpg, jpeg, gif, png', 'allowEmpty'=>true),
                         array('docfile', 'file', 'types'=>'doc, docx', 'allowEmpty'=>true),
                         array('pdffile', 'file', 'types'=>'pdf', 'allowEmpty'=>true),
-                        //array('videofile', 'file', 'types'=>'mp4, mpeg, mov', 'allowEmpty'=>true),
+                        array('videofile', 'file', 'types'=>'mp4', 'allowEmpty'=>true),
                         array('video', 'length', 'max'=>255),
                         array('programfile', 'file', 'types'=>'rar, zip, exe', 'allowEmpty'=>true),
 			// The following rule is used by search().
@@ -129,7 +127,7 @@ class Trainingtree extends CActiveRecord
             $imgfile=CUploadedFile::getInstance($this,'imgfile');
             $docfile=CUploadedFile::getInstance($this,'docfile');
             $pdffile=CUploadedFile::getInstance($this,'pdffile');
-            //$videofile=CUploadedFile::getInstance($this,'videofile');
+            $videofile=CUploadedFile::getInstance($this,'videofile');
             $programfile=CUploadedFile::getInstance($this,'programfile');
             if ($imgfile)
             {
@@ -152,13 +150,13 @@ class Trainingtree extends CActiveRecord
                     $_SERVER['DOCUMENT_ROOT'].'/storage/training/'.$this->pdffile);
                 $this->pdf = $this->pdffile;
             }
-            /*if ($videofile)
+            if ($videofile)
             {
                 $this->videofile=$videofile;
                 $this->videofile->saveAs(
                     $_SERVER['DOCUMENT_ROOT'].'/storage/training/'.$this->videofile);
                 $this->video = $this->videofile;
-            }*/
+            }
             if ($programfile)
             {
                 $this->programfile=$programfile;

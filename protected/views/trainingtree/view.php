@@ -65,7 +65,7 @@
                 'width'=>600,
                 'height'=>360,
                 'id'=>'HelptreeViewVideo',
-                'file'=>'/storage/video/'.$model->video,
+                'file'=>'/storage/training/'.$model->video,
                 //'image'=>'/assets/doc.jpg', // the thumbnail image of the player, if null we use demo image of jwplayer
                 'options'=>array(
                     'controlbar'=>'bottom'

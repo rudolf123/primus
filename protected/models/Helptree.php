@@ -63,7 +63,7 @@ class Helptree extends CActiveRecord
                         array('imgfile', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>true),
                         array('docfile', 'file', 'types'=>'doc, docx', 'allowEmpty'=>true),
                         array('pdffile', 'file', 'types'=>'pdf', 'allowEmpty'=>true),
-                        //array('videofile', 'types'=>'mp4, mpeg, mov', 'allowEmpty'=>true),
+                        array('videofile', 'file', 'types'=>'mp4', 'allowEmpty'=>true),
                         array('video', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -114,7 +114,7 @@ class Helptree extends CActiveRecord
             $imgfile=CUploadedFile::getInstance($this,'imgfile');
             $docfile=CUploadedFile::getInstance($this,'docfile');
             $pdffile=CUploadedFile::getInstance($this,'pdffile');
-            //$videofile=CUploadedFile::getInstance($this,'videofile');
+            $videofile=CUploadedFile::getInstance($this,'videofile');
             if ($imgfile)
             {
                 $this->imgfile=$imgfile;
@@ -136,7 +136,13 @@ class Helptree extends CActiveRecord
                     $_SERVER['DOCUMENT_ROOT'].'/storage/'.$this->pdffile);
                 $this->pdf = $this->pdffile;
             }
-
+            if ($videofile)
+            {
+                $this->videofile=$videofile;
+                $this->videofile->saveAs(
+                    $_SERVER['DOCUMENT_ROOT'].'/storage/'.$this->videofile);
+                $this->video = $this->videofile;
+            }
             return true;
         }
 
