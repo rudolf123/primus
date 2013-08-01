@@ -17,7 +17,7 @@
 
 	<div class="row">
                 <?php echo $form->labelEx($model,'text'); ?>
-                <?php echo $form->textField($model,'text',array('maxlength'=>255)); ?>
+                <?php echo $form->textArea($model,'text'); ?>
                 <?php echo $form->error($model,'text'); ?>
                 <?php echo $form->dropDownList($model,'isright',
                             array(1=>'Верный', 0=>'Неверный'));?>

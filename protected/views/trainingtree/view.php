@@ -4,14 +4,15 @@
              )); 
                 //echo Chtml::link('sdfsdf',Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>'2260358673_keyboard_1.jpg')), array('img'=>'src=; alt="альтернативный текст">'));
                 if ($model->doc != '')
-                    echo Chtml::link(CHtml::image('/assets/doc.gif','doc icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать в формате Word')),Yii::app()->createUrl('trainingtree/DownloadFile',array('filename'=>$model->doc)));
+                    echo Chtml::link(CHtml::image('/assets/doc.png','doc icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать в формате Word')),Yii::app()->createUrl('trainingtree/DownloadFile',array('filename'=>$model->doc)));
                 if ($model->pdf != '')
-                    echo Chtml::link(CHtml::image('/assets/pdf.gif','pdf icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать в формате PDF')),Yii::app()->createUrl('trainingtree/DownloadFile',array('filename'=>$model->pdf)));
+                    echo Chtml::link(CHtml::image('/assets/pdf.png','pdf icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать в формате PDF')),Yii::app()->createUrl('trainingtree/DownloadFile',array('filename'=>$model->pdf)));
                 if ($model->program != '')
-                    echo Chtml::link(CHtml::image('/assets/gear.gif','program icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать программу')),Yii::app()->createUrl('trainingtree/DownloadFile',array('filename'=>$model->program))); 
+                    echo Chtml::link(CHtml::image('/assets/gear.png','program icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать программу')),Yii::app()->createUrl('trainingtree/DownloadFile',array('filename'=>$model->program))); 
                 if (Yii::app()->user->checkAccess('moderator'))
                     echo Chtml::link(CHtml::image('/assets/edit.png','edit icon is missing',array('title'=>'Изменить материал')), Yii::app()->createUrl('trainingtree/update', array('id'=>$model->id)));
-                                
+                if (Yii::app()->user->checkAccess('moderator'))
+                    echo Chtml::link(CHtml::image('/assets/question.png','question icon is missing',array('title'=>'Изменить вопросы самоконтроля')), Yii::app()->createUrl('trainingtree/manageQuestions', array('id'=>$model->id)));                
                 $this->widget('ext.mPrint.mPrint', array(
                     'title' => $model->title,          //the title of the document. Defaults to the HTML title
                     'tooltip' => 'Печать',        //tooltip message of the print icon. Defaults to 'print'
@@ -75,6 +76,20 @@
     }
 ?>
 </div>
+
+<?php 
+    if (Trainingquestion::model()->findByAttributes(array('training_id'=>$model->id)))
+    {
+        $this->widget('zii.widgets.jui.CJuiButton', array(
+            'name'=>'buttonAddMaterial',
+            'caption'=>'Пройти самоконтроль!',
+            'buttonType'=>'link',
+            'url'=>Yii::app()->createUrl('trainingtree/runtest', array('id'=>$model->id)),
+            )
+        );
+        //echo Chtml::link('Пройти самоконтроль',Yii::app()->createUrl('helptree/runtest', array('id'=>$model->id)));
+    }
+?>
 <script>
         $(document).ready(function() {
             $("#wideView").click(function() {

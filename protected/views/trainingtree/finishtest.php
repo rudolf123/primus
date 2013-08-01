@@ -19,6 +19,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
     ),
 ));?>
 <p>
-<?php echo CHtml::link('<< Назад (Информационная справка)', Yii::app()->createUrl('helptree/index'));?>
+<?php echo CHtml::link('<< Назад (Обучение)', Yii::app()->createUrl('trainingtree/index'));?>
 </p>
 

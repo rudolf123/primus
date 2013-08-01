@@ -7,7 +7,7 @@
                                //'onsubmit'=>"return false;",// Disable normal form submit 
                                //'onkeypress'=>" if(event.keyCode == 13){ send(); } " //do ajax call when user presses enter key 
                             ),
-                'action' => Yii::app()->createUrl('helptree/Ajax', array('userlog_id'=>$userlog_id)),
+                'action' => Yii::app()->createUrl('trainingtree/Ajax', array('userlog_id'=>$userlog_id)),
                 ));
     echo $form->errorSummary($model);
     $i = 0;

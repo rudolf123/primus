@@ -35,6 +35,10 @@ $('.search-form form').submit(function(){
                 'rate',
 		array(
 			'class'=>'CButtonColumn',
+                        'template'=>'{view}{update}{delete}',
+                        'viewButtonUrl' => 'Yii::app()->createUrl("question/viewAnswer", array("id"=>$data->id))',
+                        'updateButtonUrl' => 'Yii::app()->createUrl("question/updateAnswer", array("id"=>$data->id, "page"=>isset($_GET["Question_page"]) ? $_GET["Question_page"] : 1))',
+                        'deleteButtonUrl'=> 'Yii::app()->createUrl("question/deleteAnswer", array("id"=>$data->id))',
 		),
 	),
 )); ?>

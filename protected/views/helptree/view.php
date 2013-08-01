@@ -4,9 +4,9 @@
              )); 
                 //echo Chtml::link('sdfsdf',Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>'2260358673_keyboard_1.jpg')), array('img'=>'src=; alt="альтернативный текст">'));
                 if ($model->doc != '')
-                    echo Chtml::link(CHtml::image('/assets/doc.gif','doc icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать в формате Word')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->doc)));
+                    echo Chtml::link(CHtml::image('/assets/doc.png','doc icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать в формате Word')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->doc)));
                 if ($model->pdf != '')
-                    echo Chtml::link(CHtml::image('/assets/pdf.gif','pdf icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать в формате PDF')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->pdf)));  
+                    echo Chtml::link(CHtml::image('/assets/pdf.png','pdf icon is missing',array('width'=>'40px','height'=>'40px','title'=>'Скачать в формате PDF')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->pdf)));  
                 if (Yii::app()->user->checkAccess('moderator'))
                     echo Chtml::link(CHtml::image('/assets/edit.png','edit icon is missing',array('title'=>'Изменить материал')), Yii::app()->createUrl('helptree/update', array('id'=>$model->id)));
                 //echo Chtml::link(CHtml::image('/assets/doc.gif','doc icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('helptree/delete',array('id'=>$model->id)));
