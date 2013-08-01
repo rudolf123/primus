@@ -122,6 +122,187 @@ class TrainingtreeController extends Controller
 		));
 	}
         
+        public function actionManageQuestions($id)
+        {
+                $model = $this->loadModel($id);
+               
+                $testquestions = Trainingquestion::model()->findAllByAttributes(array('training_id'=>$id));
+                $count_questions = count($testquestions);
+                if($count_questions > 0){
+                    $arr_questions = array();
+                    foreach($testquestions as $testquestion)
+                        array_push($arr_questions,$testquestion->question_id);
+                }
+                $criteria = new CDbCriteria();
+                $criteria1 = new CDbCriteria();
+                $criteria1->addInCondition('id', $arr_questions);
+                $questionsintest = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria1));
+                
+                $criteria->addNotInCondition('id', $arr_questions);
+
+                $dataProvider = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria));
+
+                $this->render('updatetest',array(
+                        'model'=>$model,
+                        'dataProvider'=>$dataProvider,
+                        'testquestions'=>$questionsintest,
+                        ),false,true);
+        }
+        
+        public function actionAddQuestionToTest($question_id,$test_id)
+        {
+            $testquestion = new Trainingquestion;
+            $testquestion->training_id = $test_id;
+            $testquestion->question_id = $question_id;
+            $testquestion->save();
+            $testquestions = Trainingquestion::model()->findAllByAttributes(array('training_id'=>$test_id));
+            $count_questions = count($testquestions);
+            if($count_questions > 0){
+                $arr_questions = array();
+                foreach($testquestions as $testquestion)
+                    array_push($arr_questions,$testquestion->question_id);
+            }
+            $criteria = new CDbCriteria();
+            $criteria1 = new CDbCriteria();
+            $criteria1->addInCondition('id', $arr_questions);
+            $questionsintest = new CActiveDataProvider('Question', array(
+               'criteria' => $criteria1));
+            $criteria->addNotInCondition('id', $arr_questions);
+            $dataProvider = new CActiveDataProvider('Question', array(
+               'criteria' => $criteria));
+
+            $model = $this->loadModel($test_id);
+
+            $this->render('updatetest',array(
+                    'model'=>$model,
+                    'dataProvider'=>$dataProvider,
+                    'testquestions'=>$questionsintest,
+                    ),false,true);
+        }
+        
+        public function actionRemoveQuestionFromTest($question_id,$test_id)
+        {
+            Helpquestion::model()->deleteAll(
+                                    'training_id = :param_test_id AND question_id=:param_question_id',
+                                    array(
+                                        ':param_test_id' => $test_id,
+                                        ':param_question_id' => $question_id,
+                                        ));
+            
+            $testquestions = Trainingquestion::model()->findAllByAttributes(array('training_id'=>$test_id));
+            $count_questions = count($testquestions);
+            if($count_questions > 0){
+                $arr_questions = array();
+                foreach($testquestions as $testquestion)
+                    array_push($arr_questions,$testquestion->question_id);
+            }
+            $criteria = new CDbCriteria();
+            $criteria1 = new CDbCriteria();
+            $criteria1->addInCondition('id', $arr_questions);
+            $questionsintest = new CActiveDataProvider('Question', array(
+               'criteria' => $criteria1));
+            $criteria->addNotInCondition('id', $arr_questions);
+            $dataProvider = new CActiveDataProvider('Question', array(
+               'criteria' => $criteria));
+
+            $model = $this->loadModel($test_id);
+
+            $this->render('updatetest',array(
+                    'model'=>$model,
+                    'dataProvider'=>$dataProvider,
+                    'testquestions'=>$questionsintest,
+                    ),false,true);
+        }
+        
+        public function actionRunTest($id)
+        {
+            $testquestions = Trainingquestion::model()->findAllByAttributes(array('training_id'=>$id));
+            $testtreemodel = Trainingtree::model()->findByPk($id);
+            $count_questions = count($testquestions);
+            if($count_questions > 0){
+                $arr_questions_ids = array();
+                foreach($testquestions as $testquestion)
+                    array_push($arr_questions_ids,$testquestion->question_id);
+            }
+            $criteria = new CDbCriteria();
+            $criteria->addInCondition('id', $arr_questions_ids);
+            $questions = Question::model()->findAll($criteria);
+            $qmodel = new QuestionForm;
+
+            $userlogcount = count(Userlogtraining::model()->findByAttributes(array('test_id'=>$id, 'user_id'=>Yii::app()->user->id)));
+           // if (count($userlogcount)==0)
+            
+            $userlog = new Userlogtraining;            
+            $userlog->test_id = $id;
+            $userlog->user_id = Yii::app()->user->id;
+            $userlog->grade = -1;
+            $userlog->starttime = date('Y-m-d H:i:s', time());
+            $userlog->save();
+
+            $this->render('runtest', array(
+                        'questions'=>$questions,
+                        'model'=>$qmodel,
+                        'testtreemodel'=>$testtreemodel,
+                        'userlogcount'=>$userlogcount,
+                        'userlog_id'=>$userlog->id,
+                        ), false, true);
+        }
+        
+        public function actionAjax($userlog_id)
+        {
+                if(isset($_POST['QuestionForm']))
+                {
+                    $userlog = Userlogtraining::model()->findByPk($userlog_id);
+                    $userlog->endtime = date('Y-m-d H:i:s', time());
+                    
+                    $rightanswer_counter = 0;
+                    $grade = 0;
+
+                    if(isset($_POST['QuestionForm']['answers']))
+                        foreach ($_POST['QuestionForm']['answers'] as $attr)
+                        {
+                            list($question_id, $answer_id) = explode(";", $attr);
+                            $checkquestion  = Question::model()->findByPk($question_id);
+                            $checkanswer = Answer::model()->findByAttributes(array('question_id'=>$question_id,'id'=>$answer_id));
+                            if ($checkanswer->isright)
+                            {
+                                $rightanswer_counter++;
+                                $grade += $checkquestion->rate; 
+                            }
+                            $userloganswers = new Userloganswerstraining;
+                            $userloganswers->answer_id = $answer_id;
+                            $userloganswers->answer_text = $checkanswer->text;
+                            $userloganswers->question_text = $checkquestion->text;
+                            $userloganswers->question_id = $question_id;
+                            $userloganswers->userlog_id = $userlog_id;
+                            $userloganswers->isright = $checkanswer->isright;
+                            $right_answer_text = Answer::model()->findByAttributes(array('question_id'=>$question_id, 'isright'=>1))->text;
+                            $userloganswers->right_answer = $right_answer_text;
+                            $userloganswers->save();
+                        }
+
+                    $question_count = count(Trainingquestion::model()->findAllByAttributes(array('training_id'=>$_POST['QuestionForm']['test_id'])));
+                    $grade /= $question_count;
+                    $userlog->grade = round($grade,2);
+                    $userlog->save();
+                    $answerslog = new CActiveDataProvider('Userloganswerstraining', array(
+                                        'criteria' => array(
+                                        'condition' => 'userlog_id = :param_userlog_id',// AND TIME_TO_SEC(TIMEDIFF(NOW(),sessionend))<100',
+                                        'params' => array(':param_userlog_id' => $userlog_id),
+                                        ),
+                    ));
+                    $this->render('finishTest', array(
+                                                'rightcount'=>$rightanswer_counter,
+                                                'questioncount'=>$question_count,
+                                                'answerslog'=>$answerslog,
+                                                'grade'=>$grade,
+                                    ));
+        
+                } 
+        }
+        
         public function actionDownloadFile($filename)
         {
             //отключить профайлеры

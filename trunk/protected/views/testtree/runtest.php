@@ -36,6 +36,7 @@
                 $parttodisplay[$firstpart] = $secondpart;
             }   
         }
+        shuffle($answers);
         foreach($answers as $answer)
         {
             if ($wronganswers==0)

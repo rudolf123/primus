@@ -2165,3 +2165,928 @@ Stack trace:
 REQUEST_URI=/index.php/helptree/images/close.png
 HTTP_REFERER=http://primus_yii2/index.php/helptree/index
 ---
+2013/08/01 12:24:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 12:24:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 12:25:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 12:25:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 12:25:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 12:25:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 12:25:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 12:25:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 13:09:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 13:09:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 13:09:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 13:09:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 13:10:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 13:10:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 13:11:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 13:11:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 13:36:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 13:36:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 13:36:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 13:36:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 13:37:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 13:37:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:01:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:01:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:01:31 [error] [exception.CDbException] exception 'CDbException' with message 'Таблица "tbl_answer" не содержит столбца "is_right".' in Z:\home\Yii\framework\db\schema\CDbCommandBuilder.php:591
+Stack trace:
+#0 Z:\home\Yii\framework\db\ar\CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 Z:\home\primus_yii2\www\protected\controllers\HelptreeController.php(367): CActiveRecord->findByAttributes(Array)
+#2 [internal function]: HelptreeController->actionAjax('6')
+#3 Z:\home\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HelptreeController), Array)
+#4 Z:\home\Yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HelptreeController), Object(ReflectionMethod), Array)
+#5 Z:\home\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('Ajax')
+#14 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/Ajax')
+#15 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/helptree/Ajax?userlog_id=6
+HTTP_REFERER=http://primus_yii2/index.php/helptree/runtest/20
+---
+2013/08/01 14:05:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:05:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:15:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:15:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:45:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:45:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:49:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:49:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:50:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:50:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:55:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:55:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:56:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 14:56:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 15:17:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 15:17:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 15:24:08 [error] [php] include(ESetReturnUrlFilter.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\Yii\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\Yii\framework\YiiBase.php(217): spl_autoload_call()
+#1 Z:\home\Yii\framework\web\filters\CFilterChain.php(89): createComponent()
+#2 Z:\home\Yii\framework\web\CController.php(291): create()
+#3 Z:\home\Yii\framework\web\CController.php(265): QuestionController->runActionWithFilters()
+#4 Z:\home\Yii\framework\web\CWebApplication.php(282): QuestionController->run()
+#5 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 Z:\home\primus_yii2\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/question/admin
+in Z:\home\primus_yii2\www\index.php (13)
+2013/08/01 16:11:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Array".' in Z:\home\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Array')
+#1 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/Array
+HTTP_REFERER=http://primus_yii2/index.php/question/24
+---
+2013/08/01 17:08:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:09:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:11:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:11:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:11:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:11:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:12:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in Z:\home\primus_yii2\www\protected\controllers\HelptreeController.php:444
+Stack trace:
+#0 Z:\home\primus_yii2\www\protected\controllers\HelptreeController.php(207): HelptreeController->loadModel('9')
+#1 [internal function]: HelptreeController->actionManageQuestions('9')
+#2 Z:\home\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HelptreeController), Array)
+#3 Z:\home\Yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HelptreeController), Object(ReflectionMethod), Array)
+#4 Z:\home\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#11 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('manageQuestions')
+#13 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/manage...')
+#14 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/helptree/manageQuestions/9
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:13:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in Z:\home\primus_yii2\www\protected\controllers\HelptreeController.php:444
+Stack trace:
+#0 Z:\home\primus_yii2\www\protected\controllers\HelptreeController.php(207): HelptreeController->loadModel('9')
+#1 [internal function]: HelptreeController->actionManageQuestions('9')
+#2 Z:\home\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HelptreeController), Array)
+#3 Z:\home\Yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HelptreeController), Object(ReflectionMethod), Array)
+#4 Z:\home\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#11 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('manageQuestions')
+#13 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/manage...')
+#14 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/helptree/manageQuestions/9
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:13:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:13:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:13:58 [error] [exception.CDbException] exception 'CDbException' with message 'Таблица "tbl_helpquestion" не содержит столбца "training_id".' in Z:\home\Yii\framework\db\schema\CDbCommandBuilder.php:591
+Stack trace:
+#0 Z:\home\Yii\framework\db\ar\CActiveRecord.php(1481): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 Z:\home\primus_yii2\www\protected\controllers\TrainingtreeController.php(166): CActiveRecord->findAllByAttributes(Array)
+#2 [internal function]: TrainingtreeController->actionAddQuestionToTest('13', '7')
+#3 Z:\home\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(TrainingtreeController), Array)
+#4 Z:\home\Yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TrainingtreeController), Object(ReflectionMethod), Array)
+#5 Z:\home\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 Z:\home\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 Z:\home\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 Z:\home\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\Yii\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('addquestiontote...')
+#14 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/ad...')
+#15 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/trainingtree/addquestiontotest?question_id=13&test_id=7
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/manageQuestions/7
+---
+2013/08/01 17:15:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 17:15:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 17:15:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:15:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:16:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:16:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:16:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:16:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 17:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 17:20:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:20:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:21:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:21:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:21:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 17:21:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 17:21:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:21:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:22:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 17:22:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('helptree/images...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/helptree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/helptree/index
+---
+2013/08/01 17:22:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:22:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:23:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/close.png
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---
+2013/08/01 17:23:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\Yii\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\Yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\Yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('trainingtree/im...')
+#3 Z:\home\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\primus_yii2\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/trainingtree/images/loading.gif
+HTTP_REFERER=http://primus_yii2/index.php/trainingtree/index
+---

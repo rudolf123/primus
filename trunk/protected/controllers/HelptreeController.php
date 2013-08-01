@@ -364,6 +364,8 @@ class HelptreeController extends Controller
                             $userloganswers->question_id = $question_id;
                             $userloganswers->userlog_id = $userlog_id;
                             $userloganswers->isright = $checkanswer->isright;
+                            $right_answer_text = Answer::model()->findByAttributes(array('question_id'=>$question_id, 'isright'=>1))->text;
+                            $userloganswers->right_answer = $right_answer_text;
                             $userloganswers->save();
                         }
 

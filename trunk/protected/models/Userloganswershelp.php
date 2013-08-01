@@ -11,6 +11,7 @@
  * @property integer $isright
  * @property string $question_text
  * @property string $answer_text
+ * @property string $right_answer
  */
 class Userloganswershelp extends CActiveRecord
 {
@@ -42,10 +43,10 @@ class Userloganswershelp extends CActiveRecord
 		return array(
 			array('question_id, answer_id, userlog_id', 'required'),
 			array('question_id, answer_id, userlog_id, isright', 'numerical', 'integerOnly'=>true),
-			array('question_text, answer_text', 'length', 'max'=>255),
+			array('question_text, answer_text, right_answer', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, question_id, answer_id, userlog_id, isright, question_text, answer_text', 'safe', 'on'=>'search'),
+			array('id, question_id, answer_id, userlog_id, isright, question_text, answer_text, right_answer', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,9 +71,10 @@ class Userloganswershelp extends CActiveRecord
 			'question_id' => 'Question',
 			'answer_id' => 'Answer',
 			'userlog_id' => 'Userlog',
-			'isright' => 'Isright',
-			'question_text' => 'Question Text',
-			'answer_text' => 'Answer Text',
+			'isright' => 'Верный',
+			'question_text' => 'Текст вопроса',
+			'answer_text' => 'Вы ответили',
+			'right_answer' => 'Правильный ответ',
 		);
 	}
 
@@ -94,6 +96,7 @@ class Userloganswershelp extends CActiveRecord
 		$criteria->compare('isright',$this->isright);
 		$criteria->compare('question_text',$this->question_text,true);
 		$criteria->compare('answer_text',$this->answer_text,true);
+		$criteria->compare('right_answer',$this->right_answer,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
