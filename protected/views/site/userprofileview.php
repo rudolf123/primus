@@ -50,17 +50,17 @@ $this->widget('zii.widgets.CDetailView', array(
 ?>
 <div class="button_box">
 <?php
-if ($model->role == 'user')
+/*if ($model->role == 'user')
         $this->widget('zii.widgets.jui.CJuiButton', array(
             'name'=>'buttonAddMaterial',
             'caption'=>'Сделать преподавателем',
             'buttonType'=>'link',
             'htmlOptions'=>array(
-                'class'=>'ui-button-primary',
+                //'class'=>'ui-button-primary',
                 ),
             'url'=>Yii::app()->createUrl('site/makemoderator',array('id'=>$model->id)),
             )
-        );
+        );*/
 
 if ($model->role == 'moderator')
         $this->widget('zii.widgets.jui.CJuiButton', array(

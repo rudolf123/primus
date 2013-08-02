@@ -153,8 +153,20 @@
     if (Helpquestion::model()->findByAttributes(array('help_id'=>$model->id)))
     {
         $this->widget('zii.widgets.jui.CJuiButton', array(
-            'name'=>'buttonAddMaterial',
+            'name'=>'buttonRuntest',
             'caption'=>'Пройти самоконтроль!',
+            'buttonType'=>'link',
+            'url'=>Yii::app()->createUrl('helptree/runtest', array('id'=>$model->id)),
+            )
+        );
+        //echo Chtml::link('Пройти самоконтроль',Yii::app()->createUrl('helptree/runtest', array('id'=>$model->id)));
+    }
+    
+    if (Helpquestion::model()->findByAttributes(array('help_id'=>$model->id)))
+    {
+        $this->widget('zii.widgets.jui.CJuiButton', array(
+            'name'=>'buttonViewResults',
+            'caption'=>'Показать результаты самоконтроля!',
             'buttonType'=>'link',
             'url'=>Yii::app()->createUrl('helptree/runtest', array('id'=>$model->id)),
             )
