@@ -332,13 +332,18 @@ div.search-form
     -webkit-box-shadow: 3px 3px 5px 6px rgba(82, 168, 236, 0.6);
     box-shadow:         3px 20px 20px -10px rgba(82, 168, 236, 0.6);
 }
-#mtreeview
+
+#leftcolumn
 {
     width: 250px;
-    border: 1px solid #6399cd;
-    float:left; 
-    overflow: auto; 
+    float:left;
+}
+
+#mtreeview
+{
     height: 560px;
+    overflow: auto;
+    border: 1px solid #6399cd;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
           border-radius: 4px;
@@ -346,9 +351,8 @@ div.search-form
 
 #mtreeview-target
 {
-    position: relative;
-    margin-left: 260px;
-    padding-left: 20px;
+    padding-top: 10px;
+    margin-left: 270px;
 }
 
 #mtreeview-buttons

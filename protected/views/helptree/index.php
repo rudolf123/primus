@@ -1,65 +1,65 @@
 <h4>Информационная справка</h4>
-
-<div id="mtreeview">
-<?php
-	$this->widget('application.extensions.MTreeView.MTreeView',array(
-		'collapsed'=>true,
-		'animated'=>'fast',
-		//---MTreeView options from here
-		'table'=>'tbl_helptree',//what table the menu would come from
-		'hierModel'=>'adjacency',//hierarchy model of the table
-		//'conditions'=>array('visible=:visible',array(':visible'=>1)),//other conditions if any                                    
-		'fields'=>array(//declaration of fields
-			'text'=>'title',//no `text` column, use `title` instead
-			'alt'=>'title',//skip using `alt` column
-			'id_parent'=>'parent_id',//no `id_parent` column,use `parent_id` instead
-			'position'=>'type',
-			'task'=>false,
-			'options'=>'title',
-			'url'=>'url',
-                        //'url'=>array('/helptree/view',array('id'=>'id')),
-		),
-		'template'=>'{icon}&nbsp;{text}',
-		'ajaxOptions'=>array('update'=>'#mtreeview-target')
-	));
-?>
-</div>
+<div id="leftcolumn">
+    <div id="mtreeview">
+    <?php
+            $this->widget('application.extensions.MTreeView.MTreeView',array(
+                    'collapsed'=>true,
+                    'animated'=>'fast',
+                    //---MTreeView options from here
+                    'table'=>'tbl_helptree',//what table the menu would come from
+                    'hierModel'=>'adjacency',//hierarchy model of the table
+                    //'conditions'=>array('visible=:visible',array(':visible'=>1)),//other conditions if any                                    
+                    'fields'=>array(//declaration of fields
+                            'text'=>'title',//no `text` column, use `title` instead
+                            'alt'=>'title',//skip using `alt` column
+                            'id_parent'=>'parent_id',//no `id_parent` column,use `parent_id` instead
+                            'position'=>'type',
+                            'task'=>false,
+                            'options'=>'title',
+                            'url'=>'url',
+                            //'url'=>array('/helptree/view',array('id'=>'id')),
+                    ),
+                    'template'=>'{icon}&nbsp;{text}',
+                    'persist' => 'location',
+                    //'ajaxOptions'=>array('update'=>'#mtreeview-target')
+            ));
+    ?>
+    </div>
     
+    <div id="mtreeview-buttons">
+    <?php
+        if (Yii::app()->user->checkAccess('moderator'))
+        {
+            $this->widget('zii.widgets.jui.CJuiButton', array(
+                'name'=>'buttonAddFolder',
+                'caption'=>'Добавить раздел',
+                //'value'=>'abc',
+                'htmlOptions'=>array(
+                    'style'=>'height:40px; width:250px;  margin-top: 10px; margin-bottom: 10px',
+                    ),
+                'onclick'=>'js:function(){$("#dialogFolders").dialog("open"); return false;}',
+                )
+            );
+            $this->widget('zii.widgets.jui.CJuiButton', array(
+                'name'=>'buttonAddMaterial',
+                'caption'=>'Добавить материал',
+                'htmlOptions'=>array(
+                    'style'=>'height:40px; width:250px; ',
+                    'class'=>'ui-button-primary',
+                    ),
+                'onclick'=>'js:function(){window.location = "'.Yii::app()->createUrl('helptree/create', array('backurl'=>Yii::app()->request->url)).'"; return false;}',
+                )
+            );
+        }
+        ?>
+    
+    </div>
+</div>
 <div id="mtreeview-target">
 
 </div>
 
-<div id="mtreeview-buttons">
-    <?php
-    if (Yii::app()->user->checkAccess('moderator'))
-    {
-        $this->widget('zii.widgets.jui.CJuiButton', array(
-            'name'=>'buttonAddFolder',
-            'caption'=>'Добавить раздел',
-            //'value'=>'abc',
-            'htmlOptions'=>array(
-                'style'=>'height:40px; width:250px; margin-top: 10px; margin-bottom: 10px ',
-                'class'=>'button'
-                ),
-            'onclick'=>'js:function(){$("#dialogFolders").dialog("open"); return false;}',
-            )
-        );
-        $this->widget('zii.widgets.jui.CJuiButton', array(
-            'name'=>'buttonAddMaterial',
-            'caption'=>'Добавить материал',
-            //'value'=>'abc',
-            'htmlOptions'=>array(
-                'style'=>'height:40px; width:250px',
-                'class'=>'ui-button-primary'
-                ),
-            //'onclick'=>'js:function(){$("#dialogMaterial").dialog("open"); return false;}',
-            'onclick'=>'js:function(){window.location = "create"; return false;}',
-            )
-        );
-    }
-        ?>
-    
-</div>
+
 
 <div class="demo_box">
 <?php

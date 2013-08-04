@@ -118,23 +118,7 @@
                 'class'=>'ui-button-primary'
                 ),
             )
-        );?>	
-            
-        <?php 
-            $path = '../index';
-            if ($model->isNewRecord)
-                $path = 'index';
-         
-            $this->widget('zii.widgets.jui.CJuiButton', array(
-            'name'=>'Cancel',
-            'caption'=>'Отмена',
-            'htmlOptions'=>array(
-                'class'=>'button',
-                ),
-            'onclick'=>'js:function(){window.location = "'.$path.'"; return false;}',
-            )
-        );?>	
-            
+        );?>	          
     </div>
 
 

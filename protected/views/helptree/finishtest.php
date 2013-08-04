@@ -9,8 +9,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider'=>$answerslog,
     'columns'=>array(
             array(
-                'name' => 'isright',
-                'value' => '$data->isright==0 ? "<p class=\'wrong_answer_cell\'>Нет</p>" : "<p class=\'right_answer_cell\'>Да</p>"',
+                'value' => '$data->isright==0 ? "<p class=\'wrong_answer_cell\'>Неверно</p>" : "<p class=\'right_answer_cell\'>Верно</p>"',
                 'type' => 'html',
             ),
             'question_text',
