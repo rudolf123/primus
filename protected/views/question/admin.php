@@ -36,8 +36,8 @@ $('.search-form form').submit(function(){
 		array(
 			'class'=>'CButtonColumn',
                         'template'=>'{view}{update}{delete}',
-                        'viewButtonUrl' => 'Yii::app()->createUrl("question/view", array("id"=>$data->id))',
-                        'updateButtonUrl' => 'Yii::app()->createUrl("question/update", array("id"=>$data->id, "page"=>isset($_GET["Question_page"]) ? $_GET["Question_page"] : 1))',
+                        'viewButtonUrl' => 'Yii::app()->createUrl("question/view", array("id"=>$data->id, "backurl"=>Yii::app()->request->url))',
+                        'updateButtonUrl' => 'Yii::app()->createUrl("question/update", array("id"=>$data->id, "backurl"=>Yii::app()->request->url))',
                         'deleteButtonUrl'=> 'Yii::app()->createUrl("question/delete", array("id"=>$data->id))',
 		),
 	),
@@ -70,7 +70,7 @@ $('.search-form form').submit(function(){
                     'accept-charset'=>'UTF-8',
                 ),
                 //'action' => array('Yii::app()->createUrl("question/createAnswer", array("id"=>$model->id))'), // когда форма показывается и в других контроллерах, не только 'site', то я в каждый из этих контроллеров вставил actionQuick, a здесь указал — array('quick'); почему-то не получается с array('//site/quick')
-                'action' => array('question/create'),
+                'action' => array('question/create', 'backurl'=>Yii::app()->request->url),
             ));
         ?>
 
@@ -79,7 +79,7 @@ $('.search-form form').submit(function(){
         <br />
         <?php echo $forms->labelEx($questionmodel,'text'); ?>
         <br />
-        <?php echo $forms->textField($questionmodel,'text',array('maxlength'=>255)); ?>
+        <?php echo $forms->textArea($questionmodel,'text'); ?>
         <br />
         <?php echo $forms->error($questionmodel,'text'); ?>
         <br />

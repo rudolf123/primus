@@ -67,9 +67,9 @@ class Userloghelp extends CActiveRecord
 			'id' => 'ID',
 			'user_id' => 'User',
 			'test_id' => 'Test',
-			'grade' => 'Grade',
-			'starttime' => 'Starttime',
-			'endtime' => 'Endtime',
+			'grade' => 'Оценка',
+			'starttime' => 'Тест начат',
+			'endtime' => 'Тест закончен',
 		);
 	}
 

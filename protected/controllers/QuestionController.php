@@ -49,6 +49,7 @@ class QuestionController extends Controller
 	{
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+                        'backurl'=>$_GET['backurl'],
 		));
 	}
         
@@ -79,7 +80,7 @@ class QuestionController extends Controller
 		{
 			$model->attributes=$_POST['Answer'];
 			if($model->save())
-				$this->redirect(array('question/view','id'=>$model->question_id));
+                                $this->redirect(array('question/view','id'=>$model->question_id, 'backurl'=>$_GET['backurl']));
 		}
 
 		//$this->render('create',array(
@@ -98,11 +99,12 @@ class QuestionController extends Controller
 		{
 			$model->attributes=$_POST['Answer'];
 			if($model->save())
-				$this->redirect(array('question/view', 'id'=>$model->question_id));
+				$this->redirect($_GET['backurl']);
 		}
 
 		$this->render('updateAnswer',array(
 			'model'=>$model,
+                        'backurl'=>$_GET['backurl'],
 		));
 	}
 
@@ -121,7 +123,7 @@ class QuestionController extends Controller
 		{
 			$model->attributes=$_POST['Question'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view', 'id'=>$model->id, 'backurl'=>$_GET['backurl']));
 		}
 
 		//$this->render('create',array(
@@ -145,11 +147,12 @@ class QuestionController extends Controller
 		{
 			$model->attributes=$_POST['Question'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect($_GET['backurl']);
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
+                        'backurl'=>$_GET['backurl'],
 		));
 	}
 

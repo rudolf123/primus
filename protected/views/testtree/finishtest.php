@@ -15,5 +15,19 @@ echo '<h5>Оценка: '.round($grade,2).'</h5>';
             'question_text',
             'answer_text',
     ),
-));
-?>*/
+));*/
+?>
+<p>
+<?php 
+    $this->widget('zii.widgets.jui.CJuiButton', array(
+        'name'=>'buttonBack',
+        'caption'=>'<< Назад (Проверка знаний)',
+        'htmlOptions'=>array(
+            //'style'=>'height:40px; width:250px; ',
+            'class'=>'ui-button-primary',
+            ),
+        'onclick'=>'js:function(){window.location = "'.Yii::app()->createUrl('testtree/viewtest', array('id'=>$test_id)).'"; return false;}',
+        )
+    );
+?>
+</p>

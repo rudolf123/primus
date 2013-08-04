@@ -296,9 +296,17 @@ class TrainingtreeController extends Controller
                                                 'questioncount'=>$question_count,
                                                 'answerslog'=>$answerslog,
                                                 'grade'=>$grade,
+                                                'test_id'=>$userlog->test_id,
                                     ));
         
                 } 
+        }
+        
+        public function actionViewResults($id)
+        {
+            $logs = Userlogtraining::model()->findAllByAttributes(array('user_id'=>Yii::app()->user->id, 'test_id'=>$id));
+            
+            $this->render('viewresults', array('logs'=>$logs, 'backurl'=>$_GET['backurl']));
         }
         
         public function actionDownloadFile($filename)

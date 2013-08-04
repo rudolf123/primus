@@ -50,27 +50,27 @@ $this->widget('zii.widgets.CDetailView', array(
 ?>
 <div class="button_box">
 <?php
-/*if ($model->role == 'user')
+if ($model->role == 'user')
         $this->widget('zii.widgets.jui.CJuiButton', array(
-            'name'=>'buttonAddMaterial',
+            'name'=>'buttonMakeModerator',
             'caption'=>'Сделать преподавателем',
-            'buttonType'=>'link',
             'htmlOptions'=>array(
-                //'class'=>'ui-button-primary',
+                'style'=>'height:40px; width:250px; ',
+                'class'=>'ui-button-error',
                 ),
-            'url'=>Yii::app()->createUrl('site/makemoderator',array('id'=>$model->id)),
+            'onclick'=>'js:function(){window.location = "'.Yii::app()->createUrl('site/viewuser',array('id'=>$model->id, 'makemoderator'=>1,"backurl"=>Yii::app()->request->url)).'"; return false;}',
             )
-        );*/
+        );
 
 if ($model->role == 'moderator')
         $this->widget('zii.widgets.jui.CJuiButton', array(
-            'name'=>'buttonAddMaterial',
+            'name'=>'buttonMakeModerator',
             'caption'=>'Сделать обучаемым',
-            'buttonType'=>'link',
             'htmlOptions'=>array(
-                'class'=>'ui-button-primary',
+                'style'=>'height:40px; width:250px; ',
+                'class'=>'ui-button-error',
                 ),
-            'url'=>Yii::app()->createUrl('site/makemoderator',array('id'=>$model->id)),
+            'onclick'=>'js:function(){window.location = "'.Yii::app()->createUrl('site/viewuser',array('id'=>$model->id, 'makemoderator'=>1,"backurl"=>Yii::app()->request->url)).'"; return false;}',
             )
         );
 ?>

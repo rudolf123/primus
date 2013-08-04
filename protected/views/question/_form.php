@@ -9,6 +9,11 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'question-form',
 	'enableAjaxValidation'=>false,
+        'htmlOptions'=>array(
+            'class'=>'well',
+            'accept-charset'=>'UTF-8',
+        ),
+        'action'=>array('question/update', 'id'=>$model->id, 'backurl'=>$backurl),
 )); ?>
 
 	<p class="note">Поля помеченные <span class="required">*</span> обязательны для заполнения.</p>
@@ -39,7 +44,14 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Создать' : 'Сохранить'); ?>
+            <?php $this->widget('zii.widgets.jui.CJuiButton', array(
+            'name'=>'submit',
+            'caption'=>'Сохранить',
+            'htmlOptions'=>array(
+                'class'=>'ui-button-primary'
+                ),
+            )
+        );?>
 	</div>
 
 <?php $this->endWidget(); ?>

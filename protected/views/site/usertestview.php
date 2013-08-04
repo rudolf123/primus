@@ -25,7 +25,7 @@ if ($dataProvider)
                 array(
                 'class'=>'CButtonColumn',
                 'template'=>'{view}{delete}',
-                'viewButtonUrl' => 'Yii::app()->createUrl("site/viewanswerslog", array("id"=>$data->id))',
+                'viewButtonUrl' => 'Yii::app()->createUrl("site/viewanswerslog", array("id"=>$data->id, "backurl"=>Yii::app()->request->url))',
                 'deleteButtonUrl'=> 'Yii::app()->createUrl("site/deletetestlog", array("id"=>$data->id))',
                 ),
         ),
