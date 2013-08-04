@@ -14,7 +14,7 @@
                     'enctype'=>'multipart/form-data',
                     'accept-charset'=>'UTF-8',
                 ),
-                //'action' => array('helptree/update'), // когда форма показывается и в других контроллерах, не только 'site', то я в каждый из этих контроллеров вставил actionQuick, a здесь указал — array('quick'); почему-то не получается с array('//site/quick')
+                //'action' => array('helptree/create'), // когда форма показывается и в других контроллерах, не только 'site', то я в каждый из этих контроллеров вставил actionQuick, a здесь указал — array('quick'); почему-то не получается с array('//site/quick')
 
             )); ?>
 
@@ -92,17 +92,6 @@
                 <?php echo $form->labelEx($model,'video'); ?>
                 <?php echo $form->fileField($model,'videofile'); ?>
                 <?php echo $form->error($model,'videofile'); ?>
-                <?php //echo $form->labelEx($model,'video'); ?>
-                <?php //echo $form->textField($model,'video',array('maxlength'=>255)); ?>
-                <?php //echo $form->error($model,'video'); ?>
-                <?php 
-                    /*$this->widget('ext.elFinder.ServerFileInput', array(
-                            'model' => $model,
-                            'attribute' => 'video',
-                            'connectorRoute' => 'elfinder/connector',
-                            )
-                    );*/
-                ?>
         </div>
         
         <?php echo $form->hiddenField($model,'etype', array('value'=>1)); ?>
@@ -118,21 +107,6 @@
             )
         );?>	
             
-        <?php 
-            $path = '../index';
-            if ($model->isNewRecord)
-                $path = 'index';
-         
-            $this->widget('zii.widgets.jui.CJuiButton', array(
-            'name'=>'Cancel',
-            'caption'=>'Отмена',
-            'htmlOptions'=>array(
-                'class'=>'button',
-                ),
-            //'onclick'=>'js:function(){window.location = "'.$path.'"; return false;}',
-            'onclick'=>'js:function(){history.back()}',
-            )
-        );?>	
 	</div>
 
 <?php $this->endWidget(); ?>

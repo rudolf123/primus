@@ -1,39 +1,34 @@
 <h4>Проверка знаний</h4>
-
-<div id="mtreeview">
-<?php
-	$this->widget('application.extensions.MTreeView.MTreeView',array(
-		'collapsed'=>true,
-		'animated'=>'fast',
-		//---MTreeView options from here
-		'table'=>'tbl_testtree',//what table the menu would come from
-		'hierModel'=>'adjacency',//hierarchy model of the table
-		//'conditions'=>array('visible=:visible',array(':visible'=>1)),//other conditions if any                                    
-		'fields'=>array(//declaration of fields
-			'text'=>'title',//no `text` column, use `title` instead
-			'alt'=>'title',//skip using `alt` column
-			'id_parent'=>'parent_id',//no `id_parent` column,use `parent_id` instead
-			'position'=>'title',
-			'task'=>false,
-			'options'=>'title',
-                        'url'=>'url',			
-                        //'url'=>array('/testtree/viewTest',array('id'=>'id')),
-		),
-		'template'=>'{icon}&nbsp;{text}',
-		'ajaxOptions'=>array('update'=>'#mtreeview-target')
-	));
-?>
-</div>
-<div id="Ajaxdata">
-   <?php //$this->renderPartial('_ajaxContent', array('myValue'=>'$myValue')); ?>
+<div id="leftcolumn">
+    <div id="mtreeview">
+    <?php
+            $this->widget('application.extensions.MTreeView.MTreeView',array(
+                    'collapsed'=>true,
+                    'animated'=>'fast',
+                    //---MTreeView options from here
+                    'table'=>'tbl_testtree',//what table the menu would come from
+                    'hierModel'=>'adjacency',//hierarchy model of the table
+                    //'conditions'=>array('visible=:visible',array(':visible'=>1)),//other conditions if any                                    
+                    'fields'=>array(//declaration of fields
+                            'text'=>'title',//no `text` column, use `title` instead
+                            'alt'=>'title',//skip using `alt` column
+                            'id_parent'=>'parent_id',//no `id_parent` column,use `parent_id` instead
+                            'position'=>'type',
+                            'task'=>false,
+                            'options'=>'title',
+                            'url'=>'url',			
+                            //'url'=>array('/testtree/viewTest',array('id'=>'id')),
+                    ),
+                    'template'=>'{icon}&nbsp;{text}',
+                    'persist' => 'location',
+                    //'ajaxOptions'=>array('update'=>'#mtreeview-target')
+            ));
+    ?>
+    </div>
 </div>
 <div id="mtreeview-target">
     
 </div>
-<?php 
-    //echo CHtml::ajaxLink('clickMe1', Yii::app()->createUrl('testtree/viewTest',array('id'=>25)), array('update'=>'#mtreeview-target'));
-    //echo CHtml::ajaxLink('clickMe2', Yii::app()->createUrl('testtree/viewTest',array('id'=>20)), array('update'=>'#data'));
-?>
 
 <div id="mtreeview-buttons">
     <?php

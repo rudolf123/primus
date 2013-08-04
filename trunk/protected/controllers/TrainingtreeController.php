@@ -75,6 +75,14 @@ class TrainingtreeController extends Controller
                             {
                                 $model->url = '/trainingtree/view/'.$model->id;
                                 $model->save();
+                                $this->redirect('../'.$model->url);
+                            }
+                            if ($model->type==0)
+                            {
+                                if (isset($_GET['backurl']))
+                                    $this->redirect($_GET['backurl']);
+                                else 
+                                    $this->redirect('../helptree/index');
                             }
                             $this->redirect('../trainingtree/index');
                         }
@@ -82,7 +90,7 @@ class TrainingtreeController extends Controller
                             $this->redirect('../site/error');
 		}
                 
-                $this->render('create', array('model'=>$model));
+                $this->render('create', array('model'=>$model, 'backurl'=>$_GET['backurl']));
 	}
         
         public function actionUpdate($id)
@@ -98,12 +106,13 @@ class TrainingtreeController extends Controller
 
 			if($model->save())
                         {
-				$this->redirect('../index');
+				$this->redirect('../view/'.$model->id);
                         }
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
+                        'backurl'=>$_GET['backurl']
 		));
 	}
         
@@ -122,6 +131,59 @@ class TrainingtreeController extends Controller
 		));
 	}
         
+        public function actionAjaxUpdate($id)
+        {
+            if (isset($_GET['add_qid']))
+            {
+                $testquestion = new Trainingquestion;
+                $testquestion->training_id = $id;
+                $testquestion->question_id = $_GET['add_qid'];
+                $testquestion->save();
+
+                $testquestions = Trainingquestion::model()->findAllByAttributes(array('training_id'=>$id));
+                $count_questions = count($testquestions);
+                if($count_questions > 0){
+                    $arr_questions = array();
+                    foreach($testquestions as $testquestion)
+                        array_push($arr_questions,$testquestion->question_id);
+                }
+                $criteria = new CDbCriteria();
+                $criteria1 = new CDbCriteria();
+                $criteria1->addInCondition('id', $arr_questions);
+                $questionsintest = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria1));
+                $criteria->addNotInCondition('id', $arr_questions);
+                $dataProvider = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria));
+            }
+            
+            if (isset($_GET['rem_qid']))
+            {
+                Trainingquestion::model()->deleteAll(
+                                    'training_id = :param_test_id AND question_id=:param_question_id',
+                                    array(
+                                        ':param_test_id' => $id,
+                                        ':param_question_id' => $_GET['rem_qid'],
+                                        ));
+            
+                $testquestions = Trainingquestion::model()->findAllByAttributes(array('training_id'=>$id));
+                $count_questions = count($testquestions);
+                if($count_questions > 0){
+                    $arr_questions = array();
+                    foreach($testquestions as $testquestion)
+                        array_push($arr_questions,$testquestion->question_id);
+                }
+                $criteria = new CDbCriteria();
+                $criteria1 = new CDbCriteria();
+                $criteria1->addInCondition('id', $arr_questions);
+                $questionsintest = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria1));
+                $criteria->addNotInCondition('id', $arr_questions);
+                $dataProvider = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria));
+            }
+        }
+
         public function actionManageQuestions($id)
         {
                 $model = $this->loadModel($id);
@@ -148,72 +210,8 @@ class TrainingtreeController extends Controller
                         'model'=>$model,
                         'dataProvider'=>$dataProvider,
                         'testquestions'=>$questionsintest,
+                        'backurl'=>$_GET['backurl'],
                         ),false,true);
-        }
-        
-        public function actionAddQuestionToTest($question_id,$test_id)
-        {
-            $testquestion = new Trainingquestion;
-            $testquestion->training_id = $test_id;
-            $testquestion->question_id = $question_id;
-            $testquestion->save();
-            $testquestions = Trainingquestion::model()->findAllByAttributes(array('training_id'=>$test_id));
-            $count_questions = count($testquestions);
-            if($count_questions > 0){
-                $arr_questions = array();
-                foreach($testquestions as $testquestion)
-                    array_push($arr_questions,$testquestion->question_id);
-            }
-            $criteria = new CDbCriteria();
-            $criteria1 = new CDbCriteria();
-            $criteria1->addInCondition('id', $arr_questions);
-            $questionsintest = new CActiveDataProvider('Question', array(
-               'criteria' => $criteria1));
-            $criteria->addNotInCondition('id', $arr_questions);
-            $dataProvider = new CActiveDataProvider('Question', array(
-               'criteria' => $criteria));
-
-            $model = $this->loadModel($test_id);
-
-            $this->render('updatetest',array(
-                    'model'=>$model,
-                    'dataProvider'=>$dataProvider,
-                    'testquestions'=>$questionsintest,
-                    ),false,true);
-        }
-        
-        public function actionRemoveQuestionFromTest($question_id,$test_id)
-        {
-            Helpquestion::model()->deleteAll(
-                                    'training_id = :param_test_id AND question_id=:param_question_id',
-                                    array(
-                                        ':param_test_id' => $test_id,
-                                        ':param_question_id' => $question_id,
-                                        ));
-            
-            $testquestions = Trainingquestion::model()->findAllByAttributes(array('training_id'=>$test_id));
-            $count_questions = count($testquestions);
-            if($count_questions > 0){
-                $arr_questions = array();
-                foreach($testquestions as $testquestion)
-                    array_push($arr_questions,$testquestion->question_id);
-            }
-            $criteria = new CDbCriteria();
-            $criteria1 = new CDbCriteria();
-            $criteria1->addInCondition('id', $arr_questions);
-            $questionsintest = new CActiveDataProvider('Question', array(
-               'criteria' => $criteria1));
-            $criteria->addNotInCondition('id', $arr_questions);
-            $dataProvider = new CActiveDataProvider('Question', array(
-               'criteria' => $criteria));
-
-            $model = $this->loadModel($test_id);
-
-            $this->render('updatetest',array(
-                    'model'=>$model,
-                    'dataProvider'=>$dataProvider,
-                    'testquestions'=>$questionsintest,
-                    ),false,true);
         }
         
         public function actionRunTest($id)

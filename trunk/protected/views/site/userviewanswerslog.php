@@ -11,7 +11,7 @@
                 'question_text',
                 'answer_text',
                 array(
-                'value' => '$data->isright==0 ? "Не верный" : "Верный"',
+                'value' => '$data->isright==0 ? "<p class=\'wrong_answer_cell\'>Неверно</p>" : "<p class=\'right_answer_cell\'>Верно</p>"',
                 'type' => 'html',
                 ),
 	),
