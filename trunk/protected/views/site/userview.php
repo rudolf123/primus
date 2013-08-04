@@ -1,7 +1,13 @@
 <div id="content">
-<p>
-<?php echo CHtml::link('<< назад', Yii::app()->createUrl('site/admin'));?>
-</p>
+<?php 
+            $this->widget('zii.widgets.jui.CJuiButton', array(
+                'name'=>'buttonBack',
+                'caption'=>'<<< Назад',
+                'buttonType'=>'link',
+                'url'=>$backurl,
+                )
+            );
+ ?>
 <h3>Просмотр профиля пользователя: <?php echo $model->login?></h3> 
 <?php
     $this->widget('bootstrap.widgets.TbTabs', array(

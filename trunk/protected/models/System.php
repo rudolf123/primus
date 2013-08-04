@@ -1,22 +1,19 @@
 <?php
 
 /**
- * This is the model class for table "{{userlogtraining}}".
+ * This is the model class for table "{{system}}".
  *
- * The followings are the available columns in table '{{userlogtraining}}':
+ * The followings are the available columns in table '{{system}}':
  * @property integer $id
- * @property integer $user_id
- * @property integer $test_id
- * @property integer $grade
- * @property string $starttime
- * @property string $endtime
+ * @property string $type
+ * @property string $value
  */
-class Userlogtraining extends CActiveRecord
+class System extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Userlogtraining the static model class
+	 * @return System the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -28,7 +25,7 @@ class Userlogtraining extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{userlogtraining}}';
+		return '{{system}}';
 	}
 
 	/**
@@ -39,11 +36,12 @@ class Userlogtraining extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, test_id, grade', 'numerical', 'integerOnly'=>true),
-			array('starttime, endtime', 'safe'),
+			array('id, type, value', 'required'),
+			array('id', 'numerical', 'integerOnly'=>true),
+			array('type, value', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, user_id, test_id, grade, starttime, endtime', 'safe', 'on'=>'search'),
+			array('id, type, value', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,11 +63,8 @@ class Userlogtraining extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'user_id' => 'User',
-			'test_id' => 'Test',
-			'grade' => 'Оценка',
-			'starttime' => 'Тест начат',
-			'endtime' => 'Тест закончен',
+			'type' => 'Type',
+			'value' => 'Value',
 		);
 	}
 
@@ -85,11 +80,8 @@ class Userlogtraining extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('user_id',$this->user_id);
-		$criteria->compare('test_id',$this->test_id);
-		$criteria->compare('grade',$this->grade);
-		$criteria->compare('starttime',$this->starttime,true);
-		$criteria->compare('endtime',$this->endtime,true);
+		$criteria->compare('type',$this->type,true);
+		$criteria->compare('value',$this->value,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

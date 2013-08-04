@@ -1,6 +1,14 @@
 <div id="content">
 <p>
-<?php echo CHtml::link('<< назад', Yii::app()->createUrl('site/admin'));?>
+<?php
+            $this->widget('zii.widgets.jui.CJuiButton', array(
+                'name'=>'buttonBack',
+                'caption'=>'<<< Назад',
+                'buttonType'=>'link',
+                'url'=>Yii::app()->createUrl('site/admin'),
+                )
+            );
+?>
 </p>
 <h5>Материалы информационной справки</h5>
 <div class="well">

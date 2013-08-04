@@ -1,6 +1,12 @@
-<p>
-<?php echo CHtml::link('<< назад(банк вопросов)', Yii::app()->createUrl('question/admin'));?>
-</p>
+<?php 
+            $this->widget('zii.widgets.jui.CJuiButton', array(
+                'name'=>'buttonBack',
+                'caption'=>'<<< Назад',
+                'buttonType'=>'link',
+                'url'=>$backurl,
+                )
+            );
+ ?>
 <h3>Просмотр вопроса № <?php echo $model->id; ?></h3>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
@@ -34,9 +40,9 @@ $dataProvider = new CActiveDataProvider('Answer', array(
                 'image',
 		array(
                     'class'=>'CButtonColumn',
-                    'template'=>'{view}{update}{delete}',
+                    'template'=>'{update}{delete}',
                     'viewButtonUrl' => 'Yii::app()->createUrl("question/viewAnswer", array("id"=>$data->id))',
-                    'updateButtonUrl' => 'Yii::app()->createUrl("question/updateAnswer", array("id"=>$data->id))',
+                    'updateButtonUrl' => 'Yii::app()->createUrl("question/updateAnswer", array("id"=>$data->id, "backurl"=>Yii::app()->request->url))',
                     'deleteButtonUrl'=> 'Yii::app()->createUrl("question/deleteAnswer", array("id"=>$data->id))',
                     /*'buttons'=>array
                     (
@@ -84,7 +90,7 @@ $dataProvider = new CActiveDataProvider('Answer', array(
                     'accept-charset'=>'UTF-8',
                 ),
                 //'action' => array('Yii::app()->createUrl("question/createAnswer", array("id"=>$model->id))'), // когда форма показывается и в других контроллерах, не только 'site', то я в каждый из этих контроллеров вставил actionQuick, a здесь указал — array('quick'); почему-то не получается с array('//site/quick')
-                'action' => array('question/createAnswer'),
+                'action' => array('question/createAnswer', 'backurl'=>$backurl),
             ));
         ?>
 

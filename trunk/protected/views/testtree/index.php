@@ -25,42 +25,40 @@
             ));
     ?>
     </div>
+    
+    <div id="mtreeview-buttons">
+        <?php
+        if (Yii::app()->user->checkAccess('moderator'))
+        {
+            $this->widget('zii.widgets.jui.CJuiButton', array(
+                'name'=>'buttonAddFolder',
+                'caption'=>'Добавить раздел',
+                //'value'=>'abc',
+                'htmlOptions'=>array(
+                    'style'=>'height:40px; width:250px; margin-top: 10px; margin-bottom: 10px ',
+                    'class'=>'button'
+                    ),
+                'onclick'=>'js:function(){$("#dialogFolders").dialog("open"); return false;}',
+                )
+            );
+            $this->widget('zii.widgets.jui.CJuiButton', array(
+                'name'=>'buttonAddMaterial',
+                'caption'=>'Добавить тест',
+                //'value'=>'abc',
+                'htmlOptions'=>array(
+                    'style'=>'height:40px; width:250px',
+                    'class'=>'ui-button-primary'
+                    ),
+                'onclick'=>'js:function(){$("#dialogMaterial").dialog("open"); return false;}',
+                )
+            );
+        }
+            ?>
+    </div>
 </div>
 <div id="mtreeview-target">
     
 </div>
-
-<div id="mtreeview-buttons">
-    <?php
-    if (Yii::app()->user->checkAccess('moderator'))
-    {
-        $this->widget('zii.widgets.jui.CJuiButton', array(
-            'name'=>'buttonAddFolder',
-            'caption'=>'Добавить раздел',
-            //'value'=>'abc',
-            'htmlOptions'=>array(
-                'style'=>'height:40px; width:250px; margin-top: 10px; margin-bottom: 10px ',
-                'class'=>'button'
-                ),
-            'onclick'=>'js:function(){$("#dialogFolders").dialog("open"); return false;}',
-            )
-        );
-        $this->widget('zii.widgets.jui.CJuiButton', array(
-            'name'=>'buttonAddMaterial',
-            'caption'=>'Добавить тест',
-            //'value'=>'abc',
-            'htmlOptions'=>array(
-                'style'=>'height:40px; width:250px',
-                'class'=>'ui-button-primary'
-                ),
-            'onclick'=>'js:function(){$("#dialogMaterial").dialog("open"); return false;}',
-            )
-        );
-    }
-        ?>
-</div>
-
-
 <div class="demo_box">
 <?php
     if (Yii::app()->user->checkAccess('moderator'))
@@ -248,11 +246,4 @@
     }// if checkaccess;
     ?>
 
-    
-    <script type="text/javascript" >
-    function addItem(){
-        $(this).dialog("close");
-        alert( $("#item-name-input").val() + " has been added");
-    }
-</script>
 </div><!-- demo box -->

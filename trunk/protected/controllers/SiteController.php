@@ -118,6 +118,22 @@ class SiteController extends Controller
 
         public function actionAdmin()
         {
+            if (isset($_GET['enable_results']))
+            {
+                if ($_GET['enable_results']==1)
+                {
+                    $model = System::model()->findByPk(1);
+                    $model->value='yes';
+                    $model->save();
+                }
+                if ($_GET['enable_results']==0)
+                {
+                    $model = System::model()->findByPk(1);
+                    $model->value='no';
+                    $model->save();
+                }
+                $this->redirect($_GET['backurl']);
+            }
             $this->render('adminview');
         }
         
@@ -292,18 +308,7 @@ class SiteController extends Controller
             fclose($fileWtest);
             
         }  
-        
-        public function actionMakemoderator($id)
-        {
-            $user = User::model()->findByPk($id);
-            if ($user->role == 'user')
-                $user->role = 'moderator';
-            else
-                $user->role = 'user';
-            $user->save();
-            $this->render('userview', array('model'=>$user));
-        }
-        
+
         public function actionDeleteuser($id)
         {
             $user = User::model()->findByPk($id);
@@ -314,6 +319,18 @@ class SiteController extends Controller
         
         public function actionViewuser($id)
         {
+            if (isset($_GET['makemoderator']))
+            {
+                $user = User::model()->findByPk($id);
+                if ($user->role == 'user')
+                    $user->role = 'moderator';
+                else
+                    $user->role = 'user';
+                $user->save();
+
+                $this->redirect($_GET['backurl']);
+            }
+            
             $user = User::model()->findByPk($id);
             $testdataprovider = new CActiveDataProvider('Userlog', array(
                     'criteria' => array(
@@ -321,7 +338,7 @@ class SiteController extends Controller
                     'params' => array(':param_user_id' => $id),
                     ),
             ));
-            $this->render('userview', array('model'=>$user,'testdataprovider'=>$testdataprovider));
+            $this->render('userview', array('model'=>$user,'testdataprovider'=>$testdataprovider, 'backurl'=>$_GET['backurl']));
         }
         
         public function actionViewanswerslog($id)
@@ -332,7 +349,7 @@ class SiteController extends Controller
                     'params' => array(':param_userlog_id' => $id),
                     ),
             ));
-            $this->render('userviewanswerslog', array('dataprovider'=>$dataprovider));
+            $this->render('userviewanswerslog', array('dataprovider'=>$dataprovider,'backurl'=>$_GET['backurl']));
         }
 
         public function actionDeletetestlog($id)

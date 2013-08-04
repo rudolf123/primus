@@ -376,6 +376,7 @@ class HelptreeController extends Controller
                                                 'questioncount'=>$question_count,
                                                 'answerslog'=>$answerslog,
                                                 'grade'=>$grade,
+                                                'test_id'=>$userlog->test_id,
                                     ));
         
                 } 
@@ -385,7 +386,14 @@ class HelptreeController extends Controller
 	 * Manages all models.
 	 */
         
-	public function actionAdmin()
+        public function actionViewResults($id)
+        {
+            $logs = Userloghelp::model()->findAllByAttributes(array('user_id'=>Yii::app()->user->id, 'test_id'=>$id));
+            
+            $this->render('viewresults', array('logs'=>$logs, 'backurl'=>$_GET['backurl']));
+        }
+
+        public function actionAdmin()
 	{
 		$model=new Helptree('search');
 		$model->unsetAttributes();  // clear any default values

@@ -140,23 +140,43 @@
         {
             $this->widget('zii.widgets.jui.CJuiButton', array(
                 'name'=>'buttonRuntest',
+                'caption'=>'Пройти самоконтроль',
+                'htmlOptions'=>array(
+                    'style'=>'height:40px; width:250px; margin-top: 10px; margin-bottom: 10px',
+                    'class'=>'ui-button-error',
+                    ),
+                'onclick'=>'js:function(){window.location = "'.Yii::app()->createUrl('trainingtree/runtest', array('id'=>$model->id)).'"; return false;}',
+                )
+            );
+            /*$this->widget('zii.widgets.jui.CJuiButton', array(
+                'name'=>'buttonRuntest',
                 'caption'=>'Пройти самоконтроль!',
                 'buttonType'=>'link',
                 'url'=>Yii::app()->createUrl('trainingtree/runtest', array('id'=>$model->id)),
                 )
-            );
+            );*/
         }
-
-        if (Trainingquestion::model()->findByAttributes(array('training_id'=>$model->id)))
-        {
-            $this->widget('zii.widgets.jui.CJuiButton', array(
-                'name'=>'buttonViewResults',
-                'caption'=>'Показать результаты самоконтроля!',
-                'buttonType'=>'link',
-                'url'=>Yii::app()->createUrl('trainingtree/runtest', array('id'=>$model->id)),
-                )
-            );
-        }
+        //if (System::model()->findByPk(1)->value==="yes")
+            if (Userlogtraining::model()->findByAttributes(array('test_id'=>$model->id, 'user_id'=>Yii::app()->user->id)))
+            {
+                $this->widget('zii.widgets.jui.CJuiButton', array(
+                    'name'=>'buttonViewResults',
+                    'caption'=>'Результаты самоконтроля',
+                    'htmlOptions'=>array(
+                        'style'=>'height:40px; width:250px; ',
+                        'class'=>'ui-button-primary',
+                        ),
+                    'onclick'=>'js:function(){window.location = "'.Yii::app()->createUrl('trainingtree/viewresults', array('id'=>$model->id,'backurl'=>Yii::app()->request->url)).'"; return false;}',
+                    )
+                );
+                /*$this->widget('zii.widgets.jui.CJuiButton', array(
+                    'name'=>'buttonViewResults',
+                    'caption'=>'Результаты самоконтроля!',
+                    'buttonType'=>'link',
+                    'url'=>Yii::app()->createUrl('trainingtree/viewresults', array('id'=>$model->id,'backurl'=>Yii::app()->request->url)),
+                    )
+                );*/
+            }
     ?>
 </div>
 

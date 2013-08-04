@@ -35,79 +35,7 @@ class TesttreeController extends Controller
 			),
 		);
 	}
-        public function actionAddQuestionToTest($question_id,$test_id)
-        {
-            $testquestion = new Testquestion;
-            $testquestion->test_id = $test_id;
-            $testquestion->question_id = $question_id;
-            $testquestion->save();
-            $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$test_id));
-            $count_questions = count($testquestions);
-            if($count_questions > 0){
-                $arr_questions = array();
-                foreach($testquestions as $testquestion)
-                    array_push($arr_questions,$testquestion->question_id);
-            }
-            $criteria = new CDbCriteria();
-            $criteria1 = new CDbCriteria();
-            $criteria1->addInCondition('id', $arr_questions);
-            $questionsintest = new CActiveDataProvider('Question', array(
-               'criteria' => $criteria1));
-            $criteria->addNotInCondition('id', $arr_questions);
-            $dataProvider = new CActiveDataProvider('Question', array(
-               'criteria' => $criteria));
-
-            $model = $this->loadModel($test_id);
-
-            $this->render('updatetest',array(
-                    'model'=>$model,
-                    'dataProvider'=>$dataProvider,
-                    'testquestions'=>$questionsintest,
-                    ),false,true);
-            //$this->redirect('../testtree/index/viewtest', array('id'=>$testquestion->test_id));
-            //if($testquestion->save())
-           // {
-           //     $this->redirect('../testtree/index');
-           // }
-           // else
-            //    $this->redirect('../site/error');
-            
-        }
-        
-        public function actionRemoveQuestionFromTest($question_id,$test_id)
-        {
-            Testquestion::model()->deleteAll(
-                                    'test_id = :param_test_id AND question_id=:param_question_id',
-                                    array(
-                                        ':param_test_id' => $test_id,
-                                        ':param_question_id' => $question_id,
-                                        ));
-            
-            $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$test_id));
-            $count_questions = count($testquestions);
-            if($count_questions > 0){
-                $arr_questions = array();
-                foreach($testquestions as $testquestion)
-                    array_push($arr_questions,$testquestion->question_id);
-            }
-            $criteria = new CDbCriteria();
-            $criteria1 = new CDbCriteria();
-            $criteria1->addInCondition('id', $arr_questions);
-            $questionsintest = new CActiveDataProvider('Question', array(
-               'criteria' => $criteria1));
-            $criteria->addNotInCondition('id', $arr_questions);
-            $dataProvider = new CActiveDataProvider('Question', array(
-               'criteria' => $criteria));
-
-            $model = $this->loadModel($test_id);
-
-            $this->render('updatetest',array(
-                    'model'=>$model,
-                    'dataProvider'=>$dataProvider,
-                    'testquestions'=>$questionsintest,
-                    ),false,true);
-        }
-        
+       
         public function actionAjax($userlog_id)
         {
                 if(isset($_POST['QuestionForm']))
@@ -179,10 +107,65 @@ class TesttreeController extends Controller
                                                 'questioncount'=>$question_count,
                                                 'answerslog'=>$answerslog,
                                                 'grade'=>$grade,
+                                                'test_id'=>$userlog->test_id,
                                     ));
         
                 } 
         }
+        
+        public function actionAjaxUpdate($id)
+        {
+            if (isset($_GET['add_qid']))
+            {
+                $testquestion = new Testquestion;
+                $testquestion->test_id = $id;
+                $testquestion->question_id = $_GET['add_qid'];
+                $testquestion->save();
+
+                $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
+                $count_questions = count($testquestions);
+                if($count_questions > 0){
+                    $arr_questions = array();
+                    foreach($testquestions as $testquestion)
+                        array_push($arr_questions,$testquestion->question_id);
+                }
+                $criteria = new CDbCriteria();
+                $criteria1 = new CDbCriteria();
+                $criteria1->addInCondition('id', $arr_questions);
+                $questionsintest = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria1));
+                $criteria->addNotInCondition('id', $arr_questions);
+                $dataProvider = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria));
+            }
+            
+            if (isset($_GET['rem_qid']))
+            {
+                Testquestion::model()->deleteAll(
+                                    'test_id = :param_test_id AND question_id=:param_question_id',
+                                    array(
+                                        ':param_test_id' => $id,
+                                        ':param_question_id' => $_GET['rem_qid'],
+                                        ));
+            
+                $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
+                $count_questions = count($testquestions);
+                if($count_questions > 0){
+                    $arr_questions = array();
+                    foreach($testquestions as $testquestion)
+                        array_push($arr_questions,$testquestion->question_id);
+                }
+                $criteria = new CDbCriteria();
+                $criteria1 = new CDbCriteria();
+                $criteria1->addInCondition('id', $arr_questions);
+                $questionsintest = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria1));
+                $criteria->addNotInCondition('id', $arr_questions);
+                $dataProvider = new CActiveDataProvider('Question', array(
+                   'criteria' => $criteria));
+            }
+        }
+        
 
 
         public function actionUpdateTest($id)
@@ -192,7 +175,7 @@ class TesttreeController extends Controller
 		{
 			$model->attributes=$_POST['Testtree'];
 			if($model->save())
-				$this->redirect(array('index'));
+				$this->redirect('../viewTest/'.$model->id);
 		}
                 
                 $testquestions = Testquestion::model()->findAllByAttributes(array('test_id'=>$id));
@@ -217,6 +200,7 @@ class TesttreeController extends Controller
                         'model'=>$model,
                         'dataProvider'=>$dataProvider,
                         'testquestions'=>$questionsintest,
+                        'backurl'=>$_GET['backurl'],
                         ),false,true);
         }
         
@@ -249,7 +233,7 @@ class TesttreeController extends Controller
             $model = $this->loadModel($id);
             $qmodel = new QuestionForm;
             $userlogcount = count(Userlog::model()->findAllByAttributes(array('test_id'=>$id, 'user_id'=>Yii::app()->user->id)));
-            $this->renderPartial('viewtest',array(
+            $this->render('viewtest',array(
                     'arr_answers'=>$arr_answers,
                     'arr_questions'=>$arr_questions,
                     'qmodel'=>$qmodel,
@@ -312,6 +296,7 @@ class TesttreeController extends Controller
                             {
                                 $model->url = '/testtree/viewTest/'.$model->id;
                                 $model->save();
+                                $this->redirect('../'.$model->url);
                             }
                             $this->redirect('../testtree/index');
                         }
