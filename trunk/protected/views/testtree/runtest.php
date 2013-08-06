@@ -13,11 +13,13 @@
     $i = 0;
     $k = 0;
 
+    shuffle($questions);
     foreach($questions as $question)
     {
         echo '<div class="questionblock">';
         echo '<div class="questiontext">';
-        echo '<h5> Вопрос №'.($k+1).'</h5>';
+        echo '<h5> Вопрос № '.($k+1).'</h5>';
+        echo '<h5> Сложность: '.$question->rate.'</h5>';
         echo '<h5>'.$question->text.'</h5>';
         echo '</div>';
         echo '<div class="answerblock">';
