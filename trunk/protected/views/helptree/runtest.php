@@ -12,7 +12,8 @@
     echo $form->errorSummary($model);
     $i = 0;
     $k = 0;
-
+    
+    shuffle($questions);
     foreach($questions as $question)
     {
         echo '<div class="questionblock">';

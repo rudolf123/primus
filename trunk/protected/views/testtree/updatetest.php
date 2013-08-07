@@ -55,6 +55,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'theme',
             'text',
             'image',
+            'rate',
             /*array(
                 'class'=>'CButtonColumn',
                 'template'=>'{add}',
@@ -92,6 +93,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'theme',
             'text',
             'image',
+            'rate',
             /*array(
                 'class'=>'CButtonColumn',
                 'template'=>'{remove}',
