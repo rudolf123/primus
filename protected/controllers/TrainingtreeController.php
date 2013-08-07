@@ -86,8 +86,6 @@ class TrainingtreeController extends Controller
                             }
                             $this->redirect('../trainingtree/index');
                         }
-                        else
-                            $this->redirect('../site/error');
 		}
                 
                 $this->render('create', array('model'=>$model, 'backurl'=>$_GET['backurl']));
