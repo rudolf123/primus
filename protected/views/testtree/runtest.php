@@ -35,6 +35,18 @@
     }
     $min_rate = 0;
     $min_i;
+    $i = 0;
+    $j = 0;
+    for($i=1;$i<$counter_oq;$i++)
+        for ($j=0;$j<$counter_oq-$i;$j++)
+            if ($tempquestions[$j]->rate>$tempquestions[$j+1]->rate)
+            {
+                    $t=$tempquestions[$j];
+                    $tempquestions[$j]=$tempquestions[$j+1];
+                    $tempquestions[$j+1]=$t;
+            }
+            
+/*
     
     for i := 1 to N - 1 do
 begin
@@ -57,7 +69,7 @@ end;
             $tempquestions[$min_i] = $tempquestions[$i];
             $tempquestions[$i] = $min_rate;
         }
-    }
+    }*/
     
     for ($i = 0; $i<$counter_oq; ++$i)
     {
