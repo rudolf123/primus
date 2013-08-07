@@ -13,8 +13,62 @@
     $i = 0;
     $k = 0;
 
-    shuffle($questions);
     foreach($questions as $question)
+    {
+        echo $question->rate;
+    }
+        echo '<br />';
+    shuffle($questions);
+    
+    foreach($questions as $question)
+    {
+        echo $question->rate;
+    }
+        echo '<br />';
+    $tempquestions = array();
+    $ordredquestions = array();
+    $counter_oq = 0;
+    foreach ($questions as $question)
+    {
+        $tempquestions[$counter_oq] = $question;
+        ++$counter_oq;
+    }
+    $min_rate = 0;
+    $min_i;
+    
+    for i := 1 to N - 1 do
+begin
+p := a [ i ] ; k := i ;
+for j := i + 1 to N do
+if A [ j ] < p then begin p := A[ j ]; k := j ; end;
+A [ k ] := A [ i ] ; A [ i ] := p ;
+end;
+    for ($i = 0; $i<$counter_oq; ++$i)
+    {
+        $min_rate = $tempquestions[$i];
+        $min_i = $i;
+        for ($j = $i+1; $j<$counter_oq; ++$j)
+        {
+            if ($tempquestions[$j]->rate < $min_rate->rate)
+            {
+                $min_rate = $tempquestions[$j];
+                $min_i = $j;
+            }
+            $tempquestions[$min_i] = $tempquestions[$i];
+            $tempquestions[$i] = $min_rate;
+        }
+    }
+    
+    for ($i = 0; $i<$counter_oq; ++$i)
+    {
+         echo $tempquestions[$i]->rate;   
+    }
+    echo '<br />';
+    foreach($tempquestions as $question)
+    {
+        echo $question->rate;
+    }
+    foreach($tempquestions as $question)
     {
         echo '<div class="questionblock">';
         echo '<div class="questiontext">';
