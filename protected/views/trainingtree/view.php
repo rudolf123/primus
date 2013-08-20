@@ -85,7 +85,10 @@
                         'alt' => 'print',       //text which will appear if image can't be loaded
                         'debug' => false,            //enable the debugger to see what you will get
                         //'id' => 'documentspanel'         //id of the print link
-                    ));        
+                    ));   
+                    if (Yii::app()->user->checkAccess('moderator'))
+                        echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array('title'=>'Удалить материал')),'#',array('submit'=>array('trainingtree/delete','id'=>$model->id),'confirm'=>'Вы действительно хотите удалить материал?'));
+
             $this->endWidget(); ?>
 
     </div>
