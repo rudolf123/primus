@@ -158,8 +158,9 @@ $this->widget('zii.widgets.grid.CGridView', array(
                                 'name'=>'submit',
                                 'caption'=>'Сохранить',
                                 'htmlOptions'=>array(
+                                    'style'=>'height:40px; width:250px;',
                                     'class'=>'ui-button-primary'
-                                ),
+                                    ),
                                 ));
                 ?>
 	</div>

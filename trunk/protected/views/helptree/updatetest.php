@@ -1,12 +1,12 @@
 
 <?php 
-            $this->widget('zii.widgets.jui.CJuiButton', array(
-                'name'=>'buttonBack',
-                'caption'=>'<<< Назад',
-                'buttonType'=>'link',
-                'url'=>$backurl,
-                )
-            );
+$this->widget('zii.widgets.jui.CJuiButton', array(
+    'name'=>'buttonBack',
+    'caption'=>'<<< Назад',
+    'buttonType'=>'link',
+    'url'=>$backurl,
+    )
+);
  ?>
 
 <h4> Добавление вопросов в тему "<?php echo $model->title?>"</h4>
@@ -54,20 +54,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'theme',
             'text',
             'image',
-            /*array(
-                'class'=>'CButtonColumn',
-                'template'=>'{add}',
-                'buttons'=>array
-                (
-                    'add' => array
-                    (
-                        'label'=>'Добавить в тест',
-                        'imageUrl'=>Yii::app()->request->baseUrl.'/assets/plus.png',
-                        'url'=>'Yii::app()->createUrl("ajaxupdate", "id"=>'.$model->id.',"qid"=>$data->id), array("class"=>"ajaxupdate"))',
-                    ),
-
-                ),
-            ),*/
             array(
                 'name'=>'',
                 'type'=>'raw',
@@ -91,20 +77,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'theme',
             'text',
             'image',
-            /*array(
-                'class'=>'CButtonColumn',
-                'template'=>'{remove}',
-                'buttons'=>array
-                (
-                    'remove' => array
-                    (
-                        'label'=>'Убрать из теста',
-                        'imageUrl'=>Yii::app()->request->baseUrl.'/assets/minus.png',
-                        'url'=>'Yii::app()->createUrl("helptree/removequestionfromtest", array("question_id"=>$data->id, "test_id"=>'.$model->id.'))',
-                    ),
-                ),
-
-            ),*/
             array(
                 'name'=>'',
                 'type'=>'raw',
@@ -117,7 +89,42 @@ $this->widget('zii.widgets.grid.CGridView', array(
 ?>
 </div>
 
+<div>
 <?php 
-//    $this->renderPartial('viewquestions', array('dataProvider'=>$dataProvider, 'model'=>$model));
-//    $this->renderPartial('viewtestquestions', array('dataProvider'=>$testquestions, 'model'=>$model));
-?> 
+        $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+                'id' => 'loadtformfile-form',
+                'enableClientValidation' => true,
+                'clientOptions' => array(
+                        'validateOnSubmit' => true,
+                        'validateOnChange' => true,
+                    ),
+                'htmlOptions'=>array(
+                    'class'=>'well',
+                    'enctype'=>'multipart/form-data',
+                    'accept-charset'=>'UTF-8',
+                ),
+                'action' => array('helptree/create'), // когда форма показывается и в других контроллерах, не только 'site', то я в каждый из этих контроллеров вставил actionQuick, a здесь указал — array('quick'); почему-то не получается с array('//site/quick')
+
+            )); ?>
+
+        <div class="row">
+                <?php echo $form->labelEx($model,'doc'); ?>
+                <?php echo $form->fileField($model,'docfile'); ?>
+                <?php echo $form->error($model,'docfile'); ?>
+        </div>
+
+	<div class="form-actions">
+	<?php $this->widget('zii.widgets.jui.CJuiButton', array(
+            'name'=>'submit',
+            'caption'=>'Загрузить',
+            'htmlOptions'=>array(
+                'style'=>'height:40px; width:250px;',
+                'class'=>'ui-button-primary'
+                ),
+            )
+        );?>	
+            
+	</div>
+
+<?php $this->endWidget();?> 
+</div>

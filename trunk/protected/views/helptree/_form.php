@@ -102,6 +102,7 @@
             'caption'=>'Сохранить',
             //'value'=>'abc',
             'htmlOptions'=>array(
+                'style'=>'height:40px; width:250px;',
                 'class'=>'ui-button-primary'
                 ),
             )

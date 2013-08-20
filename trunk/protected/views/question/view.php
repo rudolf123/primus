@@ -98,7 +98,7 @@ $dataProvider = new CActiveDataProvider('Answer', array(
         <br />
         <?php echo $forms->labelEx($answermodel,'text'); ?>
         <br />
-        <?php echo $forms->textField($answermodel,'text',array('maxlength'=>255)); ?>
+        <?php echo $forms->textArea($answermodel,'text'); ?>
         <?php echo $forms->hiddenField($answermodel,'question_id', array('value'=>$model->id)); ?>
         <br />
         <?php echo $forms->error($answermodel,'text'); ?>

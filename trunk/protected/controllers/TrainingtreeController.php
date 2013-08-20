@@ -49,6 +49,12 @@ class TrainingtreeController extends Controller
 			));
 	}
         
+        public function actionDelete($id)
+	{
+            $this->loadModel($id)->delete();
+            $this->redirect('../index');
+        }
+        
         public function actionCreate()
 	{
 		$model=new Trainingtree;
