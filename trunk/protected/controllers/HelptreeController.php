@@ -401,9 +401,16 @@ class HelptreeController extends Controller
                 $data = fgets($fileR); 
                 $i++;
                 
-                if (strpos($data,'&0,'))
+                if (strpos($data,'&0.'))
                 {
-                    $rate = substr($data, strpos($data,'&0,')+1,3);
+                    $rate = substr($data, strpos($data,'&0.')+1,3);
+                    $data = substr($data, 0, strpos($data,'&0.'));
+                }
+                
+                if (strpos($data,'&1'))
+                {
+                    $rate = substr($data, strpos($data,'&1')+1,2);
+                    $data = substr($data, 0, strpos($data,'&1'));
                 }
 
                 if (strpos($data,'1.')===0)
@@ -448,7 +455,9 @@ class HelptreeController extends Controller
                     $model = new Question;
                     $model->theme = $theme;
                     $model->text = $qtext;
-                    $model->rate = $rate;//rand(1,10)/10;
+                    echo '<h1>'.$rate.'</h1>';
+                    $model->rate = floatval($rate);//rand(1,10)/10;
+                    echo '<h1>'.$model->rate .'</h1>';
                     $question_id = 0;
                     if ($model->save())
                     {
@@ -479,11 +488,11 @@ class HelptreeController extends Controller
                         $modelAnswr = new Answer;
                         $count++;
                         fwrite ($fileWtest, 'answer: '.$answr);
-                        $modelAnswr->text = substr($answr,2);
+                        $modelAnswr->text = substr($answr,1);
                         if (strpos($answr,'+'))
                         {
                             $modelAnswr->isright = 1;
-                            $modelAnswr->text = substr($modelAnswr->text,strpos($answr,'+')+1);
+                            $modelAnswr->text = substr($modelAnswr->text,strpos($answr,'+'));
                         }
                         else
                             $modelAnswr->isright = 0;
@@ -504,7 +513,7 @@ class HelptreeController extends Controller
                 {
                     echo $flag.$data;
                     echo '<br />';
-                    $theme = substr($data,9);
+                    $theme = substr($data,10);
                     fwrite($fileW, $data);
                     continue;
                 }
