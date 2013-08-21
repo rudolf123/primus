@@ -91,7 +91,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 
 <div>
 <?php 
-        $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+        $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
                 'id' => 'loadtformfile-form',
                 'enableClientValidation' => true,
                 'clientOptions' => array(
@@ -103,14 +103,12 @@ $this->widget('zii.widgets.grid.CGridView', array(
                     'enctype'=>'multipart/form-data',
                     'accept-charset'=>'UTF-8',
                 ),
-                'action' => array('helptree/create'), // когда форма показывается и в других контроллерах, не только 'site', то я в каждый из этих контроллеров вставил actionQuick, a здесь указал — array('quick'); почему-то не получается с array('//site/quick')
+                'action' => Yii::app()->createUrl('helptree/pasrequestions', array('materialID'=>$model->id)),
 
             )); ?>
 
         <div class="row">
-                <?php echo $form->labelEx($model,'doc'); ?>
-                <?php echo $form->fileField($model,'docfile'); ?>
-                <?php echo $form->error($model,'docfile'); ?>
+                <?php echo CHtml::textArea('questions'); ?>
         </div>
 
 	<div class="form-actions">

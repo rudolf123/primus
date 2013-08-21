@@ -376,7 +376,157 @@ class HelptreeController extends Controller
 	/**
 	 * Manages all models.
 	 */
-        
+        public function actionPasrequestions($materialID)
+        {
+            $text = "";
+            if (isset($_POST['questions']))
+                $text = $_POST['questions'];
+            
+            $file = fopen('questionsArea.txt', 'w');
+            fwrite($file, $text);
+            fclose($file);
+            $fileR = fopen('questionsArea.txt', 'r');
+            $fileWtest = fopen('questionsTest.txt', 'w');
+            $fileW = fopen('logparse.txt', 'w');
+            $theme = '';
+            $qtext = '';
+            $atext = array();
+            $i = 0;
+            $j = 0;
+            $flag = 0;
+            $rate = 0;
+            $testtree_id = $materialID;
+            while (!feof($fileR))
+            {
+                $data = fgets($fileR); 
+                $i++;
+                
+                if (strpos($data,'&0,'))
+                {
+                    $rate = substr($data, strpos($data,'&0,')+1,3);
+                }
+
+                if (strpos($data,'1.')===0)
+                {
+                    fwrite($fileW, $data);
+                    array_push($atext, $data);
+                    continue;
+                }
+                if (strpos($data,'2.')===0)
+                {
+                    fwrite($fileW, $data);
+                    array_push($atext, $data);
+                    continue;
+                }
+                if (strpos($data,'3.')===0)
+                {
+                    fwrite($fileW, $data);
+                    array_push($atext, $data);
+                    continue;
+                }
+                if (strpos($data,'4.')===0)
+                {
+                    fwrite($fileW, $data);
+                    array_push($atext, $data);
+                    continue;
+                }
+                if (strpos($data,'5.')===0)
+                {
+                    fwrite($fileW, $data);
+                    array_push($atext, $data);
+                    continue;
+                }
+                if (strpos($data,'6.')===0)
+                {
+                    fwrite($fileW, $data);
+                    array_push($atext, $data);
+                    continue;
+                }
+                $flag++;
+                if ($qtext!=='' && $flag>2)
+                {
+                    $model = new Question;
+                    $model->theme = $theme;
+                    $model->text = $qtext;
+                    $model->rate = $rate;//rand(1,10)/10;
+                    $question_id = 0;
+                    if ($model->save())
+                    {
+                        echo 'Вопрос сохранен!';
+                        echo '<br />';
+                        $question_id = $model->id;
+                    }
+                    fwrite($fileWtest, 'themeTitle: '.$theme);
+                    fwrite($fileWtest, 'questiontxt: '.$qtext);
+                    $testquestionmodel = new Helpquestion;
+                    $testquestionmodel->question_id = $question_id;
+                    $testquestionmodel->help_id = $testtree_id;
+                    if ($testquestionmodel->save())
+                    {
+                        echo 'Связь вопроса с темой сохранена!';
+                        echo '<br />';
+                    };
+                    echo  $model->theme;
+                    echo '<br />';
+                    echo $model->text;
+                    echo '<br />';
+                    echo $model->rate;
+                    echo '<br />';
+                    
+                    $count = 0;
+                    foreach ($atext as $answr)
+                    {
+                        $modelAnswr = new Answer;
+                        $count++;
+                        fwrite ($fileWtest, 'answer: '.$answr);
+                        $modelAnswr->text = substr($answr,2);
+                        if (strpos($answr,'+'))
+                        {
+                            $modelAnswr->isright = 1;
+                            $modelAnswr->text = substr($modelAnswr->text,strpos($answr,'+')+1);
+                        }
+                        else
+                            $modelAnswr->isright = 0;
+                        $modelAnswr->question_id = $question_id;
+                        if ($modelAnswr->save())
+                        {
+                            echo 'Ответ сохранен!';
+                            echo '<br />';
+                        };
+                        
+                        echo $modelAnswr->isright.':'.$modelAnswr->text;
+                        echo '<br />';
+                    }
+                    $qtext = '';
+                    array_splice($atext, 0);
+                }
+                if (strpos($data,'$category$')===0)
+                {
+                    echo $flag.$data;
+                    echo '<br />';
+                    $theme = substr($data,9);
+                    fwrite($fileW, $data);
+                    continue;
+                }
+                $qtext = $data;
+                
+                
+                fwrite($fileW, '::'.$data);
+                
+
+            }
+            fwrite($fileWtest, 'themeTitle: '.$theme);
+            fwrite($fileWtest, 'questiontxt: '.$qtext);
+            foreach ($atext as $answr)
+                fwrite ($fileWtest, 'answer: '.$answr);
+            $qtext = '';
+            array_splice($atext, 0);
+            echo $j.'  ';
+            fclose($fileR);
+            fclose($fileW);
+            fclose($fileWtest);
+            
+        }
         public function actionViewResults($id)
         {
             $logs = Userloghelp::model()->findAllByAttributes(array('user_id'=>Yii::app()->user->id, 'test_id'=>$id));
