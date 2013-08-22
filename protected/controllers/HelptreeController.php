@@ -488,14 +488,18 @@ class HelptreeController extends Controller
                         $modelAnswr = new Answer;
                         $count++;
                         fwrite ($fileWtest, 'answer: '.$answr);
-                        $modelAnswr->text = substr($answr,1);
+                        
                         if (strpos($answr,'+'))
                         {
                             $modelAnswr->isright = 1;
-                            $modelAnswr->text = substr($modelAnswr->text,strpos($answr,'+'));
+                            $modelAnswr->text = substr($answr,strpos($answr,'+')+1);
                         }
                         else
+                        {
+                            $modelAnswr->text = substr($answr,2);
                             $modelAnswr->isright = 0;
+                        }
+                            
                         $modelAnswr->question_id = $question_id;
                         if ($modelAnswr->save())
                         {
@@ -517,12 +521,75 @@ class HelptreeController extends Controller
                     fwrite($fileW, $data);
                     continue;
                 }
-                $qtext = $data;
+                $qtext = substr($data,strpos($data,'	'));
                 
                 
                 fwrite($fileW, '::'.$data);
                 
 
+            }
+            
+            {
+                    $model = new Question;
+                    $model->theme = $theme;
+                    $model->text = $qtext;
+                    echo '<h1>'.$rate.'</h1>';
+                    $model->rate = floatval($rate);//rand(1,10)/10;
+                    echo '<h1>'.$model->rate .'</h1>';
+                    $question_id = 0;
+                    if ($model->save())
+                    {
+                        echo 'Вопрос сохранен!';
+                        echo '<br />';
+                        $question_id = $model->id;
+                    }
+                    fwrite($fileWtest, 'themeTitle: '.$theme);
+                    fwrite($fileWtest, 'questiontxt: '.$qtext);
+                    $testquestionmodel = new Helpquestion;
+                    $testquestionmodel->question_id = $question_id;
+                    $testquestionmodel->help_id = $testtree_id;
+                    if ($testquestionmodel->save())
+                    {
+                        echo 'Связь вопроса с темой сохранена!';
+                        echo '<br />';
+                    };
+                    echo  $model->theme;
+                    echo '<br />';
+                    echo $model->text;
+                    echo '<br />';
+                    echo $model->rate;
+                    echo '<br />';
+                    
+                    $count = 0;
+                    foreach ($atext as $answr)
+                    {
+                        $modelAnswr = new Answer;
+                        $count++;
+                        fwrite ($fileWtest, 'answer: '.$answr);
+                        
+                        if (strpos($answr,'+'))
+                        {
+                            $modelAnswr->isright = 1;
+                            $modelAnswr->text = substr($answr,strpos($answr,'+')+1);
+                        }
+                        else
+                        {
+                            $modelAnswr->text = substr($answr,2);
+                            $modelAnswr->isright = 0;
+                        }
+                            
+                        $modelAnswr->question_id = $question_id;
+                        if ($modelAnswr->save())
+                        {
+                            echo 'Ответ сохранен!';
+                            echo '<br />';
+                        };
+                        
+                        echo $modelAnswr->isright.':'.$modelAnswr->text;
+                        echo '<br />';
+                    }
+                    $qtext = '';
+                    array_splice($atext, 0);
             }
             fwrite($fileWtest, 'themeTitle: '.$theme);
             fwrite($fileWtest, 'questiontxt: '.$qtext);

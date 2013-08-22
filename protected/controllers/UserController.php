@@ -150,7 +150,7 @@ class UserController extends CController
                                 // Выводим страницу что "все окей"
                                 $form->passwd = crypt($form->passwd,'Fghqwe$trteysdf');//self::blowfishSalt());
 
-                                $form->regdate = date('Y-m-d', time());;
+                                $form->regdate = date('Y-m-d H:i:s', time());;
                                 if ($form->passwdModerator==='tank')
                                     $form->role = 'moderator';
                                 else 
