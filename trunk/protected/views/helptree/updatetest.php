@@ -91,7 +91,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 
 <div>
 <?php 
-        $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+     /*   $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
                 'id' => 'loadtformfile-form',
                 'enableClientValidation' => true,
                 'clientOptions' => array(
@@ -124,5 +124,5 @@ $this->widget('zii.widgets.grid.CGridView', array(
             
 	</div>
 
-<?php $this->endWidget();?> 
+<?php $this->endWidget();*/?> 
 </div>

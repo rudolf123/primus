@@ -13,11 +13,6 @@
     $i = 0;
     $k = 0;
 
-    foreach($questions as $question)
-    {
-        echo $question->rate;
-    }
-        echo '<br />';
     shuffle($questions);
     
     $tempquestions = array();

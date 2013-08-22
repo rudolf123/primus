@@ -89,6 +89,12 @@ $('.search-form form').submit(function(){
         <br />
         <?php echo $forms->error($questionmodel,'theme'); ?>
         <br />
+        <?php echo $forms->labelEx($questionmodel,'rate'); ?>
+        <br />
+        <?php echo $forms->textField($questionmodel,'rate'); ?>
+        <br />
+        <?php echo $forms->error($questionmodel,'rate'); ?>
+	<br />
 
         <?php echo CHtml::submitButton($questionmodel->isNewRecord ? 'Создать' : 'Сохранить'); ?>
 
