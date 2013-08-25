@@ -82,6 +82,20 @@ class Testtree extends CActiveRecord
 			'icon' => 'Icon',
 		);
 	}
+        
+        protected function beforeDelete(){
+            if(!parent::beforeDelete())
+                return false;
+            
+            Testquestion::model()->deleteAll(
+                'test_id=:param_test_id',
+                array(
+                    ':param_test_id' => $this->id,
+                    ));
+            
+            return true;
+        }
+        
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.

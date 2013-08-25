@@ -101,6 +101,40 @@ class TrainingtreeController extends Controller
 	{
 		$model=$this->loadModel($id);
 
+                if (isset($_GET['deletefile']))
+                {
+                    if ($_GET['deletefile'] === 'doc')
+                    {
+                        @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/training/'.$model->doc);
+                        $model->doc = '';
+                        $model->save();
+                    }
+                    if ($_GET['deletefile'] === 'img')
+                    {
+                        @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/training/'.$model->img);
+                        $model->img = '';
+                        $model->save();
+                    }
+                    if ($_GET['deletefile'] === 'pdf')
+                    {
+                        @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/training/'.$model->pdf);
+                        $model->pdf = '';
+                        $model->save();
+                    }
+                    if ($_GET['deletefile'] === 'video')
+                    {
+                        @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/training/'.$model->video);
+                        $model->video = '';
+                        $model->save();
+                    }
+                    
+                    if ($_GET['deletefile'] === 'program')
+                    {
+                        @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/training/'.$model->program);
+                        $model->program = '';
+                        $model->save();
+                    }
+                }
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 		if(isset($_POST['Trainingtree']))

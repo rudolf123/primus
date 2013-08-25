@@ -8,9 +8,14 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'question-form',
-	'enableAjaxValidation'=>false,
+        'enableClientValidation' => true,
+        'clientOptions' => array(
+                'validateOnSubmit' => true,
+                'validateOnChange' => true,
+            ),
         'htmlOptions'=>array(
             'class'=>'well',
+            'enctype'=>'multipart/form-data',
             'accept-charset'=>'UTF-8',
         ),
         'action'=>array('question/update', 'id'=>$model->id, 'backurl'=>$backurl),
@@ -33,16 +38,24 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'image'); ?>
-		<?php echo $form->textField($model,'image',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'image'); ?>
+                <?php echo $form->labelEx($model,'image'); ?>
+                <?php echo $form->fileField($model,'imgfile'); ?>
+                <?php echo $form->error($model,'imgfile'); ?>
+            
+                <?php
+                if ($model->image != '')
+                {
+                            echo CHtml::image('/storage/questionimgs/'.$model->image,'Picture is missing', array('style'=>"width: 40px; height: 40px"));
+                            echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array('title'=>'Удалить файл')), Yii::app()->createUrl('question/update', array('id'=>$model->id, 'deletefile'=>'img','backurl'=>$backurl)),array('confirm'=>'Вы действительно хотите удалить файл?'));
+                }
+                ?>
 	</div>
         <div class="row">
 		<?php echo $form->labelEx($model,'rate'); ?>
 		<?php echo $form->textField($model,'rate'); ?>
 		<?php echo $form->error($model,'rate'); ?>
 	</div>
-
+        
 	<div class="row buttons">
             <?php $this->widget('zii.widgets.jui.CJuiButton', array(
             'name'=>'submit',

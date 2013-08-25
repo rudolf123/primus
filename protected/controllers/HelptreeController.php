@@ -137,12 +137,41 @@ class HelptreeController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+
+        public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
+                if (isset($_GET['deletefile']))
+                {
+                    if ($_GET['deletefile'] === 'doc')
+                    {
+                        @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/'.$model->doc);
+                        $model->doc = '';
+                        $model->save();
+                    }
+                    if ($_GET['deletefile'] === 'img')
+                    {
+                        @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/'.$model->img);
+                        $model->img = '';
+                        $model->save();
+                    }
+                    if ($_GET['deletefile'] === 'pdf')
+                    {
+                        @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/'.$model->pdf);
+                        $model->pdf = '';
+                        $model->save();
+                    }
+                    if ($_GET['deletefile'] === 'video')
+                    {
+                        @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/'.$model->video);
+                        $model->video = '';
+                        $model->save();
+                    }
+                }
+                
 		if(isset($_POST['Helptree']))
 		{
 			$model->attributes=$_POST['Helptree'];

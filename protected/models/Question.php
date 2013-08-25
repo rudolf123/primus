@@ -40,8 +40,8 @@ class Question extends CActiveRecord
 		return array(
 			array('theme, text', 'required'),
 			array('theme', 'length', 'max'=>255),
-			array('image', 'length', 'max'=>50),
                         array('rate', 'numerical'),
+                        array('imgfile', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, theme, text, image, rate', 'safe', 'on'=>'search'),
@@ -57,7 +57,7 @@ class Question extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
                     'test' => array(self::BELONGS_TO, 'Test', 'test_id'),
-                    'answers' => array(self::HAS_MANY, 'Answer', 'question_id'),
+                    //'answers' => array(self::HAS_MANY, 'Answer', 'question_id'),
 		);
 	}
 
@@ -72,8 +72,40 @@ class Question extends CActiveRecord
 			'text' => 'Текст вопроса',
 			'image' => 'Изображение',
                         'rate' => 'Коэффициент сложности',
+                        'image' => 'Графический файл',
 		);
 	}
+        protected function beforeSave()
+                {
+            if(!parent::beforeSave())
+                return false;
+            if (!is_dir($_SERVER['DOCUMENT_ROOT'].'/storage/questionimgs/'))
+            {
+                mkdir($_SERVER['DOCUMENT_ROOT'].'/storage/questionimgs/', 0777);
+            };
+            
+            $imgfile=CUploadedFile::getInstance($this,'imgfile');
+            if ($imgfile)
+            {
+                $this->imgfile=$imgfile;
+                $id = md5(time());
+                $this->imgfile->saveAs(
+                    $_SERVER['DOCUMENT_ROOT'].'/storage/questionimgs/'.$id.$this->imgfile);
+                $this->image = $id.$this->imgfile; 
+            }
+
+            return true;
+        }
+        
+        protected function beforeDelete(){
+            if(!parent::beforeDelete())
+                return false;
+            
+            if ($this->image)
+                @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/questionimgs/'.$this->image);
+            
+            return true;
+        }
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.

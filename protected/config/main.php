@@ -83,7 +83,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=primus_db_final',
+			'connectionString' => 'mysql:host=localhost;dbname=primus_test',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
