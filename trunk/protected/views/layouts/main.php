@@ -94,6 +94,8 @@
 
 </div><!-- page -->
 
+<script src="/js/lightbox.js"></script>
+
 <script>
 (function(jq) {
 	jq.autoScroll = function(ops) {

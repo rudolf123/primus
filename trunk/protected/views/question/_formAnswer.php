@@ -28,9 +28,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'image'); ?>
-		<?php echo $form->textField($model,'image',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'image'); ?>
+		<?php //echo $form->labelEx($model,'image'); ?>
+		<?php //echo $form->textField($model,'image',array('size'=>50,'maxlength'=>50)); ?>
+		<?php //echo $form->error($model,'image'); ?>
 	</div>
 
 	<div class="row buttons">

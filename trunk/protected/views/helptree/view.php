@@ -257,7 +257,6 @@
             });
         });
 </script>
-<script src="/js/lightbox.js"></script>
 
 <script>
         $(document).ready(function(){

@@ -139,6 +139,16 @@ class QuestionController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+                
+                if (isset($_GET['deletefile']))
+                {
+                    if ($_GET['deletefile'] === 'img')
+                    {
+                        @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/questionimgs/'.$model->image);
+                        $model->image = '';
+                        $model->save();
+                    }
+                }
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -163,7 +173,29 @@ class QuestionController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+                $model = Question::model()->findByPk($id);
+                $submodelsAnswers = Answer::model()->findAllByAttributes(array('question_id'=>$id));
+                if ($submodelsAnswers)
+                    foreach ($submodelsAnswers as $submodel)
+                        $submodel->delete();
+
+                Helpquestion::model()->deleteAll(
+                    'question_id=:param_question_id',
+                    array(
+                        ':param_question_id' => $id,
+                        ));
+                Trainingquestion::model()->deleteAll(
+                    'question_id=:param_question_id',
+                    array(
+                        ':param_question_id' => $id,
+                        ));
+                Testquestion::model()->deleteAll(
+                    'question_id=:param_question_id',
+                    array(
+                        ':param_question_id' => $id,
+                        ));
+                                
+                $model->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))

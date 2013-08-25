@@ -18,6 +18,18 @@
                 'rate',
 	),
 )); ?>
+<?php
+    if ($model->image != '')
+        echo Chtml::link(
+                CHtml::image('/storage/questionimgs/'.$model->image,'Изображение недоступно!',array(
+                    'style'=>'class: imagepreview',
+                    )
+                ),'/storage/questionimgs/'.$model->image,array(
+                        'rel'=>'lightbox',
+                        'title'=>$model->image,
+                        )
+                );
+?>
 
 <?php
 $dataProvider = new CActiveDataProvider('Answer', array(
@@ -37,7 +49,7 @@ $dataProvider = new CActiveDataProvider('Answer', array(
                 'value' => '$data->isright==0 ? "Не верный" : "Верный"',
                 'type' => 'html',
                 ),
-                'image',
+                //'image',
 		array(
                     'class'=>'CButtonColumn',
                     'template'=>'{update}{delete}',

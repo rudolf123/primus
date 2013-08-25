@@ -106,6 +106,30 @@ class Trainingtree extends CActiveRecord
 		);
 	}
         
+        protected function beforeDelete(){
+            if(!parent::beforeDelete())
+                return false;
+            
+            if ($this->img)
+                @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/training/'.$this->img);
+            if ($this->doc)
+                @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/training/'.$this->doc);
+            if ($this->pdf)
+                @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/training/'.$this->pdf);
+            if ($this->video)
+                @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/training/'.$this->video);
+            if ($this->program)
+                @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/training/'.$this->program);
+            
+            Trainingquestion::model()->deleteAll(
+                'training_id=:param_training_id',
+                array(
+                    ':param_training_id' => $this->id,
+                    ));
+            
+            return true;
+        }
+        
         protected function beforeSave()
         {
             if(!parent::beforeSave())

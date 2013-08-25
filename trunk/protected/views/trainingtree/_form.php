@@ -38,7 +38,7 @@
 
 	<div class="row">
                 <?php //echo $form->labelEx($model,'htmlfield'); ?>
-                <?php echo $form->ckEditorRow($model, 'htmlfield', array('options'=>array('fullpage'=>'js:true', 'width'=>'640', 'resize_maxWidth'=>'640','resize_minWidth'=>'320')));?>
+                <?php echo $form->ckEditorRow($model, 'htmlfield', array('options'=>array('fullpage'=>'js:true', 'width'=>'840','height'=>'640', 'resize_maxWidth'=>'1040','resize_minWidth'=>'320')));?>
                 <?php //echo $form->textArea($model,'htmlfield'); ?>
                 <?php echo $form->error($model,'htmlfield'); ?>
 	</div>
@@ -50,8 +50,8 @@
                 if ($model->img != '')
                 {
                             echo CHtml::image('/storage/training/'.$model->img,'Picture is missing', array('style'=>"width: 40px; height: 40px"));
-                            /*echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array()), Yii::app()->createUrl('helptree/update', array('id'=>$model->id)));
-                            $this->widget('bootstrap.widgets.TbButton', array(
+                            echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array('title'=>'Удалить файл')), Yii::app()->createUrl('trainingtree/update', array('id'=>$model->id, 'deletefile'=>'img','backurl'=>$backurl)),array('confirm'=>'Вы действительно хотите удалить файл?'));
+                            /*$this->widget('bootstrap.widgets.TbButton', array(
                                 'label'=>'Удалить',
                                 'type'=>'danger',
                                 'htmlOptions'=>array(
@@ -73,7 +73,7 @@
                 <?php if ($model->doc != '')
                       {
                             echo Chtml::link(CHtml::image('/assets/doc.gif','doc icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->doc)));
-                           // echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array()), Yii::app()->createUrl('helptree/update', array('id'=>$model->id)));
+                            echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array('title'=>'Удалить файл')), Yii::app()->createUrl('trainingtree/update', array('id'=>$model->id, 'deletefile'=>'doc','backurl'=>$backurl)),array('confirm'=>'Вы действительно хотите удалить файл?'));
                       }
                 ?>
         </div>
@@ -84,7 +84,7 @@
                 <?php if ($model->pdf != '')
                 {
                             echo Chtml::link(CHtml::image('/assets/pdf.gif','doc icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->pdf)));
-                          //  echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array()), Yii::app()->createUrl('helptree/update', array('id'=>$model->id)));
+                            echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array('title'=>'Удалить файл')), Yii::app()->createUrl('trainingtree/update', array('id'=>$model->id, 'deletefile'=>'pdf','backurl'=>$backurl)),array('confirm'=>'Вы действительно хотите удалить файл?'));
                 }
                 ?>
         </div>
@@ -92,6 +92,12 @@
                 <?php echo $form->labelEx($model,'video'); ?>
                 <?php echo $form->fileField($model,'videofile'); ?>
                 <?php echo $form->error($model,'videofile'); ?>
+                <?php if ($model->video != '')
+                {
+                            //echo Chtml::link(CHtml::image('/assets/pdf.gif','doc icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->pdf)));
+                            echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array('title'=>'Удалить файл')), Yii::app()->createUrl('trainingtree/update', array('id'=>$model->id, 'deletefile'=>'video','backurl'=>$backurl)),array('confirm'=>'Вы действительно хотите удалить файл?'));
+                }
+                ?>
                 <?php //echo $form->labelEx($model,'video'); ?>
                 <?php //echo $form->textField($model,'video',array('maxlength'=>255)); ?>
                 <?php //echo $form->error($model,'video'); ?>
@@ -101,6 +107,12 @@
                 <?php echo $form->labelEx($model,'program'); ?>
                 <?php echo $form->fileField($model,'programfile'); ?>
                 <?php echo $form->error($model,'programfile'); ?>
+                <?php if ($model->program != '')
+                {
+                            echo Chtml::link(CHtml::image('/assets/gear.gif','doc icon is missing',array('width'=>'40px','height'=>'40px')),Yii::app()->createUrl('helptree/DownloadFile',array('filename'=>$model->program)));
+                            echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array('title'=>'Удалить файл')), Yii::app()->createUrl('trainingtree/update', array('id'=>$model->id, 'deletefile'=>'program','backurl'=>$backurl)),array('confirm'=>'Вы действительно хотите удалить файл?'));
+                }
+                ?>
         </div>
         
         <?php// echo $form->hiddenField($model,'type'); ?>

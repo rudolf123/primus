@@ -103,6 +103,28 @@ class Helptree extends CActiveRecord
 		);
 	}
         
+        protected function beforeDelete(){
+            if(!parent::beforeDelete())
+                return false;
+            
+            if ($this->img)
+                @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/'.$this->img);
+            if ($this->doc)
+                @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/'.$this->doc);
+            if ($this->pdf)
+                @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/'.$this->pdf);
+            if ($this->video)
+                @unlink($_SERVER['DOCUMENT_ROOT'].'/storage/'.$this->video);
+            
+            Helpquestion::model()->deleteAll(
+                'help_id=:param_help_id',
+                array(
+                    ':param_help_id' => $this->id,
+                    ));
+            
+            return true;
+        }
+        
         protected function beforeSave(){
             if(!parent::beforeSave())
                 return false;
