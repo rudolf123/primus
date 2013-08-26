@@ -18,6 +18,13 @@ class HelptreeController extends Controller
 			'accessControl', // perform access control for CRUD operations
 		);
 	}
+        
+        public function actions()
+        {
+            return array(
+                'fileUploaderConnector' => "ext.ezzeelfinder.ElFinderConnectorAction",
+            );
+        }
 
 	/**
 	 * Specifies the access control rules.

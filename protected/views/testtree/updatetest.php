@@ -82,7 +82,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 ?>
 </div>
 
-<h5>Вопросы в теме</h5>
+<h5>Вопросы в тесте</h5>
 <div id="ajaxModerateTableTestQuestions" class="well">
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
