@@ -106,6 +106,19 @@
             'onclick'=>'js:function(){window.location = "'.Yii::app()->createUrl('testtree/updatetest', array('id'=>$model->id,'backurl'=>Yii::app()->request->url)).'"; return false;}',
             )
         );
+    echo '</br>';
+    if (Yii::app()->user->checkAccess('moderator'))
+        $this->widget('zii.widgets.jui.CJuiButton', array(
+            'name'=>'buttonDeletetest',
+            'caption'=>'Удалить тест',
+            'htmlOptions'=>array(
+                    'submit'=>array('testtree/delete','id'=>$model->id),
+                    'confirm'=>'Вы действительно хотите удалить тест?',
+                    'style'=>'height:40px; width:250px; margin-top: 10px;',
+                    'class'=>'ui-button-error',
+                ),
+            )
+        );
             //echo Chtml::link('Редактировать тест',Yii::app()->createUrl('testtree/updatetest', array('id'=>$model->id,'backurl'=>Yii::app()->request->url)));
     ?>
 

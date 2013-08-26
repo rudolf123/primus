@@ -339,6 +339,12 @@ class TesttreeController extends Controller
         
         public function actionDelete($id)
 	{
+            $this->loadModel($id)->delete();
+            $this->redirect('../index');
+        }
+        
+        /*public function actionDelete($id)
+	{
 		if(Yii::app()->request->isPostRequest)
 		{
 			// we only allow deletion via POST request
@@ -350,7 +356,7 @@ class TesttreeController extends Controller
 		}
 		else
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
-	}
+	}*/
         
         public function actionRunTest($id)
         {
