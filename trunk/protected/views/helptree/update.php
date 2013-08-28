@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
             $this->widget('zii.widgets.jui.CJuiButton', array(
                 'name'=>'buttonViewResults',
                 'caption'=>'<<< Назад',
@@ -12,11 +12,11 @@
 <?php echo $this->renderPartial('_form', array('model'=>$model, 'backurl'=>$backurl,)); ?>
 
 
-<div id="file-uploader"></div>
+
  
 <?php
 
-$filesPath = realpath(Yii::app()->basePath);
+/*$filesPath = realpath(Yii::app()->basePath);
 $filesUrl = Yii::app()->baseUrl;
  
 $this->widget("ext.ezzeelfinder.ElFinderWidget", array(
@@ -41,4 +41,4 @@ $this->widget("ext.ezzeelfinder.ElFinderWidget", array(
     )
 ));
  
-?>
+*/?>
