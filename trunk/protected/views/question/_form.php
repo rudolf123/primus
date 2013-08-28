@@ -45,7 +45,7 @@
                 <?php
                 if ($model->image != '')
                 {
-                            echo CHtml::image('/storage/questionimgs/'.$model->image,'Picture is missing', array('style'=>"width: 40px; height: 40px"));
+                            echo CHtml::image('/storage/questionimgs/'.$model->image,'Изображение недоступно!', array('style'=>"width: 40px; height: 40px"));
                             echo Chtml::link(CHtml::image('/assets/delete.png','delete icon is missing',array('title'=>'Удалить файл')), Yii::app()->createUrl('question/update', array('id'=>$model->id, 'deletefile'=>'img','backurl'=>$backurl)),array('confirm'=>'Вы действительно хотите удалить файл?'));
                 }
                 ?>
