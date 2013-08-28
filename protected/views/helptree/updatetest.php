@@ -51,6 +51,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
     //'filter'=>$dataProvider,
     'skin'=>'false',
     'columns'=>array(
+            'id',
             'theme',
             'text',
             'image',
@@ -74,6 +75,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider'=>$testquestions,
     //'filter'=>$dataProvider,
     'columns'=>array(
+            'id',
             'theme',
             'text',
             'image',

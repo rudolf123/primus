@@ -1,4 +1,4 @@
-<div id="content" class="well">
+﻿<div id="content" class="well">
 <?php 
     $form=$this->beginWidget('CActiveForm', array(
                 'id'=>'question',
@@ -42,6 +42,17 @@
         echo '<h5> Сложность: '.$question->rate.'</h5>';
         echo '<h5>'.$question->text.'</h5>';
         echo '</div>';
+        if ($question->image != '')
+            echo Chtml::link(
+                    CHtml::image('/storage/questionimgs/'.$question->image,'Изображение недоступно!',array(
+                        'style'=>'class: imagepreview',
+                        )
+                    ),'/storage/questionimgs/'.$question->image,array(
+                            'rel'=>'lightbox',
+                            'title'=>$question->image,
+                            )
+                    );
+
         echo '<div class="answerblock">';
         echo '<h5>Варианты ответов:</h5>';
         $answers = Answer::model()->findAllByAttributes(array('question_id'=>$question->id));
